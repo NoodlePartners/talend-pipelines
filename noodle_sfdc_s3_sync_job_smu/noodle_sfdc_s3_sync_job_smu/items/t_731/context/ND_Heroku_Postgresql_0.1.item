@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_7VUtcBGPEeu93t8NuXXf3g" confirmationNeeded="false" name="staging">
+    <contextParameter xmi:id="_7VUtcRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Login" prompt="ND_Heroku_Postgresql_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
+    <contextParameter xmi:id="_7VUtchGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Password" prompt="ND_Heroku_Postgresql_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:jlflcP1cgg6UjGC2MVZdf/r4OhFp5q79mNv8RvyMihkuEOopZ/MwDUjPAcEABWbrMJd5v27MqHx6Ld5KQqEmzferCuY9sATyJcsPr3teXAOM0vZEzvp/JKjTJB5t"/>
+    <contextParameter xmi:id="_7VUtcxGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Server" prompt="ND_Heroku_Postgresql_Server?" promptNeeded="false" type="id_String" value="ec2-3-218-86-24.compute-1.amazonaws.com"/>
+    <contextParameter xmi:id="_7VUtdBGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Port" prompt="ND_Heroku_Postgresql_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_7VUtdRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Schema" prompt="ND_Heroku_Postgresql_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_7VUtdhGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Database" prompt="ND_Heroku_Postgresql_Database?" promptNeeded="false" type="id_String" value="d1uersr7oml4g9"/>
+    <contextParameter xmi:id="_7VUtdxGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_AdditionalParams" prompt="ND_Heroku_Postgresql_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_DOkUkBfFEeu0MriGnAnjIQ" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_DOkUkRfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Login" prompt="ND_Heroku_Postgresql_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
+    <contextParameter xmi:id="_DOkUkhfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Password" prompt="ND_Heroku_Postgresql_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:pOOL+e+DhTYR57odyrE4kYqHs+ep4SZmwBE4+bwpqUQ5dq99"/>
+    <contextParameter xmi:id="_DOkUkxfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Server" prompt="ND_Heroku_Postgresql_Server?" promptNeeded="false" type="id_String" value="dev-dataeng-airflow-pgsql-01.cs3qcy3lego4.us-east-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_DOkUlBfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Port" prompt="ND_Heroku_Postgresql_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_DOkUlRfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Schema" prompt="ND_Heroku_Postgresql_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_DOkUlhfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_Database" prompt="ND_Heroku_Postgresql_Database?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_DOkUlxfFEeu0MriGnAnjIQ" comment="" name="ND_Heroku_Postgresql_AdditionalParams" prompt="ND_Heroku_Postgresql_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_7VUtgBGPEeu93t8NuXXf3g" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_7VUtgRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Login" prompt="ND_Heroku_Postgresql_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
+    <contextParameter xmi:id="_7VUtghGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Password" prompt="ND_Heroku_Postgresql_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:xYSzbrNpBGnIyQRcofh3NR3U55XnPRXs6X0GAYW90Y+QMABNC6mtMTbaHcN3OW98ZvBc8RPd7GLogPZFeV+GZ60WwfBrsMfA/+WDM0qGcSMkjyoEyN1l+Gz/vlSW"/>
+    <contextParameter xmi:id="_7VUtgxGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Server" prompt="ND_Heroku_Postgresql_Server?" promptNeeded="false" type="id_String" value="ec2-3-218-86-24.compute-1.amazonaws.com"/>
+    <contextParameter xmi:id="_7VUthBGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Port" prompt="ND_Heroku_Postgresql_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_7VUthRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Schema" prompt="ND_Heroku_Postgresql_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_7VUthhGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Database" prompt="ND_Heroku_Postgresql_Database?" promptNeeded="false" type="id_String" value="d1uersr7oml4g9"/>
+    <contextParameter xmi:id="_7VUthxGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_AdditionalParams" prompt="ND_Heroku_Postgresql_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_7VUtiBGPEeu93t8NuXXf3g" confirmationNeeded="false" name="qa">
+    <contextParameter xmi:id="_7VUtiRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Login" prompt="ND_Heroku_Postgresql_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
+    <contextParameter xmi:id="_7VUtihGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Password" prompt="ND_Heroku_Postgresql_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:FLMFq6HEFw0P7l6O3wnHMK+TAzVmUyC/3RD/0UYlRieUSBOWYqbegbMUYsU5qy4xCVqPjVTtGPXI0tYrpTT4+lLM3JxUFN5a2ITyVqw0VE0Drgc7fyz1q1kzRoLG"/>
+    <contextParameter xmi:id="_7VUtixGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Server" prompt="ND_Heroku_Postgresql_Server?" promptNeeded="false" type="id_String" value="ec2-3-218-86-24.compute-1.amazonaws.com"/>
+    <contextParameter xmi:id="_7VUtjBGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Port" prompt="ND_Heroku_Postgresql_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_7VUtjRGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Schema" prompt="ND_Heroku_Postgresql_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_7VUtjhGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_Database" prompt="ND_Heroku_Postgresql_Database?" promptNeeded="false" type="id_String" value="d1uersr7oml4g9"/>
+    <contextParameter xmi:id="_7VUtjxGPEeu93t8NuXXf3g" comment="" name="ND_Heroku_Postgresql_AdditionalParams" prompt="ND_Heroku_Postgresql_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
