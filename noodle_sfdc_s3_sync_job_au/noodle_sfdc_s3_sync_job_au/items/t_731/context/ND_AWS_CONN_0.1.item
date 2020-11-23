@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_vro1kBfGEeu0MriGnAnjIQ" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_vro1kRfGEeu0MriGnAnjIQ" comment="" name="nd_aws_access_key" prompt="nd_aws_access_key?" promptNeeded="false" type="id_String" value="AKIAXNLEDOA6BJKGQFYS"/>
+    <contextParameter xmi:id="_vro1khfGEeu0MriGnAnjIQ" comment="" name="nd_aws_secret_key" prompt="nd_aws_secret_key?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:ukEYPccVcSSqHBSfliTuBgwOH8UwqmG24vtaZaJB8TId33iKhRq5pynMYQvDbPBh2elUm9OUvaRtdWKAQlifv1ygNHg="/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_7VOm2RGPEeu93t8NuXXf3g" confirmationNeeded="false" name="qa">
+    <contextParameter xmi:id="_7VOm2hGPEeu93t8NuXXf3g" comment="" name="nd_aws_access_key" prompt="nd_aws_access_key?" promptNeeded="false" type="id_String" value="AKIAX7XXPH66U7KEO3YD"/>
+    <contextParameter xmi:id="_7VOm2xGPEeu93t8NuXXf3g" comment="" name="nd_aws_secret_key" prompt="nd_aws_secret_key?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:3xRYDwzyNeX0ZWtzC9feyf5cBeW/jyL+R7LSMS5zgc70vlcEecyPi9rd0wW00K9YnVluBfs2CiDx6wnZoGykeGDpG5Q="/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_7VOm0BGPEeu93t8NuXXf3g" confirmationNeeded="false" name="staging">
+    <contextParameter xmi:id="_7VOm0RGPEeu93t8NuXXf3g" comment="" name="nd_aws_access_key" prompt="nd_aws_access_key?" promptNeeded="false" type="id_String" value="AKIAX7XXPH66U7KEO3YD"/>
+    <contextParameter xmi:id="_7VOm0hGPEeu93t8NuXXf3g" comment="" name="nd_aws_secret_key" prompt="nd_aws_secret_key?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:XpbVDBIpuj1z/8AQBu4KehlEmG0I/YC8RjmoEu7MduvrFnbYjbVS1l8AajFizArl9HIxN+SHJYte4mkuUoNx2bIlEtI="/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_7VOm1hGPEeu93t8NuXXf3g" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_7VOm1xGPEeu93t8NuXXf3g" comment="" name="nd_aws_access_key" prompt="nd_aws_access_key?" promptNeeded="false" type="id_String" value="AKIAX7XXPH66U7KEO3YD"/>
+    <contextParameter xmi:id="_7VOm2BGPEeu93t8NuXXf3g" comment="" name="nd_aws_secret_key" prompt="nd_aws_secret_key?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:FVdOMEpodaIhW7Km8cC/v+ATHE3fHY0SAoZEmeyxH/2bM3WFE7c1Vd5Ixj1qVuZhZXTZJVb1SnULriM6rhVMKDxFt6E="/>
+  </talendfile:ContextType>
+</xmi:XMI>
