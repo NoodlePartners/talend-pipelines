@@ -14,4 +14,4 @@ A collection of all Noodle pipelines that run on Talend.
     - In all `ND_PostgreSQL_POND` components, change 'Action on table' to `Clear table`
 4. Build job and export
 5. Create `.tar.gz` of all jobs
-6. Push `.tr.gz` to AWS S3
+6. Push `.tar.gz` to AWS S3
