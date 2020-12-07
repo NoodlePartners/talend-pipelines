@@ -7,7 +7,7 @@ A collection of all Noodle pipelines that run on Talend.
 
 1. Create job in Talend
 2. Run job once on each env
-    - In `tPreJob_1` component, uncheck 'Inherit credentials from AWS role' and supply your own `Access Key` and `Sercret Key`
+    - In PreJjob pipeline, in the `AWS S3 Connection` component, uncheck 'Inherit credentials from AWS role' and supply your own `Access Key` and `Sercret Key`
     - In all `ND_PostgreSQL_POND` components, change 'Action on table' to `Create table`
 3. Revert the changes made in step two
     - In `tPreJob_1` component, check 'Inherit credentials from AWS role'
