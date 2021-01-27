@@ -6,7 +6,7 @@
     <contextParameter xmi:id="_sEKDcxfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_sEKDdBfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
     <contextParameter xmi:id="_sEKDdRfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter xmi:id="_sEKDdhfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:uanBqJtEeqSubLuILqUPMT5H6Go0dK3bWHZ/eYkeSk1FgDg1"/>
+    <contextParameter xmi:id="_sEKDdhfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter xmi:id="_sEKDdxfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_7Va0GBGPEeu93t8NuXXf3g" confirmationNeeded="false" name="prod">
@@ -15,7 +15,7 @@
     <contextParameter xmi:id="_7Va0GxGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
     <contextParameter xmi:id="_7Va0HBGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="talend"/>
     <contextParameter xmi:id="_7Va0HRGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter xmi:id="_7Va0HhGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:n59YeO2picB3eqdp7UWcLamgpUyE2jC3E0JPRfM7NrWzbnBw"/>
+    <contextParameter xmi:id="_7Va0HhGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter xmi:id="_7Va0HxGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_7Va0IBGPEeu93t8NuXXf3g" confirmationNeeded="false" name="qa">
@@ -24,7 +24,7 @@
     <contextParameter xmi:id="_7Va0IxGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
     <contextParameter xmi:id="_7Va0JBGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="NoodleMaster"/>
     <contextParameter xmi:id="_7Va0JRGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter xmi:id="_7Va0JhGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:zqjKKihqtLwiR+C//sBdzbUd1h1D3tkQtTVKWD8jbPWvNjPClbU="/>
+    <contextParameter xmi:id="_7Va0JhGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter xmi:id="_7Va0JxGPEeu93t8NuXXf3g" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_sEKDeBfEEeu0MriGnAnjIQ" confirmationNeeded="false" name="staging">
@@ -33,7 +33,7 @@
     <contextParameter xmi:id="_sEKDexfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
     <contextParameter xmi:id="_sEKDfBfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="talend"/>
     <contextParameter xmi:id="_sEKDfRfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter xmi:id="_sEKDfhfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value="enc:system.encryption.key.v1:YpVJz09H3zUMplsK9T5TVItKDrrgE0DILtTYMeNtLOQzSoB8"/>
+    <contextParameter xmi:id="_sEKDfhfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
     <contextParameter xmi:id="_sEKDfxfEEeu0MriGnAnjIQ" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>
