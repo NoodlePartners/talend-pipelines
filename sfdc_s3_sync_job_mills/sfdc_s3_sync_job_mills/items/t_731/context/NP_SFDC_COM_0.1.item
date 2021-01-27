@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_6LZdgFq4EeutE_r091hW3w" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_6Md0gFq4EeutE_r091hW3w" comment="" name="sfdc_audience_url" prompt="sfdc_audience_url?" promptNeeded="false" type="id_String" value="&quot;https://login.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_6Md0gVq4EeutE_r091hW3w" comment="" name="sfdc_keystore_path" prompt="sfdc_keystore_path?" promptNeeded="false" type="id_String" value="&quot;/usr/local/airflow/talend/00D6g000001YXqg.jks.txt&quot;"/>
+    <contextParameter xmi:id="_6Md0glq4EeutE_r091hW3w" comment="" name="sfdc_certificate_alias" prompt="sfdc_certificate_alias?" promptNeeded="false" type="id_String" value="&quot;Talend&quot;"/>
+    <contextParameter xmi:id="_HdPuoGAKEeupwejMc7PDnw" comment="" name="sfdc_keystore_password" prompt="sfdc_keystore_password?" promptNeeded="false" type="id_Password" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_6LZdgVq4EeutE_r091hW3w" confirmationNeeded="false" name="qa">
+    <contextParameter xmi:id="_6Md0hFq4EeutE_r091hW3w" comment="" name="sfdc_audience_url" prompt="sfdc_audience_url?" promptNeeded="false" type="id_String" value="&quot;https://login.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_6Md0hVq4EeutE_r091hW3w" comment="" name="sfdc_keystore_path" prompt="sfdc_keystore_path?" promptNeeded="false" type="id_String" value="&quot;/usr/local/airflow/talend/00D6g000001YXqg.jks.txt&quot;"/>
+    <contextParameter xmi:id="_6Md0hlq4EeutE_r091hW3w" comment="" name="sfdc_certificate_alias" prompt="sfdc_certificate_alias?" promptNeeded="false" type="id_String" value="&quot;Talend&quot;"/>
+    <contextParameter xmi:id="_HdPuoWAKEeupwejMc7PDnw" comment="" name="sfdc_keystore_password" prompt="sfdc_keystore_password?" promptNeeded="false" type="id_Password" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_6LZdglq4EeutE_r091hW3w" confirmationNeeded="false" name="staging">
+    <contextParameter xmi:id="_6Md0iFq4EeutE_r091hW3w" comment="" name="sfdc_audience_url" prompt="sfdc_audience_url?" promptNeeded="false" type="id_String" value="&quot;https://login.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_6Md0iVq4EeutE_r091hW3w" comment="" name="sfdc_keystore_path" prompt="sfdc_keystore_path?" promptNeeded="false" type="id_String" value="&quot;/usr/local/airflow/talend/00D6g000001YXqg.jks.txt&quot;"/>
+    <contextParameter xmi:id="_6Md0ilq4EeutE_r091hW3w" comment="" name="sfdc_certificate_alias" prompt="sfdc_certificate_alias?" promptNeeded="false" type="id_String" value="&quot;Talend&quot;"/>
+    <contextParameter xmi:id="_HdPuomAKEeupwejMc7PDnw" comment="" name="sfdc_keystore_password" prompt="sfdc_keystore_password?" promptNeeded="false" type="id_Password" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_6LZdg1q4EeutE_r091hW3w" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_6Md0jFq4EeutE_r091hW3w" comment="" name="sfdc_audience_url" prompt="sfdc_audience_url?" promptNeeded="false" type="id_String" value="&quot;https://login.salesforce.com&quot;"/>
+    <contextParameter xmi:id="_6Md0jVq4EeutE_r091hW3w" comment="" name="sfdc_keystore_path" prompt="sfdc_keystore_path?" promptNeeded="false" type="id_String" value="&quot;/usr/local/airflow/talend/00D6g000001YXqg.jks.txt&quot;"/>
+    <contextParameter xmi:id="_6Md0jlq4EeutE_r091hW3w" comment="" name="sfdc_certificate_alias" prompt="sfdc_certificate_alias?" promptNeeded="false" type="id_String" value="&quot;Talend&quot;"/>
+    <contextParameter xmi:id="_HdPuo2AKEeupwejMc7PDnw" comment="" name="sfdc_keystore_password" prompt="sfdc_keystore_password?" promptNeeded="false" type="id_Password" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
