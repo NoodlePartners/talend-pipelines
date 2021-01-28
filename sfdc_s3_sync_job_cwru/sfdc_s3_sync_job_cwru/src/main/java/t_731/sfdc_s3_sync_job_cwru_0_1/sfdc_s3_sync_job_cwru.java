@@ -29898,30 +29898,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					return this.rcsfl__key__c;
 				}
 				
-			    public String Dialpad__CallId__c;
-
-				public String getDialpad__CallId__c () {
-					return this.Dialpad__CallId__c;
-				}
-				
-			    public String Dialpad__PhoneNumber__c;
-
-				public String getDialpad__PhoneNumber__c () {
-					return this.Dialpad__PhoneNumber__c;
-				}
-				
-			    public String Dialpad__TimeInitiated__c;
-
-				public String getDialpad__TimeInitiated__c () {
-					return this.Dialpad__TimeInitiated__c;
-				}
-				
-			    public java.util.Date Dialpad__Timestamp__c;
-
-				public java.util.Date getDialpad__Timestamp__c () {
-					return this.Dialpad__Timestamp__c;
-				}
-				
 			    public boolean NoodleCRM__Cat_Academic_Curriculum__c;
 
 				public boolean getNoodleCRM__Cat_Academic_Curriculum__c () {
@@ -30302,14 +30278,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 					
 					this.rcsfl__key__c = readString(dis);
 					
-					this.Dialpad__CallId__c = readString(dis);
-					
-					this.Dialpad__PhoneNumber__c = readString(dis);
-					
-					this.Dialpad__TimeInitiated__c = readString(dis);
-					
-					this.Dialpad__Timestamp__c = readDate(dis);
-					
 			        this.NoodleCRM__Cat_Academic_Curriculum__c = dis.readBoolean();
 					
 			        this.NoodleCRM__Cat_Academic_Integrity_Conduct__c = dis.readBoolean();
@@ -30584,22 +30552,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 				
 						writeString(this.rcsfl__key__c,dos);
 					
-					// String
-				
-						writeString(this.Dialpad__CallId__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__PhoneNumber__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__TimeInitiated__c,dos);
-					
-					// java.util.Date
-				
-						writeDate(this.Dialpad__Timestamp__c,dos);
-					
 					// boolean
 				
 		            	dos.writeBoolean(this.NoodleCRM__Cat_Academic_Curriculum__c);
@@ -30796,10 +30748,6 @@ public static class row11Struct implements routines.system.IPersistableRow<row11
 		sb.append(",rcsfl__Recording_Information__c="+rcsfl__Recording_Information__c);
 		sb.append(",rcsfl__external_whoid__c="+rcsfl__external_whoid__c);
 		sb.append(",rcsfl__key__c="+rcsfl__key__c);
-		sb.append(",Dialpad__CallId__c="+Dialpad__CallId__c);
-		sb.append(",Dialpad__PhoneNumber__c="+Dialpad__PhoneNumber__c);
-		sb.append(",Dialpad__TimeInitiated__c="+Dialpad__TimeInitiated__c);
-		sb.append(",Dialpad__Timestamp__c="+String.valueOf(Dialpad__Timestamp__c));
 		sb.append(",NoodleCRM__Cat_Academic_Curriculum__c="+String.valueOf(NoodleCRM__Cat_Academic_Curriculum__c));
 		sb.append(",NoodleCRM__Cat_Academic_Integrity_Conduct__c="+String.valueOf(NoodleCRM__Cat_Academic_Integrity_Conduct__c));
 		sb.append(",NoodleCRM__Cat_At_Risk_Students__c="+String.valueOf(NoodleCRM__Cat_At_Risk_Students__c));
@@ -31436,14 +31384,6 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
      		                    						
      		                    						a("\"name\":\"rcsfl__key__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"rcsfl__key__c\",\"talend.field.dbColumnName\":\"rcsfl__key__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"rcsfl__key__c\",\"di.column.relatedEntity\":\"\"},{",s);
      		                    						
-     		                    						a("\"name\":\"Dialpad__CallId__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__CallId__c\",\"talend.field.dbColumnName\":\"Dialpad__CallId__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"32\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__CallId__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__PhoneNumber__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__PhoneNumber__c\",\"talend.field.dbColumnName\":\"Dialpad__PhoneNumber__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"50\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__PhoneNumber__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__TimeInitiated__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__TimeInitiated__c\",\"talend.field.dbColumnName\":\"Dialpad__TimeInitiated__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"50\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__TimeInitiated__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__Timestamp__c\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__Timestamp__c\",\"talend.field.dbColumnName\":\"Dialpad__Timestamp__c\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__Timestamp__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
      		                    						a("\"name\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"di.column.relatedEntity\":\"\"},{",s);
      		                    						
      		                    						a("\"name\":\"NoodleCRM__Cat_Academic_Integrity_Conduct__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Cat_Academic_Integrity_Conduct__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Cat_Academic_Integrity_Conduct__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Cat_Academic_Integrity_Conduct__c\",\"di.column.relatedEntity\":\"\"},{",s);
@@ -31770,205 +31710,197 @@ if(componentRuntime_tSalesforceInput_11 instanceof org.talend.components.api.com
                 Object columnValue_46_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(46);
                         row11.rcsfl__key__c = (String) (columnValue_46_tSalesforceInput_11);
                 Object columnValue_47_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(47);
-                        row11.Dialpad__CallId__c = (String) (columnValue_47_tSalesforceInput_11);
-                Object columnValue_48_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(48);
-                        row11.Dialpad__PhoneNumber__c = (String) (columnValue_48_tSalesforceInput_11);
-                Object columnValue_49_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(49);
-                        row11.Dialpad__TimeInitiated__c = (String) (columnValue_49_tSalesforceInput_11);
-                Object columnValue_50_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(50);
-                        row11.Dialpad__Timestamp__c = (java.util.Date) (columnValue_50_tSalesforceInput_11);
-                Object columnValue_51_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(51);
-                    if (columnValue_51_tSalesforceInput_11 == null) {
+                    if (columnValue_47_tSalesforceInput_11 == null) {
                         row11.NoodleCRM__Cat_Academic_Curriculum__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Academic_Curriculum__c = (boolean) (columnValue_51_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Academic_Curriculum__c = (boolean) (columnValue_47_tSalesforceInput_11);
+                    }
+                Object columnValue_48_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(48);
+                    if (columnValue_48_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_Academic_Integrity_Conduct__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_Academic_Integrity_Conduct__c = (boolean) (columnValue_48_tSalesforceInput_11);
+                    }
+                Object columnValue_49_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(49);
+                    if (columnValue_49_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_At_Risk_Students__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_At_Risk_Students__c = (boolean) (columnValue_49_tSalesforceInput_11);
+                    }
+                Object columnValue_50_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(50);
+                    if (columnValue_50_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_Automated_success_alert__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_Automated_success_alert__c = (boolean) (columnValue_50_tSalesforceInput_11);
+                    }
+                Object columnValue_51_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(51);
+                    if (columnValue_51_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_Behavioral_issues_conduct__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_Behavioral_issues_conduct__c = (boolean) (columnValue_51_tSalesforceInput_11);
                     }
                 Object columnValue_52_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(52);
                     if (columnValue_52_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Academic_Integrity_Conduct__c = false;
+                        row11.NoodleCRM__Cat_Career_support__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Academic_Integrity_Conduct__c = (boolean) (columnValue_52_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Career_support__c = (boolean) (columnValue_52_tSalesforceInput_11);
                     }
                 Object columnValue_53_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(53);
                     if (columnValue_53_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_At_Risk_Students__c = false;
+                        row11.NoodleCRM__Cat_Concern_Issue__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_At_Risk_Students__c = (boolean) (columnValue_53_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Concern_Issue__c = (boolean) (columnValue_53_tSalesforceInput_11);
                     }
                 Object columnValue_54_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(54);
                     if (columnValue_54_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Automated_success_alert__c = false;
+                        row11.NoodleCRM__Cat_Course_Related__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Automated_success_alert__c = (boolean) (columnValue_54_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Course_Related__c = (boolean) (columnValue_54_tSalesforceInput_11);
                     }
                 Object columnValue_55_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(55);
                     if (columnValue_55_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Behavioral_issues_conduct__c = false;
+                        row11.NoodleCRM__Cat_Disability_support__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Behavioral_issues_conduct__c = (boolean) (columnValue_55_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Disability_support__c = (boolean) (columnValue_55_tSalesforceInput_11);
                     }
                 Object columnValue_56_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(56);
                     if (columnValue_56_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Career_support__c = false;
+                        row11.NoodleCRM__Cat_Encouragement__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Career_support__c = (boolean) (columnValue_56_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Encouragement__c = (boolean) (columnValue_56_tSalesforceInput_11);
                     }
                 Object columnValue_57_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(57);
                     if (columnValue_57_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Concern_Issue__c = false;
+                        row11.NoodleCRM__Cat_Faculty_Related__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Concern_Issue__c = (boolean) (columnValue_57_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Faculty_Related__c = (boolean) (columnValue_57_tSalesforceInput_11);
                     }
                 Object columnValue_58_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(58);
                     if (columnValue_58_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Course_Related__c = false;
+                        row11.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Course_Related__c = (boolean) (columnValue_58_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = (boolean) (columnValue_58_tSalesforceInput_11);
                     }
                 Object columnValue_59_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(59);
                     if (columnValue_59_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Disability_support__c = false;
+                        row11.NoodleCRM__Cat_Financial__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Disability_support__c = (boolean) (columnValue_59_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Financial__c = (boolean) (columnValue_59_tSalesforceInput_11);
                     }
                 Object columnValue_60_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(60);
                     if (columnValue_60_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Encouragement__c = false;
+                        row11.NoodleCRM__Cat_Hold_on_Account__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Encouragement__c = (boolean) (columnValue_60_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Hold_on_Account__c = (boolean) (columnValue_60_tSalesforceInput_11);
                     }
                 Object columnValue_61_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(61);
                     if (columnValue_61_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Faculty_Related__c = false;
+                        row11.NoodleCRM__Cat_Orientation__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Faculty_Related__c = (boolean) (columnValue_61_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Orientation__c = (boolean) (columnValue_61_tSalesforceInput_11);
                     }
                 Object columnValue_62_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(62);
                     if (columnValue_62_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = false;
+                        row11.NoodleCRM__Cat_Proactive_Outreach__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = (boolean) (columnValue_62_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Proactive_Outreach__c = (boolean) (columnValue_62_tSalesforceInput_11);
                     }
                 Object columnValue_63_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(63);
                     if (columnValue_63_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Financial__c = false;
+                        row11.NoodleCRM__Cat_Registration__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Financial__c = (boolean) (columnValue_63_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Registration__c = (boolean) (columnValue_63_tSalesforceInput_11);
                     }
                 Object columnValue_64_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(64);
                     if (columnValue_64_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Hold_on_Account__c = false;
+                        row11.NoodleCRM__Cat_Student_Wellness__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Hold_on_Account__c = (boolean) (columnValue_64_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Student_Wellness__c = (boolean) (columnValue_64_tSalesforceInput_11);
                     }
                 Object columnValue_65_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(65);
                     if (columnValue_65_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Orientation__c = false;
+                        row11.NoodleCRM__Cat_Technology_Related__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Orientation__c = (boolean) (columnValue_65_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Technology_Related__c = (boolean) (columnValue_65_tSalesforceInput_11);
                     }
                 Object columnValue_66_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(66);
                     if (columnValue_66_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Proactive_Outreach__c = false;
+                        row11.NoodleCRM__Cat_Time_management__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Proactive_Outreach__c = (boolean) (columnValue_66_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Time_management__c = (boolean) (columnValue_66_tSalesforceInput_11);
                     }
                 Object columnValue_67_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(67);
                     if (columnValue_67_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Registration__c = false;
+                        row11.NoodleCRM__Cat_Tutoring__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Registration__c = (boolean) (columnValue_67_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Tutoring__c = (boolean) (columnValue_67_tSalesforceInput_11);
                     }
                 Object columnValue_68_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(68);
                     if (columnValue_68_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Student_Wellness__c = false;
+                        row11.NoodleCRM__Cat_Urgent__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Student_Wellness__c = (boolean) (columnValue_68_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Urgent__c = (boolean) (columnValue_68_tSalesforceInput_11);
                     }
                 Object columnValue_69_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(69);
                     if (columnValue_69_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Technology_Related__c = false;
+                        row11.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Technology_Related__c = (boolean) (columnValue_69_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = (boolean) (columnValue_69_tSalesforceInput_11);
                     }
                 Object columnValue_70_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(70);
-                    if (columnValue_70_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Time_management__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Time_management__c = (boolean) (columnValue_70_tSalesforceInput_11);
-                    }
+                        row11.NoodleCRM__Category__c = (String) (columnValue_70_tSalesforceInput_11);
                 Object columnValue_71_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(71);
-                    if (columnValue_71_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Tutoring__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Tutoring__c = (boolean) (columnValue_71_tSalesforceInput_11);
-                    }
+                        row11.NoodleCRM__Completed_Date_Time__c = (java.util.Date) (columnValue_71_tSalesforceInput_11);
                 Object columnValue_72_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(72);
                     if (columnValue_72_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Urgent__c = false;
+                        row11.NoodleCRM__Cat_Academic_Advising__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Urgent__c = (boolean) (columnValue_72_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Academic_Advising__c = (boolean) (columnValue_72_tSalesforceInput_11);
                     }
                 Object columnValue_73_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(73);
                     if (columnValue_73_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = false;
+                        row11.NoodleCRM__Cat_Deposit__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = (boolean) (columnValue_73_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Deposit__c = (boolean) (columnValue_73_tSalesforceInput_11);
                     }
                 Object columnValue_74_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(74);
-                        row11.NoodleCRM__Category__c = (String) (columnValue_74_tSalesforceInput_11);
+                    if (columnValue_74_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_Immersion__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_Immersion__c = (boolean) (columnValue_74_tSalesforceInput_11);
+                    }
                 Object columnValue_75_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(75);
-                        row11.NoodleCRM__Completed_Date_Time__c = (java.util.Date) (columnValue_75_tSalesforceInput_11);
+                    if (columnValue_75_tSalesforceInput_11 == null) {
+                        row11.NoodleCRM__Cat_Library_related__c = false;
+                    } else {
+                            row11.NoodleCRM__Cat_Library_related__c = (boolean) (columnValue_75_tSalesforceInput_11);
+                    }
                 Object columnValue_76_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(76);
                     if (columnValue_76_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Academic_Advising__c = false;
+                        row11.NoodleCRM__Cat_Student_Complaint_Issue__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Academic_Advising__c = (boolean) (columnValue_76_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Student_Complaint_Issue__c = (boolean) (columnValue_76_tSalesforceInput_11);
                     }
                 Object columnValue_77_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(77);
                     if (columnValue_77_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Deposit__c = false;
+                        row11.NoodleCRM__Cat_Student_Data_related__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Deposit__c = (boolean) (columnValue_77_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Student_Data_related__c = (boolean) (columnValue_77_tSalesforceInput_11);
                     }
                 Object columnValue_78_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(78);
                     if (columnValue_78_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Immersion__c = false;
+                        row11.NoodleCRM__Cat_Student_Id_Card__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Immersion__c = (boolean) (columnValue_78_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Student_Id_Card__c = (boolean) (columnValue_78_tSalesforceInput_11);
                     }
                 Object columnValue_79_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(79);
                     if (columnValue_79_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Library_related__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Library_related__c = (boolean) (columnValue_79_tSalesforceInput_11);
-                    }
-                Object columnValue_80_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(80);
-                    if (columnValue_80_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Student_Complaint_Issue__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Student_Complaint_Issue__c = (boolean) (columnValue_80_tSalesforceInput_11);
-                    }
-                Object columnValue_81_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(81);
-                    if (columnValue_81_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Student_Data_related__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Student_Data_related__c = (boolean) (columnValue_81_tSalesforceInput_11);
-                    }
-                Object columnValue_82_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(82);
-                    if (columnValue_82_tSalesforceInput_11 == null) {
-                        row11.NoodleCRM__Cat_Student_Id_Card__c = false;
-                    } else {
-                            row11.NoodleCRM__Cat_Student_Id_Card__c = (boolean) (columnValue_82_tSalesforceInput_11);
-                    }
-                Object columnValue_83_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(83);
-                    if (columnValue_83_tSalesforceInput_11 == null) {
                         row11.NoodleCRM__Cat_Transcript__c = false;
                     } else {
-                            row11.NoodleCRM__Cat_Transcript__c = (boolean) (columnValue_83_tSalesforceInput_11);
+                            row11.NoodleCRM__Cat_Transcript__c = (boolean) (columnValue_79_tSalesforceInput_11);
                     }
-                Object columnValue_84_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(84);
-                        row11.NoodleCRM__Result__c = (String) (columnValue_84_tSalesforceInput_11);
+                Object columnValue_80_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11.get(80);
+                        row11.NoodleCRM__Result__c = (String) (columnValue_80_tSalesforceInput_11);
         } catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_11) {
         	java.util.Map<String,Object> info_tSalesforceInput_11 = e_tSalesforceInput_11.getRejectInfo();
             	//TODO use a method instead of getting method by the special key "error/errorMessage"
@@ -32130,10 +32062,10 @@ out10_tmp.rcsfl__Recording_Information__c = row11.rcsfl__Recording_Information__
 out10_tmp.rcsfl__external_whoid__c = row11.rcsfl__external_whoid__c ;
 out10_tmp.rcsfl__key__c = row11.rcsfl__key__c ;
 out10_tmp.CreatedDate__c = null;
-out10_tmp.Dialpad__CallId__c = row11.Dialpad__CallId__c ;
-out10_tmp.Dialpad__PhoneNumber__c = row11.Dialpad__PhoneNumber__c ;
-out10_tmp.Dialpad__TimeInitiated__c = row11.Dialpad__TimeInitiated__c ;
-out10_tmp.Dialpad__Timestamp__c = row11.Dialpad__Timestamp__c ;
+out10_tmp.Dialpad__CallId__c = null;
+out10_tmp.Dialpad__PhoneNumber__c = null;
+out10_tmp.Dialpad__TimeInitiated__c = null;
+out10_tmp.Dialpad__Timestamp__c = null;
 out10_tmp.NoodleCRM__Cat_Academic_Curriculum__c = row11.NoodleCRM__Cat_Academic_Curriculum__c ;
 out10_tmp.NoodleCRM__Cat_Academic_Integrity_Conduct__c = row11.NoodleCRM__Cat_Academic_Integrity_Conduct__c ;
 out10_tmp.NoodleCRM__Cat_At_Risk_Students__c = row11.NoodleCRM__Cat_At_Risk_Students__c ;
@@ -55509,54 +55441,6 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					return this.rcsfl__key__c;
 				}
 				
-			    public String Dialpad__CallId__c;
-
-				public String getDialpad__CallId__c () {
-					return this.Dialpad__CallId__c;
-				}
-				
-			    public String Dialpad__Dialpad_Agents__c;
-
-				public String getDialpad__Dialpad_Agents__c () {
-					return this.Dialpad__Dialpad_Agents__c;
-				}
-				
-			    public String Dialpad__Dialpad_Call_Center__c;
-
-				public String getDialpad__Dialpad_Call_Center__c () {
-					return this.Dialpad__Dialpad_Call_Center__c;
-				}
-				
-			    public String Dialpad__Dialpad_List__c;
-
-				public String getDialpad__Dialpad_List__c () {
-					return this.Dialpad__Dialpad_List__c;
-				}
-				
-			    public boolean Dialpad__IsDialpadCallLog__c;
-
-				public boolean getDialpad__IsDialpadCallLog__c () {
-					return this.Dialpad__IsDialpadCallLog__c;
-				}
-				
-			    public String Dialpad__PhoneNumber__c;
-
-				public String getDialpad__PhoneNumber__c () {
-					return this.Dialpad__PhoneNumber__c;
-				}
-				
-			    public String Dialpad__TimeInitiated__c;
-
-				public String getDialpad__TimeInitiated__c () {
-					return this.Dialpad__TimeInitiated__c;
-				}
-				
-			    public java.util.Date Dialpad__Timestamp__c;
-
-				public java.util.Date getDialpad__Timestamp__c () {
-					return this.Dialpad__Timestamp__c;
-				}
-				
 			    public boolean NoodleCRM__Cat_Academic_Advising__c;
 
 				public boolean getNoodleCRM__Cat_Academic_Advising__c () {
@@ -55961,22 +55845,6 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 					
 					this.rcsfl__key__c = readString(dis);
 					
-					this.Dialpad__CallId__c = readString(dis);
-					
-					this.Dialpad__Dialpad_Agents__c = readString(dis);
-					
-					this.Dialpad__Dialpad_Call_Center__c = readString(dis);
-					
-					this.Dialpad__Dialpad_List__c = readString(dis);
-					
-			        this.Dialpad__IsDialpadCallLog__c = dis.readBoolean();
-					
-					this.Dialpad__PhoneNumber__c = readString(dis);
-					
-					this.Dialpad__TimeInitiated__c = readString(dis);
-					
-					this.Dialpad__Timestamp__c = readDate(dis);
-					
 			        this.NoodleCRM__Cat_Academic_Advising__c = dis.readBoolean();
 					
 			        this.NoodleCRM__Cat_Academic_Curriculum__c = dis.readBoolean();
@@ -56289,38 +56157,6 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 				
 						writeString(this.rcsfl__key__c,dos);
 					
-					// String
-				
-						writeString(this.Dialpad__CallId__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__Dialpad_Agents__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__Dialpad_Call_Center__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__Dialpad_List__c,dos);
-					
-					// boolean
-				
-		            	dos.writeBoolean(this.Dialpad__IsDialpadCallLog__c);
-					
-					// String
-				
-						writeString(this.Dialpad__PhoneNumber__c,dos);
-					
-					// String
-				
-						writeString(this.Dialpad__TimeInitiated__c,dos);
-					
-					// java.util.Date
-				
-						writeDate(this.Dialpad__Timestamp__c,dos);
-					
 					// boolean
 				
 		            	dos.writeBoolean(this.NoodleCRM__Cat_Academic_Advising__c);
@@ -56530,14 +56366,6 @@ public static class row10Struct implements routines.system.IPersistableRow<row10
 		sb.append(",rcsfl__external_whoid__c="+rcsfl__external_whoid__c);
 		sb.append(",rcsfl__hvs_disposition__c="+rcsfl__hvs_disposition__c);
 		sb.append(",rcsfl__key__c="+rcsfl__key__c);
-		sb.append(",Dialpad__CallId__c="+Dialpad__CallId__c);
-		sb.append(",Dialpad__Dialpad_Agents__c="+Dialpad__Dialpad_Agents__c);
-		sb.append(",Dialpad__Dialpad_Call_Center__c="+Dialpad__Dialpad_Call_Center__c);
-		sb.append(",Dialpad__Dialpad_List__c="+Dialpad__Dialpad_List__c);
-		sb.append(",Dialpad__IsDialpadCallLog__c="+String.valueOf(Dialpad__IsDialpadCallLog__c));
-		sb.append(",Dialpad__PhoneNumber__c="+Dialpad__PhoneNumber__c);
-		sb.append(",Dialpad__TimeInitiated__c="+Dialpad__TimeInitiated__c);
-		sb.append(",Dialpad__Timestamp__c="+String.valueOf(Dialpad__Timestamp__c));
 		sb.append(",NoodleCRM__Cat_Academic_Advising__c="+String.valueOf(NoodleCRM__Cat_Academic_Advising__c));
 		sb.append(",NoodleCRM__Cat_Academic_Curriculum__c="+String.valueOf(NoodleCRM__Cat_Academic_Curriculum__c));
 		sb.append(",NoodleCRM__Cat_Academic_Integrity_Conduct__c="+String.valueOf(NoodleCRM__Cat_Academic_Integrity_Conduct__c));
@@ -57411,22 +57239,6 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
      		                    						
      		                    						a("\"name\":\"rcsfl__key__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"rcsfl__key__c\",\"talend.field.dbColumnName\":\"rcsfl__key__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"rcsfl__key__c\",\"di.column.relatedEntity\":\"\"},{",s);
      		                    						
-     		                    						a("\"name\":\"Dialpad__CallId__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__CallId__c\",\"talend.field.dbColumnName\":\"Dialpad__CallId__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"32\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__CallId__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__Dialpad_Agents__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__Dialpad_Agents__c\",\"talend.field.dbColumnName\":\"Dialpad__Dialpad_Agents__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__Dialpad_Agents__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__Dialpad_Call_Center__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__Dialpad_Call_Center__c\",\"talend.field.dbColumnName\":\"Dialpad__Dialpad_Call_Center__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__Dialpad_Call_Center__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__Dialpad_List__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__Dialpad_List__c\",\"talend.field.dbColumnName\":\"Dialpad__Dialpad_List__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__Dialpad_List__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__IsDialpadCallLog__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__IsDialpadCallLog__c\",\"talend.field.dbColumnName\":\"Dialpad__IsDialpadCallLog__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__IsDialpadCallLog__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__PhoneNumber__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__PhoneNumber__c\",\"talend.field.dbColumnName\":\"Dialpad__PhoneNumber__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"50\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__PhoneNumber__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__TimeInitiated__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__TimeInitiated__c\",\"talend.field.dbColumnName\":\"Dialpad__TimeInitiated__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"50\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__TimeInitiated__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
-     		                    						a("\"name\":\"Dialpad__Timestamp__c\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"Dialpad__Timestamp__c\",\"talend.field.dbColumnName\":\"Dialpad__Timestamp__c\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Dialpad__Timestamp__c\",\"di.column.relatedEntity\":\"\"},{",s);
-     		                    						
      		                    						a("\"name\":\"NoodleCRM__Cat_Academic_Advising__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Cat_Academic_Advising__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Cat_Academic_Advising__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Cat_Academic_Advising__c\",\"di.column.relatedEntity\":\"\"},{",s);
      		                    						
      		                    						a("\"name\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Cat_Academic_Curriculum__c\",\"di.column.relatedEntity\":\"\"},{",s);
@@ -57793,219 +57605,199 @@ if(componentRuntime_tSalesforceInput_2 instanceof org.talend.components.api.comp
                 Object columnValue_55_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(55);
                         row10.rcsfl__key__c = (String) (columnValue_55_tSalesforceInput_2);
                 Object columnValue_56_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(56);
-                        row10.Dialpad__CallId__c = (String) (columnValue_56_tSalesforceInput_2);
-                Object columnValue_57_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(57);
-                        row10.Dialpad__Dialpad_Agents__c = (String) (columnValue_57_tSalesforceInput_2);
-                Object columnValue_58_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(58);
-                        row10.Dialpad__Dialpad_Call_Center__c = (String) (columnValue_58_tSalesforceInput_2);
-                Object columnValue_59_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(59);
-                        row10.Dialpad__Dialpad_List__c = (String) (columnValue_59_tSalesforceInput_2);
-                Object columnValue_60_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(60);
-                    if (columnValue_60_tSalesforceInput_2 == null) {
-                        row10.Dialpad__IsDialpadCallLog__c = false;
-                    } else {
-                            row10.Dialpad__IsDialpadCallLog__c = (boolean) (columnValue_60_tSalesforceInput_2);
-                    }
-                Object columnValue_61_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(61);
-                        row10.Dialpad__PhoneNumber__c = (String) (columnValue_61_tSalesforceInput_2);
-                Object columnValue_62_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(62);
-                        row10.Dialpad__TimeInitiated__c = (String) (columnValue_62_tSalesforceInput_2);
-                Object columnValue_63_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(63);
-                        row10.Dialpad__Timestamp__c = (java.util.Date) (columnValue_63_tSalesforceInput_2);
-                Object columnValue_64_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(64);
-                    if (columnValue_64_tSalesforceInput_2 == null) {
+                    if (columnValue_56_tSalesforceInput_2 == null) {
                         row10.NoodleCRM__Cat_Academic_Advising__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Academic_Advising__c = (boolean) (columnValue_64_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Academic_Advising__c = (boolean) (columnValue_56_tSalesforceInput_2);
+                    }
+                Object columnValue_57_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(57);
+                    if (columnValue_57_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Academic_Curriculum__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Academic_Curriculum__c = (boolean) (columnValue_57_tSalesforceInput_2);
+                    }
+                Object columnValue_58_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(58);
+                    if (columnValue_58_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Academic_Integrity_Conduct__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Academic_Integrity_Conduct__c = (boolean) (columnValue_58_tSalesforceInput_2);
+                    }
+                Object columnValue_59_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(59);
+                    if (columnValue_59_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_At_Risk_Students__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_At_Risk_Students__c = (boolean) (columnValue_59_tSalesforceInput_2);
+                    }
+                Object columnValue_60_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(60);
+                    if (columnValue_60_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Automated_success_alert__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Automated_success_alert__c = (boolean) (columnValue_60_tSalesforceInput_2);
+                    }
+                Object columnValue_61_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(61);
+                    if (columnValue_61_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Behavioral_issues_conduct__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Behavioral_issues_conduct__c = (boolean) (columnValue_61_tSalesforceInput_2);
+                    }
+                Object columnValue_62_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(62);
+                    if (columnValue_62_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Career_support__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Career_support__c = (boolean) (columnValue_62_tSalesforceInput_2);
+                    }
+                Object columnValue_63_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(63);
+                    if (columnValue_63_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Concern_Issue__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Concern_Issue__c = (boolean) (columnValue_63_tSalesforceInput_2);
+                    }
+                Object columnValue_64_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(64);
+                    if (columnValue_64_tSalesforceInput_2 == null) {
+                        row10.NoodleCRM__Cat_Course_Related__c = false;
+                    } else {
+                            row10.NoodleCRM__Cat_Course_Related__c = (boolean) (columnValue_64_tSalesforceInput_2);
                     }
                 Object columnValue_65_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(65);
                     if (columnValue_65_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Academic_Curriculum__c = false;
+                        row10.NoodleCRM__Cat_Deposit__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Academic_Curriculum__c = (boolean) (columnValue_65_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Deposit__c = (boolean) (columnValue_65_tSalesforceInput_2);
                     }
                 Object columnValue_66_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(66);
                     if (columnValue_66_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Academic_Integrity_Conduct__c = false;
+                        row10.NoodleCRM__Cat_Disability_support__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Academic_Integrity_Conduct__c = (boolean) (columnValue_66_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Disability_support__c = (boolean) (columnValue_66_tSalesforceInput_2);
                     }
                 Object columnValue_67_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(67);
                     if (columnValue_67_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_At_Risk_Students__c = false;
+                        row10.NoodleCRM__Cat_Encouragement__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_At_Risk_Students__c = (boolean) (columnValue_67_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Encouragement__c = (boolean) (columnValue_67_tSalesforceInput_2);
                     }
                 Object columnValue_68_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(68);
                     if (columnValue_68_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Automated_success_alert__c = false;
+                        row10.NoodleCRM__Cat_Faculty_Related__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Automated_success_alert__c = (boolean) (columnValue_68_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Faculty_Related__c = (boolean) (columnValue_68_tSalesforceInput_2);
                     }
                 Object columnValue_69_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(69);
                     if (columnValue_69_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Behavioral_issues_conduct__c = false;
+                        row10.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Behavioral_issues_conduct__c = (boolean) (columnValue_69_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = (boolean) (columnValue_69_tSalesforceInput_2);
                     }
                 Object columnValue_70_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(70);
                     if (columnValue_70_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Career_support__c = false;
+                        row10.NoodleCRM__Cat_Financial__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Career_support__c = (boolean) (columnValue_70_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Financial__c = (boolean) (columnValue_70_tSalesforceInput_2);
                     }
                 Object columnValue_71_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(71);
                     if (columnValue_71_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Concern_Issue__c = false;
+                        row10.NoodleCRM__Cat_Hold_on_Account__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Concern_Issue__c = (boolean) (columnValue_71_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Hold_on_Account__c = (boolean) (columnValue_71_tSalesforceInput_2);
                     }
                 Object columnValue_72_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(72);
                     if (columnValue_72_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Course_Related__c = false;
+                        row10.NoodleCRM__Cat_Immersion__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Course_Related__c = (boolean) (columnValue_72_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Immersion__c = (boolean) (columnValue_72_tSalesforceInput_2);
                     }
                 Object columnValue_73_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(73);
                     if (columnValue_73_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Deposit__c = false;
+                        row10.NoodleCRM__Cat_Library_related__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Deposit__c = (boolean) (columnValue_73_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Library_related__c = (boolean) (columnValue_73_tSalesforceInput_2);
                     }
                 Object columnValue_74_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(74);
                     if (columnValue_74_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Disability_support__c = false;
+                        row10.NoodleCRM__Cat_Orientation__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Disability_support__c = (boolean) (columnValue_74_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Orientation__c = (boolean) (columnValue_74_tSalesforceInput_2);
                     }
                 Object columnValue_75_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(75);
                     if (columnValue_75_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Encouragement__c = false;
+                        row10.NoodleCRM__Cat_Proactive_Outreach__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Encouragement__c = (boolean) (columnValue_75_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Proactive_Outreach__c = (boolean) (columnValue_75_tSalesforceInput_2);
                     }
                 Object columnValue_76_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(76);
                     if (columnValue_76_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Faculty_Related__c = false;
+                        row10.NoodleCRM__Cat_Registration__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Faculty_Related__c = (boolean) (columnValue_76_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Registration__c = (boolean) (columnValue_76_tSalesforceInput_2);
                     }
                 Object columnValue_77_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(77);
                     if (columnValue_77_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = false;
+                        row10.NoodleCRM__Cat_Student_Complaint_Issue__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Fieldwork_Practicum_placement__c = (boolean) (columnValue_77_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Student_Complaint_Issue__c = (boolean) (columnValue_77_tSalesforceInput_2);
                     }
                 Object columnValue_78_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(78);
                     if (columnValue_78_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Financial__c = false;
+                        row10.NoodleCRM__Cat_Student_Data_related__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Financial__c = (boolean) (columnValue_78_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Student_Data_related__c = (boolean) (columnValue_78_tSalesforceInput_2);
                     }
                 Object columnValue_79_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(79);
                     if (columnValue_79_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Hold_on_Account__c = false;
+                        row10.NoodleCRM__Cat_Student_Id_Card__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Hold_on_Account__c = (boolean) (columnValue_79_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Student_Id_Card__c = (boolean) (columnValue_79_tSalesforceInput_2);
                     }
                 Object columnValue_80_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(80);
                     if (columnValue_80_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Immersion__c = false;
+                        row10.NoodleCRM__Cat_Student_Wellness__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Immersion__c = (boolean) (columnValue_80_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Student_Wellness__c = (boolean) (columnValue_80_tSalesforceInput_2);
                     }
                 Object columnValue_81_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(81);
                     if (columnValue_81_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Library_related__c = false;
+                        row10.NoodleCRM__Cat_Technology_Related__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Library_related__c = (boolean) (columnValue_81_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Technology_Related__c = (boolean) (columnValue_81_tSalesforceInput_2);
                     }
                 Object columnValue_82_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(82);
                     if (columnValue_82_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Orientation__c = false;
+                        row10.NoodleCRM__Cat_Time_management__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Orientation__c = (boolean) (columnValue_82_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Time_management__c = (boolean) (columnValue_82_tSalesforceInput_2);
                     }
                 Object columnValue_83_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(83);
                     if (columnValue_83_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Proactive_Outreach__c = false;
+                        row10.NoodleCRM__Cat_Transcript__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Proactive_Outreach__c = (boolean) (columnValue_83_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Transcript__c = (boolean) (columnValue_83_tSalesforceInput_2);
                     }
                 Object columnValue_84_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(84);
                     if (columnValue_84_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Registration__c = false;
+                        row10.NoodleCRM__Cat_Tutoring__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Registration__c = (boolean) (columnValue_84_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Tutoring__c = (boolean) (columnValue_84_tSalesforceInput_2);
                     }
                 Object columnValue_85_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(85);
                     if (columnValue_85_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Student_Complaint_Issue__c = false;
+                        row10.NoodleCRM__Cat_Urgent__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Student_Complaint_Issue__c = (boolean) (columnValue_85_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Urgent__c = (boolean) (columnValue_85_tSalesforceInput_2);
                     }
                 Object columnValue_86_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(86);
                     if (columnValue_86_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Student_Data_related__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Student_Data_related__c = (boolean) (columnValue_86_tSalesforceInput_2);
-                    }
-                Object columnValue_87_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(87);
-                    if (columnValue_87_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Student_Id_Card__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Student_Id_Card__c = (boolean) (columnValue_87_tSalesforceInput_2);
-                    }
-                Object columnValue_88_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(88);
-                    if (columnValue_88_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Student_Wellness__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Student_Wellness__c = (boolean) (columnValue_88_tSalesforceInput_2);
-                    }
-                Object columnValue_89_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(89);
-                    if (columnValue_89_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Technology_Related__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Technology_Related__c = (boolean) (columnValue_89_tSalesforceInput_2);
-                    }
-                Object columnValue_90_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(90);
-                    if (columnValue_90_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Time_management__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Time_management__c = (boolean) (columnValue_90_tSalesforceInput_2);
-                    }
-                Object columnValue_91_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(91);
-                    if (columnValue_91_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Transcript__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Transcript__c = (boolean) (columnValue_91_tSalesforceInput_2);
-                    }
-                Object columnValue_92_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(92);
-                    if (columnValue_92_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Tutoring__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Tutoring__c = (boolean) (columnValue_92_tSalesforceInput_2);
-                    }
-                Object columnValue_93_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(93);
-                    if (columnValue_93_tSalesforceInput_2 == null) {
-                        row10.NoodleCRM__Cat_Urgent__c = false;
-                    } else {
-                            row10.NoodleCRM__Cat_Urgent__c = (boolean) (columnValue_93_tSalesforceInput_2);
-                    }
-                Object columnValue_94_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(94);
-                    if (columnValue_94_tSalesforceInput_2 == null) {
                         row10.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = false;
                     } else {
-                            row10.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = (boolean) (columnValue_94_tSalesforceInput_2);
+                            row10.NoodleCRM__Cat_Withdrawal_LOA_Deferral__c = (boolean) (columnValue_86_tSalesforceInput_2);
                     }
-                Object columnValue_95_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(95);
-                        row10.NoodleCRM__Category__c = (String) (columnValue_95_tSalesforceInput_2);
-                Object columnValue_96_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(96);
-                        row10.NoodleCRM__Completed_Date_Time__c = (java.util.Date) (columnValue_96_tSalesforceInput_2);
-                Object columnValue_97_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(97);
-                        row10.NoodleCRM__Contact_Type__c = (String) (columnValue_97_tSalesforceInput_2);
-                Object columnValue_98_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(98);
-                        row10.NoodleCRM__Result__c = (String) (columnValue_98_tSalesforceInput_2);
+                Object columnValue_87_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(87);
+                        row10.NoodleCRM__Category__c = (String) (columnValue_87_tSalesforceInput_2);
+                Object columnValue_88_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(88);
+                        row10.NoodleCRM__Completed_Date_Time__c = (java.util.Date) (columnValue_88_tSalesforceInput_2);
+                Object columnValue_89_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(89);
+                        row10.NoodleCRM__Contact_Type__c = (String) (columnValue_89_tSalesforceInput_2);
+                Object columnValue_90_tSalesforceInput_2 = outgoingEnforcer_tSalesforceInput_2.get(90);
+                        row10.NoodleCRM__Result__c = (String) (columnValue_90_tSalesforceInput_2);
         } catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_2) {
         	java.util.Map<String,Object> info_tSalesforceInput_2 = e_tSalesforceInput_2.getRejectInfo();
             	//TODO use a method instead of getting method by the special key "error/errorMessage"
@@ -58176,10 +57968,10 @@ out6_tmp.rcsfl__Recording_Information__c = row10.rcsfl__Recording_Information__c
 out6_tmp.rcsfl__external_whoid__c = row10.rcsfl__external_whoid__c ;
 out6_tmp.rcsfl__key__c = row10.rcsfl__key__c ;
 out6_tmp.CreatedDate__c = null;
-out6_tmp.Dialpad__CallId__c = row10.Dialpad__CallId__c ;
-out6_tmp.Dialpad__PhoneNumber__c = row10.Dialpad__PhoneNumber__c ;
-out6_tmp.Dialpad__TimeInitiated__c = row10.Dialpad__TimeInitiated__c ;
-out6_tmp.Dialpad__Timestamp__c = row10.Dialpad__Timestamp__c ;
+out6_tmp.Dialpad__CallId__c = null;
+out6_tmp.Dialpad__PhoneNumber__c = null;
+out6_tmp.Dialpad__TimeInitiated__c = null;
+out6_tmp.Dialpad__Timestamp__c = null;
 out6_tmp.NoodleCRM__Cat_Academic_Curriculum__c = row10.NoodleCRM__Cat_Academic_Curriculum__c ;
 out6_tmp.NoodleCRM__Cat_Academic_Integrity_Conduct__c = row10.NoodleCRM__Cat_Academic_Integrity_Conduct__c ;
 out6_tmp.NoodleCRM__Cat_At_Risk_Students__c = row10.NoodleCRM__Cat_At_Risk_Students__c ;
@@ -90033,6 +89825,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     3500807 characters generated by Talend Open Studio for Data Integration 
- *     on the January 28, 2021 10:49:29 AM PST
+ *     3486807 characters generated by Talend Open Studio for Data Integration 
+ *     on the January 28, 2021 11:39:13 AM PST
  ************************************************************************************************/
