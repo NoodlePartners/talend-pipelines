@@ -78382,6 +78382,12 @@ public static class out2Struct implements routines.system.IPersistableRow<out2St
 					return this.NoodleCRM__Tech_Training_Date_Time__c;
 				}
 				
+			    public String NoodleCRM__University_Person_CRM_Id__c;
+
+				public String getNoodleCRM__University_Person_CRM_Id__c () {
+					return this.NoodleCRM__University_Person_CRM_Id__c;
+				}
+				
 
 
 
@@ -78929,6 +78935,8 @@ public static class out2Struct implements routines.system.IPersistableRow<out2St
 			        this.NoodleCRM__Tech_Training_Completed__c = dis.readBoolean();
 					
 					this.NoodleCRM__Tech_Training_Date_Time__c = readDate(dis);
+					
+					this.NoodleCRM__University_Person_CRM_Id__c = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -79860,6 +79868,10 @@ public static class out2Struct implements routines.system.IPersistableRow<out2St
 				
 						writeDate(this.NoodleCRM__Tech_Training_Date_Time__c,dos);
 					
+					// String
+				
+						writeString(this.NoodleCRM__University_Person_CRM_Id__c,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -80086,6 +80098,7 @@ public static class out2Struct implements routines.system.IPersistableRow<out2St
 		sb.append(",NoodleCRM__System_Provided_Phone__c="+NoodleCRM__System_Provided_Phone__c);
 		sb.append(",NoodleCRM__Tech_Training_Completed__c="+String.valueOf(NoodleCRM__Tech_Training_Completed__c));
 		sb.append(",NoodleCRM__Tech_Training_Date_Time__c="+String.valueOf(NoodleCRM__Tech_Training_Date_Time__c));
+		sb.append(",NoodleCRM__University_Person_CRM_Id__c="+NoodleCRM__University_Person_CRM_Id__c);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -81415,6 +81428,12 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 					return this.NoodleCRM__Tech_Training_Date_Time__c;
 				}
 				
+			    public String NoodleCRM__University_Person_CRM_Id__c;
+
+				public String getNoodleCRM__University_Person_CRM_Id__c () {
+					return this.NoodleCRM__University_Person_CRM_Id__c;
+				}
+				
 
 
 
@@ -81964,6 +81983,8 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 			        this.NoodleCRM__Tech_Training_Completed__c = dis.readBoolean();
 					
 					this.NoodleCRM__Tech_Training_Date_Time__c = readDate(dis);
+					
+					this.NoodleCRM__University_Person_CRM_Id__c = readString(dis);
 					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
@@ -82899,6 +82920,10 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 				
 						writeDate(this.NoodleCRM__Tech_Training_Date_Time__c,dos);
 					
+					// String
+				
+						writeString(this.NoodleCRM__University_Person_CRM_Id__c,dos);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -83126,6 +83151,7 @@ public static class row2Struct implements routines.system.IPersistableRow<row2St
 		sb.append(",NoodleCRM__System_Provided_Phone__c="+NoodleCRM__System_Provided_Phone__c);
 		sb.append(",NoodleCRM__Tech_Training_Completed__c="+String.valueOf(NoodleCRM__Tech_Training_Completed__c));
 		sb.append(",NoodleCRM__Tech_Training_Date_Time__c="+String.valueOf(NoodleCRM__Tech_Training_Date_Time__c));
+		sb.append(",NoodleCRM__University_Person_CRM_Id__c="+NoodleCRM__University_Person_CRM_Id__c);
 	    sb.append("]");
 
 	    return sb.toString();
@@ -83438,6 +83464,7 @@ String fileName_tFileOutputDelimited_2 = "";
                                         headColutFileOutputDelimited_2[210]="NoodleCRM__System_Provided_Phone__c";
                                         headColutFileOutputDelimited_2[211]="NoodleCRM__Tech_Training_Completed__c";
                                         headColutFileOutputDelimited_2[212]="NoodleCRM__Tech_Training_Date_Time__c";
+                                        headColutFileOutputDelimited_2[213]="NoodleCRM__University_Person_CRM_Id__c";
                                 }
                                 public void putValue_0(final out2Struct out2,String[] rowtFileOutputDelimited_2){
                                     rowtFileOutputDelimited_2[0]=out2.Id == null ? null : 
@@ -83870,6 +83897,8 @@ String fileName_tFileOutputDelimited_2 = "";
                                     String.valueOf(out2.NoodleCRM__Tech_Training_Completed__c);
                                     rowtFileOutputDelimited_2[212]=out2.NoodleCRM__Tech_Training_Date_Time__c == null ? null : 
                                     FormatterUtils.format_Date(out2.NoodleCRM__Tech_Training_Date_Time__c, "yyyy-MM-dd HH:mm:ss");
+                                    rowtFileOutputDelimited_2[213]=out2.NoodleCRM__University_Person_CRM_Id__c == null ? null : 
+                                    out2.NoodleCRM__University_Person_CRM_Id__c;
                             }
                 }
                 FileOutputDelimitedUtil_tFileOutputDelimited_2 fileOutputDelimitedUtil_tFileOutputDelimited_2=new FileOutputDelimitedUtil_tFileOutputDelimited_2();
@@ -83899,7 +83928,7 @@ String fileName_tFileOutputDelimited_2 = "";
     boolean isFileGenerated_tFileOutputDelimited_2 = true;
     java.io.File filetFileOutputDelimited_2 = new java.io.File(fileName_tFileOutputDelimited_2);
     globalMap.put("tFileOutputDelimited_2_FILE_NAME",fileName_tFileOutputDelimited_2);
-                String[] headColutFileOutputDelimited_2=new String[213];
+                String[] headColutFileOutputDelimited_2=new String[214];
             class CSVBasicSet_tFileOutputDelimited_2{
                 private char field_Delim;
                 private char row_Delim;
@@ -84628,7 +84657,9 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
      		                    						
      		                    						a("\"name\":\"NoodleCRM__Tech_Training_Completed__c\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Tech_Training_Completed__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Tech_Training_Completed__c\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Tech_Training_Completed__c\",\"di.column.relatedEntity\":\"\"},{",s);
      		                    						
-     		                    						a("\"name\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"MAIN\",\"di.table.label\":\"Contact\"}",s);
+     		                    						a("\"name\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"talend.field.dbColumnName\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__Tech_Training_Date_Time__c\",\"di.column.relatedEntity\":\"\"},{",s);
+     		                    						
+     		                    						a("\"name\":\"NoodleCRM__University_Person_CRM_Id__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"talend.field.dbType\":\"\",\"talend.field.dbColumnName\":\"NoodleCRM__University_Person_CRM_Id__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"NoodleCRM__University_Person_CRM_Id__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"MAIN\",\"di.table.label\":\"Contact\"}",s);
      		                    						
      		                    				return s.toString();
      		                    		
@@ -85305,6 +85336,8 @@ if(componentRuntime_tSalesforceInput_1 instanceof org.talend.components.api.comp
                     }
                 Object columnValue_213_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1.get(213);
                         row2.NoodleCRM__Tech_Training_Date_Time__c = (java.util.Date) (columnValue_213_tSalesforceInput_1);
+                Object columnValue_214_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1.get(214);
+                        row2.NoodleCRM__University_Person_CRM_Id__c = (String) (columnValue_214_tSalesforceInput_1);
         } catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_1) {
         	java.util.Map<String,Object> info_tSalesforceInput_1 = e_tSalesforceInput_1.getRejectInfo();
             	//TODO use a method instead of getting method by the special key "error/errorMessage"
@@ -85629,6 +85662,7 @@ out2_tmp.NoodleCRM__Orientation_Date_Time__c = row2.NoodleCRM__Orientation_Date_
 out2_tmp.NoodleCRM__System_Provided_Phone__c = row2.NoodleCRM__System_Provided_Phone__c ;
 out2_tmp.NoodleCRM__Tech_Training_Completed__c = row2.NoodleCRM__Tech_Training_Completed__c ;
 out2_tmp.NoodleCRM__Tech_Training_Date_Time__c = row2.NoodleCRM__Tech_Training_Date_Time__c ;
+out2_tmp.NoodleCRM__University_Person_CRM_Id__c = row2.NoodleCRM__University_Person_CRM_Id__c ;
 out2 = out2_tmp;
 // ###############################
 
@@ -85696,7 +85730,7 @@ if(out2 != null) {
 					
 
 
-                        String[] rowtFileOutputDelimited_2=new String[213];
+                        String[] rowtFileOutputDelimited_2=new String[214];
                                 fileOutputDelimitedUtil_tFileOutputDelimited_2.putValue_0(out2,rowtFileOutputDelimited_2);
                                 fileOutputDelimitedUtil_tFileOutputDelimited_2.putValue_1(out2,rowtFileOutputDelimited_2);
                                 fileOutputDelimitedUtil_tFileOutputDelimited_2.putValue_2(out2,rowtFileOutputDelimited_2);
@@ -89842,6 +89876,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     3487572 characters generated by Talend Open Studio for Data Integration 
- *     on the January 27, 2021 12:28:40 PM PST
+ *     3489693 characters generated by Talend Open Studio for Data Integration 
+ *     on the February 1, 2021 12:35:09 PM PST
  ************************************************************************************************/
