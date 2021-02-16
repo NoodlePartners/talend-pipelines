@@ -14,7 +14,7 @@
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_pefjgHB-EeuJBscMSBCHdg" confirmationNeeded="false" name="qa2">
     <contextParameter xmi:id="_pefjgXB-EeuJBscMSBCHdg" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;qa2-malt-datalake&quot;"/>
-    <contextParameter xmi:id="_pefjgnB-EeuJBscMSBCHdg" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend"/>
+    <contextParameter xmi:id="_pefjgnB-EeuJBscMSBCHdg" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend-salesforce"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_0IHH2WZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="staging">
     <contextParameter xmi:id="_0IHH2mZdEeu9SJfOFlRd8w" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;stage-malt-datalake&quot;"/>
