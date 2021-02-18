@@ -55,9 +55,6 @@ import java.text.SimpleDateFormat;
 import java.util.Properties;
 import javax.activation.*;
 
-	//the import part of tJava_4
-	//import java.util.List;
-
 	//the import part of tJava_5
 	//import java.util.List;
 
@@ -68,6 +65,9 @@ import javax.activation.*;
 	//import java.util.List;
 
 	//the import part of tJava_10
+	//import java.util.List;
+
+	//the import part of tJava_4
 	//import java.util.List;
 
 	//the import part of tJava_11
@@ -297,18 +297,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(nd_aws_access_key != null){
-				
-					this.setProperty("nd_aws_access_key", nd_aws_access_key.toString());
-				
-			}
-			
-			if(nd_aws_secret_key != null){
-				
-					this.setProperty("nd_aws_secret_key", nd_aws_secret_key.toString());
-				
-			}
-			
 			if(nd_s3_bucket_QA_sfdc != null){
 				
 					this.setProperty("nd_s3_bucket_QA_sfdc", nd_s3_bucket_QA_sfdc.toString());
@@ -525,14 +513,6 @@ public java.lang.String sfdc_keystore_password;
 public java.lang.String getSfdc_keystore_password(){
 	return this.sfdc_keystore_password;
 }
-public String nd_aws_access_key;
-public String getNd_aws_access_key(){
-	return this.nd_aws_access_key;
-}
-public java.lang.String nd_aws_secret_key;
-public java.lang.String getNd_aws_secret_key(){
-	return this.nd_aws_secret_key;
-}
 public String nd_s3_bucket_QA_sfdc;
 public String getNd_s3_bucket_QA_sfdc(){
 	return this.nd_s3_bucket_QA_sfdc;
@@ -668,8 +648,8 @@ public String getSfdc_keystore_path(){
 	public Integer errorCode = null;
 	private String currentComponent = "";
 	
-		private final java.util.Map<String, Object> globalMap = java.util.Collections.synchronizedMap(new java.util.HashMap<String, Object>());
-		
+		private final java.util.Map<String, Object> globalMap = new java.util.HashMap<String, Object>();
+        private final static java.util.Map<String, Object> junitGlobalMap = new java.util.HashMap<String, Object>();
 	
 		private final java.util.Map<String, Long> start_Hash = new java.util.HashMap<String, Long>();
 		private final java.util.Map<String, Long> end_Hash = new java.util.HashMap<String, Long>();
@@ -856,33 +836,6 @@ private class TalendException extends Exception {
 					tJava_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tFileArchive_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tFileArchive_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Put_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Put_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_4_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tFileArchive_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -1007,6 +960,33 @@ private class TalendException extends Exception {
 				status = "failure";
 				
 					tDie_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tFileArchive_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tFileArchive_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tS3Put_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tS3Put_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tJava_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tJava_4_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tS3Copy_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -2188,21 +2168,6 @@ private class TalendException extends Exception {
 					tJava_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tWriteJSONField_1_Out_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-							tWriteJSONField_1_In_error(exception, errorComponent, globalMap);
-						
-						}
-					
-			public void tWriteJSONField_1_In_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tS3Connection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -2229,21 +2194,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tJava_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tFileArchive_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Put_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_4_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2304,6 +2254,21 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tDie_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tFileArchive_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tS3Put_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tJava_4_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2838,11 +2803,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tWriteJSONField_1_In_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
 	
 
 
@@ -2896,12 +2856,7 @@ public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap
 	
 	
 	    
-    
-    		
-	final String decryptedPassword_tS3Connection_1 = context.nd_aws_secret_key; 
-
-			com.amazonaws.auth.AWSCredentials credentials_tS3Connection_1 = new com.amazonaws.auth.BasicAWSCredentials(context.nd_aws_access_key,decryptedPassword_tS3Connection_1);
-			com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.internal.StaticCredentialsProvider(credentials_tS3Connection_1);
+		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
 		
 		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
 		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
@@ -4203,775 +4158,6 @@ end_Hash.put("tJava_2", System.currentTimeMillis());
 		
 
 		globalMap.put("tJava_2_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tFileArchive_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tFileArchive_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tFileArchive_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFileArchive_1", false);
-		start_Hash.put("tFileArchive_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tFileArchive_1";
-
-	
-		int tos_count_tFileArchive_1 = 0;
-		
-
- 
-
-
-
-/**
- * [tFileArchive_1 begin ] stop
- */
-	
-	/**
-	 * [tFileArchive_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileArchive_1";
-
-	
-
-	
-
-		String sourceFile_tFileArchive_1 = context.staging_S3_dir + "account.json";
-	
-
-    if (java.nio.file.Files.notExists(java.nio.file.Paths.get(sourceFile_tFileArchive_1), java.nio.file.LinkOption.NOFOLLOW_LINKS)){
-        throw new java.io.FileNotFoundException(sourceFile_tFileArchive_1 + " (The system cannot find the path specified)");
-    }
-
-    String zipFile_tFileArchive_1 = context.staging_S3_dir + "account.json.gz";
-    
-    com.talend.compress.zip.Zip zip_tFileArchive_1 = new com.talend.compress.zip.Zip(sourceFile_tFileArchive_1, zipFile_tFileArchive_1);
-    zip_tFileArchive_1.setOverwriteExistTargetZip(true);
-	zip_tFileArchive_1.setMakeTargetDir(true);
-	zip_tFileArchive_1.setCompressLevel(9);
-	zip_tFileArchive_1.setArchiveFormat("gzip");
-	zip_tFileArchive_1.setAllFiles(true);
-	
-	
-		zip_tFileArchive_1.setSyncFlush(false);
-	
-  
-  
-   globalMap.put("tFileArchive_1_ARCHIVE_FILEPATH",zipFile_tFileArchive_1);
-   
-   globalMap.put("tFileArchive_1_ARCHIVE_FILENAME", new java.io.File(zipFile_tFileArchive_1).getName());
-
-   zip_tFileArchive_1.doZip();
-
-
- 
-
-
-	tos_count_tFileArchive_1++;
-
-/**
- * [tFileArchive_1 main ] stop
- */
-	
-	/**
-	 * [tFileArchive_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileArchive_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileArchive_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tFileArchive_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileArchive_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileArchive_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tFileArchive_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileArchive_1";
-
-	
-
- 
-
-ok_Hash.put("tFileArchive_1", true);
-end_Hash.put("tFileArchive_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk10", 0, "ok");
-				}
-				tS3Put_1Process(globalMap);
-
-
-
-/**
- * [tFileArchive_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tFileArchive_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileArchive_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileArchive_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tFileArchive_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Put_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Put_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Put_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Put_1", false);
-		start_Hash.put("tS3Put_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Put_1";
-
-	
-		int tos_count_tS3Put_1 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Put_1 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	String key_tS3Put_1 = context.nd_s3_data_lake_path_sfdc +"/sfdc/account/latest/university_id="+context.university_code+"/account.csv.gz";
-	
-	int partSizeInBytes_tS3Put_1 = 5 * 1024 * 1024;
-	if(partSizeInBytes_tS3Put_1 < 5 << 20 ) {
-		
-		partSizeInBytes_tS3Put_1 = 5 << 20;
-	}
-	
-	
-	Object fileOrStream_tS3Put_1 = context.staging_S3_dir + "account.csv.gz";
-	
-	boolean useStream_tS3Put_1 = false;
-	java.io.InputStream uploadStream_tS3Put_1 = null;
-	
-	com.amazonaws.services.s3.transfer.TransferManager tm_tS3Put_1 = null;
-	
-	try{
-		
-		
-		if(fileOrStream_tS3Put_1 instanceof String){
-		    useStream_tS3Put_1 = false;
-		}else if(fileOrStream_tS3Put_1 instanceof java.io.InputStream){
-		    useStream_tS3Put_1 = true;
-		}
-		
-    com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Put_1 = new com.amazonaws.services.s3.model.ObjectMetadata();
-		
-		
-  		
-		
-		if(!useStream_tS3Put_1) {
-				java.io.File inputFile_tS3Put_1 = new java.io.File((String)fileOrStream_tS3Put_1);
-				
-				long multipart_upload_threshold_tS3Put_1 = 5 * 1024 * 1024;
-				
-    		tm_tS3Put_1 = com.amazonaws.services.s3.transfer.TransferManagerBuilder
-    			.standard()
-    			.withMinimumUploadPartSize((long)partSizeInBytes_tS3Put_1)
-    			.withMultipartUploadThreshold(multipart_upload_threshold_tS3Put_1)
-    			.withS3Client(conn_tS3Put_1)
-    			.build();
-    			
-  			com.amazonaws.services.s3.model.PutObjectRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.PutObjectRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, inputFile_tS3Put_1).withMetadata(objectMetadata_tS3Put_1);
-			
-
-  			
-
-  		
-  			com.amazonaws.services.s3.transfer.Upload upload_tS3Put_1 = tm_tS3Put_1.upload(putRequest_tS3Put_1);
-  		
-  			upload_tS3Put_1.waitForCompletion();
-  			
-		} else {
-				java.io.InputStream sourceStream_tS3Put_1 = ((java.io.InputStream)fileOrStream_tS3Put_1);
-				
-  			class S3StreamUtil {
-    	    public int getLength(byte[] output) {
-    		    for (int i = output.length - 1; i > 0; i--) {
-    			    if (output[i] != 0) {
-    				    return i + 1;
-    			    }
-    		    }
-    		    return 0;
-    	    }
-      	}
-      	
-      	S3StreamUtil streamUtil_tS3Put_1 = new S3StreamUtil();
-    		byte[] buffer_tS3Put_1 = new byte[partSizeInBytes_tS3Put_1];
-    		sourceStream_tS3Put_1.read(buffer_tS3Put_1);
-    		long curPartSize_tS3Put_1 = streamUtil_tS3Put_1.getLength(buffer_tS3Put_1);
-    		boolean multiUpload_tS3Put_1 = curPartSize_tS3Put_1 == partSizeInBytes_tS3Put_1;
-    		
-    		if(!multiUpload_tS3Put_1) {
-    				objectMetadata_tS3Put_1.setContentLength(curPartSize_tS3Put_1);
-    				uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1,0,Long.valueOf(curPartSize_tS3Put_1).intValue());
-    				com.amazonaws.services.s3.model.PutObjectRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.PutObjectRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, uploadStream_tS3Put_1, objectMetadata_tS3Put_1);
-			
-    				
-    				
-
-    				
-    				conn_tS3Put_1.putObject(putRequest_tS3Put_1);
-    		} else {
-    				uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1);
-      			java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Put_1 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
-      			com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, objectMetadata_tS3Put_1);
-      			
-      			
-
-      			
-      			com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResponse_tS3Put_1 = conn_tS3Put_1.initiateMultipartUpload(putRequest_tS3Put_1);
-      			String uploadId_tS3Put_1 = initResponse_tS3Put_1.getUploadId();
-      			int partNumber_tS3Put_1 = 1;
-      			boolean streamHasNext_tS3Put_1 = true;
-      			byte[] probeAvailability_tS3Put_1 = new byte[1];
-				try {
-					while (streamHasNext_tS3Put_1) {
-        						com.amazonaws.services.s3.model.UploadPartRequest uploadRequest_tS3Put_1 = new com.amazonaws.services.s3.model.UploadPartRequest()
-                    	.withBucketName(context.nd_s3_bucket_QA_sfdc)
-                    	.withKey(key_tS3Put_1)
-						.withUploadId(uploadId_tS3Put_1)
-                    	.withPartNumber(partNumber_tS3Put_1)
-						.withPartSize(curPartSize_tS3Put_1);
-            		    uploadRequest_tS3Put_1.setInputStream(uploadStream_tS3Put_1);
-            		    streamHasNext_tS3Put_1 = sourceStream_tS3Put_1.read(probeAvailability_tS3Put_1) != -1;
-            		    if(!streamHasNext_tS3Put_1){
-                    	    uploadRequest_tS3Put_1.setLastPart(true);
-                    	}
-
-                		partTags_tS3Put_1.add(conn_tS3Put_1.uploadPart(uploadRequest_tS3Put_1).getPartETag());
-                  	    partNumber_tS3Put_1++;
-
-          		     	if(uploadStream_tS3Put_1!=null){
-      		         			uploadStream_tS3Put_1.close();
-          		     	}
-          		     	buffer_tS3Put_1 = new byte[partSizeInBytes_tS3Put_1];
-          		     	sourceStream_tS3Put_1.read(buffer_tS3Put_1,1,partSizeInBytes_tS3Put_1-1);
-          		     	buffer_tS3Put_1[0] = probeAvailability_tS3Put_1[0];
-          		     	probeAvailability_tS3Put_1 = new byte[1];
-          		     	curPartSize_tS3Put_1 = streamUtil_tS3Put_1.getLength(buffer_tS3Put_1);
-          		     	uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1);
-        				}
-        				
-            		com.amazonaws.services.s3.model.CompleteMultipartUploadRequest compRequest_tS3Put_1 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1,
-                        uploadId_tS3Put_1, partTags_tS3Put_1);
-            		conn_tS3Put_1.completeMultipartUpload(compRequest_tS3Put_1);
-            } catch (java.lang.Exception uploadException_tS3Put_1) {
-  							conn_tS3Put_1.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, uploadId_tS3Put_1));
-    						throw uploadException_tS3Put_1;
-            }
-    		}
-		}
-		
-		
-	}catch(java.lang.Exception e_tS3Put_1){
-		
-			throw(e_tS3Put_1);
-		
-	}finally{
-		if(useStream_tS3Put_1 && uploadStream_tS3Put_1!=null){
-    	uploadStream_tS3Put_1.close();
-    }
-    
-    if(tm_tS3Put_1 != null){
-        tm_tS3Put_1.shutdownNow(false);
-    }
-	    
-		
-	}     
-
- 
-
-
-
-/**
- * [tS3Put_1 begin ] stop
- */
-	
-	/**
-	 * [tS3Put_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Put_1";
-
-	
-
- 
-
-
-	tos_count_tS3Put_1++;
-
-/**
- * [tS3Put_1 main ] stop
- */
-	
-	/**
-	 * [tS3Put_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Put_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Put_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Put_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Put_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Put_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Put_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Put_1";
-
-	
-
- 
-
-ok_Hash.put("tS3Put_1", true);
-end_Hash.put("tS3Put_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk11", 0, "ok");
-				}
-				tJava_4Process(globalMap);
-
-
-
-/**
- * [tS3Put_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Put_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Put_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Put_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Put_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_4Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_4_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-
-
-	
-	/**
-	 * [tJava_4 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_4", false);
-		start_Hash.put("tJava_4", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_4";
-
-	
-		int tos_count_tJava_4 = 0;
-		
-
-
-System.out.println("Step 5: Completed Uploading Latest Run File To Latest Folder");
-System.out.println("Step 6: Number of source records from salesforce object  : "+  ((Integer)globalMap.get("tSalesforceInput_12_NB_LINE"))+ " Records and S3 file records count :" +((Integer)globalMap.get("tFileOutputDelimited_1_NB_LINE"))+ " Records");
-System.out.println("************************************************************");
-
-
- 
-
-
-
-/**
- * [tJava_4 begin ] stop
- */
-	
-	/**
-	 * [tJava_4 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_4";
-
-	
-
- 
-
-
-	tos_count_tJava_4++;
-
-/**
- * [tJava_4 main ] stop
- */
-	
-	/**
-	 * [tJava_4 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_4";
-
-	
-
- 
-
-
-
-/**
- * [tJava_4 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_4 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_4";
-
-	
-
- 
-
-
-
-/**
- * [tJava_4 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_4 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_4";
-
-	
-
- 
-
-ok_Hash.put("tJava_4", true);
-end_Hash.put("tJava_4", System.currentTimeMillis());
-
-
-
-
-/**
- * [tJava_4 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_4 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_4";
-
-	
-
- 
-
-
-
-/**
- * [tJava_4 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_4_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -7628,9 +6814,9 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					return this.OwnerId;
 				}
 				
-			    public Long CreatedDate;
+			    public java.util.Date CreatedDate;
 
-				public Long getCreatedDate () {
+				public java.util.Date getCreatedDate () {
 					return this.CreatedDate;
 				}
 				
@@ -7640,9 +6826,9 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					return this.CreatedById;
 				}
 				
-			    public Long LastModifiedDate;
+			    public java.util.Date LastModifiedDate;
 
-				public Long getLastModifiedDate () {
+				public java.util.Date getLastModifiedDate () {
 					return this.LastModifiedDate;
 				}
 				
@@ -7652,27 +6838,27 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					return this.LastModifiedById;
 				}
 				
-			    public Long SystemModstamp;
+			    public java.util.Date SystemModstamp;
 
-				public Long getSystemModstamp () {
+				public java.util.Date getSystemModstamp () {
 					return this.SystemModstamp;
 				}
 				
-			    public Long LastActivityDate;
+			    public java.util.Date LastActivityDate;
 
-				public Long getLastActivityDate () {
+				public java.util.Date getLastActivityDate () {
 					return this.LastActivityDate;
 				}
 				
-			    public Long LastViewedDate;
+			    public java.util.Date LastViewedDate;
 
-				public Long getLastViewedDate () {
+				public java.util.Date getLastViewedDate () {
 					return this.LastViewedDate;
 				}
 				
-			    public Long LastReferencedDate;
+			    public java.util.Date LastReferencedDate;
 
-				public Long getLastReferencedDate () {
+				public java.util.Date getLastReferencedDate () {
 					return this.LastReferencedDate;
 				}
 				
@@ -7754,9 +6940,9 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					return this.NoodleCRM__Record_Type_Developer_Name__c;
 				}
 				
-			    public Long NoodleCRM__SLAExpirationDate__c;
+			    public java.util.Date NoodleCRM__SLAExpirationDate__c;
 
-				public Long getNoodleCRM__SLAExpirationDate__c () {
+				public java.util.Date getNoodleCRM__SLAExpirationDate__c () {
 					return this.NoodleCRM__SLAExpirationDate__c;
 				}
 				
@@ -7948,6 +7134,27 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
     	}
 	}
 
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
     public void readData(ObjectInputStream dis) {
 
 		synchronized(commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_cwru) {
@@ -8045,51 +7252,21 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					
 					this.OwnerId = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.CreatedDate = null;
-           				} else {
-           			    	this.CreatedDate = dis.readLong();
-           				}
+					this.CreatedDate = readDate(dis);
 					
 					this.CreatedById = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.LastModifiedDate = null;
-           				} else {
-           			    	this.LastModifiedDate = dis.readLong();
-           				}
+					this.LastModifiedDate = readDate(dis);
 					
 					this.LastModifiedById = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.SystemModstamp = null;
-           				} else {
-           			    	this.SystemModstamp = dis.readLong();
-           				}
+					this.SystemModstamp = readDate(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.LastActivityDate = null;
-           				} else {
-           			    	this.LastActivityDate = dis.readLong();
-           				}
+					this.LastActivityDate = readDate(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.LastViewedDate = null;
-           				} else {
-           			    	this.LastViewedDate = dis.readLong();
-           				}
+					this.LastViewedDate = readDate(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.LastReferencedDate = null;
-           				} else {
-           			    	this.LastReferencedDate = dis.readLong();
-           				}
+					this.LastReferencedDate = readDate(dis);
 					
 					this.Jigsaw = readString(dis);
 					
@@ -8122,12 +7299,7 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 					
 					this.NoodleCRM__Record_Type_Developer_Name__c = readString(dis);
 					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.NoodleCRM__SLAExpirationDate__c = null;
-           				} else {
-           			    	this.NoodleCRM__SLAExpirationDate__c = dis.readLong();
-           				}
+					this.NoodleCRM__SLAExpirationDate__c = readDate(dis);
 					
 					this.NoodleCRM__SLASerialNumber__c = readString(dis);
 					
@@ -8310,67 +7482,37 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 				
 						writeString(this.OwnerId,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.CreatedDate == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.CreatedDate);
-		            	}
+						writeDate(this.CreatedDate,dos);
 					
 					// String
 				
 						writeString(this.CreatedById,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.LastModifiedDate == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.LastModifiedDate);
-		            	}
+						writeDate(this.LastModifiedDate,dos);
 					
 					// String
 				
 						writeString(this.LastModifiedById,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.SystemModstamp == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.SystemModstamp);
-		            	}
+						writeDate(this.SystemModstamp,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.LastActivityDate == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.LastActivityDate);
-		            	}
+						writeDate(this.LastActivityDate,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.LastViewedDate == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.LastViewedDate);
-		            	}
+						writeDate(this.LastViewedDate,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.LastReferencedDate == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.LastReferencedDate);
-		            	}
+						writeDate(this.LastReferencedDate,dos);
 					
 					// String
 				
@@ -8429,14 +7571,9 @@ public static class out1Struct implements routines.system.IPersistableRow<out1St
 				
 						writeString(this.NoodleCRM__Record_Type_Developer_Name__c,dos);
 					
-					// Long
+					// java.util.Date
 				
-						if(this.NoodleCRM__SLAExpirationDate__c == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeLong(this.NoodleCRM__SLAExpirationDate__c);
-		            	}
+						writeDate(this.NoodleCRM__SLAExpirationDate__c,dos);
 					
 					// String
 				
@@ -9554,7 +8691,6 @@ public void tSalesforceInput_12Process(final java.util.Map<String, Object> globa
 	globalMap.put("tSalesforceInput_12_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
-		String currentVirtualComponent = null;
 	
 		String iterateId = "";
 	
@@ -9583,176 +8719,253 @@ out1Struct out1 = new out1Struct();
 
 	
 	/**
-	 * [tWriteJSONField_1_Out begin ] start
+	 * [tFileOutputDelimited_1 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tWriteJSONField_1_Out", false);
-		start_Hash.put("tWriteJSONField_1_Out", System.currentTimeMillis());
+		ok_Hash.put("tFileOutputDelimited_1", false);
+		start_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
 		
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 					if(execStat) {
 						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"out1");
 					}
 				
-		int tos_count_tWriteJSONField_1_Out = 0;
+		int tos_count_tFileOutputDelimited_1 = 0;
 		
-//tWriteXMLFieldOut_begin
-				int nb_line_tWriteJSONField_1_Out = 0;
-				boolean needRoot_tWriteJSONField_1_Out  = true;
-				
-				String  strCompCache_tWriteJSONField_1_Out= null;		
-				
-						        java.util.Queue<row16Struct> listGroupby_tWriteJSONField_1_Out = new java.util.concurrent.ConcurrentLinkedQueue<row16Struct>();
-							
-	
-					class ThreadXMLField_tWriteJSONField_1_Out extends Thread {
-						
-									    java.util.Queue<row16Struct> queue;
-									
-						java.util.List<java.util.Map<String,String>> flows;
-						java.lang.Exception lastException;
-						java.lang.Error lastError;
-						String currentComponent;
-						
-						ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q) {
-							this.queue = q;
-							globalMap.put("queue_tWriteJSONField_1_In", queue);
-							lastException = null;
-						}
-						
-						ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q, java.util.List<java.util.Map<String,String>> l) {
-							this.queue = q;
-							this.flows = l;
-							lastException = null;
-							globalMap.put("queue_tWriteJSONField_1_In", queue);
-							globalMap.put("flows_tWriteJSONField_1_In", flows);
-						}
-						
-						public java.lang.Exception getLastException() {
-							return this.lastException;
-						}
-						
-						public java.lang.Error getLastError() {
-							return this.lastError;
-						}
-						
-						public String getCurrentComponent() {
-							return this.currentComponent;
-						}
-	
-						@Override
-						public void run() {
-							try {
-								tWriteJSONField_1_InProcess(globalMap);
-							} catch (TalendException te) {
-								this.lastException = te.getException();
-								this.currentComponent = te.getCurrentComponent();
-							} catch (java.lang.Error error) {
-								this.lastError = error;
-							}
-						}
-					}
-					
-						ThreadXMLField_tWriteJSONField_1_Out txf_tWriteJSONField_1_Out = new ThreadXMLField_tWriteJSONField_1_Out(listGroupby_tWriteJSONField_1_Out);
-					
-					txf_tWriteJSONField_1_Out.start();
-				
 
-java.util.List<java.util.List<String>> groupbyList_tWriteJSONField_1_Out = new java.util.ArrayList<java.util.List<String>>();
-java.util.Map<String,String> valueMap_tWriteJSONField_1_Out = new java.util.HashMap<String,String>();
-java.util.Map<String,String> arraysValueMap_tWriteJSONField_1_Out = new java.util.HashMap<String,String>();
-
-class NestXMLTool_tWriteJSONField_1_Out{
-	public void parseAndAdd(org.dom4j.Element nestRoot, String value){
-		try {
-            org.dom4j.Document doc4Str = org.dom4j.DocumentHelper.parseText("<root>"+ value + "</root>");
-    		nestRoot.setContent(doc4Str.getRootElement().content());
-    	} catch (java.lang.Exception e) {
-    		e.printStackTrace();
-    		nestRoot.setText(value);
+String fileName_tFileOutputDelimited_1 = "";
+    fileName_tFileOutputDelimited_1 = (new java.io.File(context.staging_S3_dir + "account.csv")).getAbsolutePath().replace("\\","/");
+    String fullName_tFileOutputDelimited_1 = null;
+    String extension_tFileOutputDelimited_1 = null;
+    String directory_tFileOutputDelimited_1 = null;
+    if((fileName_tFileOutputDelimited_1.indexOf("/") != -1)) {
+        if(fileName_tFileOutputDelimited_1.lastIndexOf(".") < fileName_tFileOutputDelimited_1.lastIndexOf("/")) {
+            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
+            extension_tFileOutputDelimited_1 = "";
+        } else {
+            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("."));
+            extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
         }
-	}
-	
-	public void setText(org.dom4j.Element element, String value){
-		if (value.startsWith("<![CDATA[") && value.endsWith("]]>")) {
-			String text = value.substring(9, value.length()-3);
-			element.addCDATA(text);
-		}else{
-			element.setText(value);
-		}
-	}
-	
-	public void replaceDefaultNameSpace(org.dom4j.Element nestRoot){
-		if (nestRoot!=null) {
-			for (org.dom4j.Element tmp: (java.util.List<org.dom4j.Element>) nestRoot.elements()) {
-        		if (("").equals(tmp.getQName().getNamespace().getURI()) && ("").equals(tmp.getQName().getNamespace().getPrefix())){
-        			tmp.setQName(org.dom4j.DocumentHelper.createQName(tmp.getName(), nestRoot.getQName().getNamespace()));
-	        	}
-    	    	replaceDefaultNameSpace(tmp);
-       		}
-       	}
-	}
-	
-	public void removeEmptyElement(org.dom4j.Element root){
-		if (root!=null) {
-			for (org.dom4j.Element tmp: (java.util.List<org.dom4j.Element>) root.elements()) {
-				removeEmptyElement(tmp);
-			}
-			if (root.content().size() == 0 
-    			&& root.attributes().size() == 0 
-    			&& root.declaredNamespaces().size() == 0) {
-    			if(root.getParent()!=null){
-                	root.getParent().remove(root);
+        directory_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("/"));
+    } else {
+        if(fileName_tFileOutputDelimited_1.lastIndexOf(".") != -1) {
+            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("."));
+            extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
+        } else {
+            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
+            extension_tFileOutputDelimited_1 = "";
+        }
+        directory_tFileOutputDelimited_1 = "";
+    }
+    boolean isFileGenerated_tFileOutputDelimited_1 = true;
+    java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
+    globalMap.put("tFileOutputDelimited_1_FILE_NAME",fileName_tFileOutputDelimited_1);
+                String[] headColutFileOutputDelimited_1=new String[59];
+            class CSVBasicSet_tFileOutputDelimited_1{
+                private char field_Delim;
+                private char row_Delim;
+                private char escape;
+                private char textEnclosure;
+                private boolean useCRLFRecordDelimiter;
+
+                public boolean isUseCRLFRecordDelimiter() {
+                    return useCRLFRecordDelimiter;
+                }
+
+                public void setFieldSeparator(String fieldSep) throws IllegalArgumentException{
+                    char field_Delim_tFileOutputDelimited_1[] = null;
+
+                    //support passing value (property: Field Separator) by 'context.fs' or 'globalMap.get("fs")'.
+                    if (fieldSep.length() > 0 ){
+                        field_Delim_tFileOutputDelimited_1 = fieldSep.toCharArray();
+                    }else {
+                        throw new IllegalArgumentException("Field Separator must be assigned a char.");
+                    }
+                    this.field_Delim = field_Delim_tFileOutputDelimited_1[0];
+                }
+
+                public char getFieldDelim(){
+                    if(this.field_Delim==0){
+                        setFieldSeparator("^");
+                    }
+                    return this.field_Delim;
+                }
+
+                public void setRowSeparator(String rowSep){
+                    if("\r\n".equals(rowSep)) {
+                        useCRLFRecordDelimiter = true;
+                        return;
+                    }
+                    char row_DelimtFileOutputDelimited_1[] = null;
+
+                    //support passing value (property: Row Separator) by 'context.rs' or 'globalMap.get("rs")'.
+                    if (rowSep.length() > 0 ){
+                        row_DelimtFileOutputDelimited_1 = rowSep.toCharArray();
+                    }else {
+                        throw new IllegalArgumentException("Row Separator must be assigned a char.");
+                    }
+                    this.row_Delim = row_DelimtFileOutputDelimited_1[0];
+                }
+
+                public char getRowDelim(){
+                    if(this.row_Delim==0){
+                        setRowSeparator("\n");
+                    }
+                    return this.row_Delim;
+                }
+
+                public void setEscapeAndTextEnclosure(String strEscape, String strTextEnclosure) throws IllegalArgumentException{
+                    if(strEscape.length() <= 0 ){
+                        throw new IllegalArgumentException("Escape Char must be assigned a char.");
+                    }
+
+                    if ("".equals(strTextEnclosure)) strTextEnclosure = "\0";
+                    char textEnclosure_tFileOutputDelimited_1[] = null;
+
+                    if(strTextEnclosure.length() > 0 ){
+                        textEnclosure_tFileOutputDelimited_1 = strTextEnclosure.toCharArray();
+                    }else {
+                        throw new IllegalArgumentException("Text Enclosure must be assigned a char.");
+                    }
+
+                    this.textEnclosure = textEnclosure_tFileOutputDelimited_1[0];
+
+                    if(("\\").equals(strEscape)){
+                        this.escape = '\\';
+                    }else if(strEscape.equals(strTextEnclosure)){
+                        this.escape = this.textEnclosure;
+                    } else {
+                        //the default escape mode is double escape
+                        this.escape = this.textEnclosure;
+                    }
+
+
+                }
+
+                public char getEscapeChar(){
+                    return (char)this.escape;
+                }
+
+                public char getTextEnclosure(){
+                    return this.textEnclosure;
                 }
             }
-		}
-	}
-	
-	public String objectToString(Object value){
-		if(value.getClass().isArray()){
-			StringBuilder sb = new StringBuilder();
 
-			int length = java.lang.reflect.Array.getLength(value);
-			for (int i = 0; i < length; i++) {
-				Object obj = java.lang.reflect.Array.get(value, i);
-				sb.append("<element>");
-				sb.append(obj);
-				sb.append("</element>");
-			}
-			return sb.toString();
-		}else{
-			return value.toString();
-		}
-	}
-}
-NestXMLTool_tWriteJSONField_1_Out nestXMLTool_tWriteJSONField_1_Out = new NestXMLTool_tWriteJSONField_1_Out();
+            int nb_line_tFileOutputDelimited_1 = 0;
+            int splitedFileNo_tFileOutputDelimited_1 =0;
+            int currentRow_tFileOutputDelimited_1 = 0;
 
-out1Struct  rowStructOutput_tWriteJSONField_1_Out = new out1Struct();
-// sort group root element for judgement of group
-java.util.List<org.dom4j.Element> groupElementList_tWriteJSONField_1_Out = new java.util.ArrayList<org.dom4j.Element>();
-org.dom4j.Element root4Group_tWriteJSONField_1_Out = null;
-org.dom4j.Document doc_tWriteJSONField_1_Out  = org.dom4j.DocumentHelper.createDocument();
-org.dom4j.io.OutputFormat format_tWriteJSONField_1_Out = org.dom4j.io.OutputFormat.createCompactFormat();
-format_tWriteJSONField_1_Out.setNewLineAfterDeclaration(false);
-format_tWriteJSONField_1_Out.setTrimText(false);
-format_tWriteJSONField_1_Out.setEncoding("ISO-8859-15");
-int[] orders_tWriteJSONField_1_Out = new int[1];
+
+            CSVBasicSet_tFileOutputDelimited_1 csvSettings_tFileOutputDelimited_1 = new CSVBasicSet_tFileOutputDelimited_1();
+            csvSettings_tFileOutputDelimited_1.setFieldSeparator("^");
+            csvSettings_tFileOutputDelimited_1.setRowSeparator("\n");
+            csvSettings_tFileOutputDelimited_1.setEscapeAndTextEnclosure("\\","`");
+                    //create directory only if not exists
+                    if(directory_tFileOutputDelimited_1 != null && directory_tFileOutputDelimited_1.trim().length() != 0) {
+                        java.io.File dir_tFileOutputDelimited_1 = new java.io.File(directory_tFileOutputDelimited_1);
+                        if(!dir_tFileOutputDelimited_1.exists()) {
+                            dir_tFileOutputDelimited_1.mkdirs();
+                        }
+                    }
+                            com.talend.csv.CSVWriter CsvWritertFileOutputDelimited_1 = null;
+
+                            java.io.File fileToDelete_tFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
+                            if(fileToDelete_tFileOutputDelimited_1.exists()) {
+                                fileToDelete_tFileOutputDelimited_1.delete();
+                            }
+                            CsvWritertFileOutputDelimited_1 = new com.talend.csv.CSVWriter(new java.io.BufferedWriter(new java.io.OutputStreamWriter(
+                            new java.io.FileOutputStream(fileName_tFileOutputDelimited_1, false), "UTF-8")));
+                            CsvWritertFileOutputDelimited_1.setSeparator(csvSettings_tFileOutputDelimited_1.getFieldDelim());
+                    if(csvSettings_tFileOutputDelimited_1.isUseCRLFRecordDelimiter()) {
+                        CsvWritertFileOutputDelimited_1.setLineEnd("\r\n");
+                    } else {
+                        CsvWritertFileOutputDelimited_1.setLineEnd(""+csvSettings_tFileOutputDelimited_1.getRowDelim());
+                    }
+                        if(filetFileOutputDelimited_1.length()==0){
+                                    headColutFileOutputDelimited_1[0]="Id";
+                                    headColutFileOutputDelimited_1[1]="IsDeleted";
+                                    headColutFileOutputDelimited_1[2]="MasterRecordId";
+                                    headColutFileOutputDelimited_1[3]="Name";
+                                    headColutFileOutputDelimited_1[4]="Type";
+                                    headColutFileOutputDelimited_1[5]="RecordTypeId";
+                                    headColutFileOutputDelimited_1[6]="ParentId";
+                                    headColutFileOutputDelimited_1[7]="BillingStreet";
+                                    headColutFileOutputDelimited_1[8]="BillingCity";
+                                    headColutFileOutputDelimited_1[9]="BillingState";
+                                    headColutFileOutputDelimited_1[10]="BillingPostalCode";
+                                    headColutFileOutputDelimited_1[11]="BillingCountry";
+                                    headColutFileOutputDelimited_1[12]="BillingLatitude";
+                                    headColutFileOutputDelimited_1[13]="BillingLongitude";
+                                    headColutFileOutputDelimited_1[14]="BillingGeocodeAccuracy";
+                                    headColutFileOutputDelimited_1[15]="BillingAddress";
+                                    headColutFileOutputDelimited_1[16]="ShippingStreet";
+                                    headColutFileOutputDelimited_1[17]="ShippingCity";
+                                    headColutFileOutputDelimited_1[18]="ShippingState";
+                                    headColutFileOutputDelimited_1[19]="ShippingPostalCode";
+                                    headColutFileOutputDelimited_1[20]="ShippingCountry";
+                                    headColutFileOutputDelimited_1[21]="ShippingLatitude";
+                                    headColutFileOutputDelimited_1[22]="ShippingLongitude";
+                                    headColutFileOutputDelimited_1[23]="ShippingGeocodeAccuracy";
+                                    headColutFileOutputDelimited_1[24]="ShippingAddress";
+                                    headColutFileOutputDelimited_1[25]="Phone";
+                                    headColutFileOutputDelimited_1[26]="Website";
+                                    headColutFileOutputDelimited_1[27]="PhotoUrl";
+                                    headColutFileOutputDelimited_1[28]="Industry";
+                                    headColutFileOutputDelimited_1[29]="NumberOfEmployees";
+                                    headColutFileOutputDelimited_1[30]="Description";
+                                    headColutFileOutputDelimited_1[31]="OwnerId";
+                                    headColutFileOutputDelimited_1[32]="CreatedDate";
+                                    headColutFileOutputDelimited_1[33]="CreatedById";
+                                    headColutFileOutputDelimited_1[34]="LastModifiedDate";
+                                    headColutFileOutputDelimited_1[35]="LastModifiedById";
+                                    headColutFileOutputDelimited_1[36]="SystemModstamp";
+                                    headColutFileOutputDelimited_1[37]="LastActivityDate";
+                                    headColutFileOutputDelimited_1[38]="LastViewedDate";
+                                    headColutFileOutputDelimited_1[39]="LastReferencedDate";
+                                    headColutFileOutputDelimited_1[40]="Jigsaw";
+                                    headColutFileOutputDelimited_1[41]="JigsawCompanyId";
+                                    headColutFileOutputDelimited_1[42]="AccountSource";
+                                    headColutFileOutputDelimited_1[43]="SicDesc";
+                                    headColutFileOutputDelimited_1[44]="hed__Current_Address__c";
+                                    headColutFileOutputDelimited_1[45]="hed__Primary_Contact__c";
+                                    headColutFileOutputDelimited_1[46]="NoodleCRM__Active__c";
+                                    headColutFileOutputDelimited_1[47]="NoodleCRM__CustomerPriority__c";
+                                    headColutFileOutputDelimited_1[48]="NoodleCRM__External_Id_Alternate__c";
+                                    headColutFileOutputDelimited_1[49]="NoodleCRM__External_Id__c";
+                                    headColutFileOutputDelimited_1[50]="NoodleCRM__NumberofLocations__c";
+                                    headColutFileOutputDelimited_1[51]="NoodleCRM__Online_App_Display_Name__c";
+                                    headColutFileOutputDelimited_1[52]="NoodleCRM__Record_Type_Developer_Name__c";
+                                    headColutFileOutputDelimited_1[53]="NoodleCRM__SLAExpirationDate__c";
+                                    headColutFileOutputDelimited_1[54]="NoodleCRM__SLASerialNumber__c";
+                                    headColutFileOutputDelimited_1[55]="NoodleCRM__SLA__c";
+                                    headColutFileOutputDelimited_1[56]="NoodleCRM__School__c";
+                                    headColutFileOutputDelimited_1[57]="NoodleCRM__University__c";
+                                    headColutFileOutputDelimited_1[58]="NoodleCRM__UpsellOpportunity__c";
+                            CsvWritertFileOutputDelimited_1.writeNext(headColutFileOutputDelimited_1);
+                            CsvWritertFileOutputDelimited_1.flush();
+                        }
+                CsvWritertFileOutputDelimited_1.setEscapeChar(csvSettings_tFileOutputDelimited_1.getEscapeChar());
+                CsvWritertFileOutputDelimited_1.setQuoteChar(csvSettings_tFileOutputDelimited_1.getTextEnclosure());
+                CsvWritertFileOutputDelimited_1.setQuoteStatus(com.talend.csv.CSVWriter.QuoteStatus.FORCE);
+
+
+
+    resourceMap.put("CsvWriter_tFileOutputDelimited_1", CsvWritertFileOutputDelimited_1);
+resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
 
  
 
 
 
 /**
- * [tWriteJSONField_1_Out begin ] stop
+ * [tFileOutputDelimited_1 begin ] stop
  */
 
 
@@ -10410,7 +9623,7 @@ out1_tmp.Name = row1.Name ;
 out1_tmp.Type = row1.Type ;
 out1_tmp.RecordTypeId = row1.RecordTypeId ;
 out1_tmp.ParentId = row1.ParentId ;
-out1_tmp.BillingStreet = StringHandling.EREPLACE(StringHandling.EREPLACE(row1.BillingStreet,"\n",""),"\r","") ;
+out1_tmp.BillingStreet = StringHandling.EREPLACE(StringHandling.EREPLACE(row1.BillingStreet,"\n",""),"\r","");
 out1_tmp.BillingCity = row1.BillingCity ;
 out1_tmp.BillingState = row1.BillingState ;
 out1_tmp.BillingPostalCode = row1.BillingPostalCode ;
@@ -10419,7 +9632,7 @@ out1_tmp.BillingLatitude = row1.BillingLatitude ;
 out1_tmp.BillingLongitude = row1.BillingLongitude ;
 out1_tmp.BillingGeocodeAccuracy = row1.BillingGeocodeAccuracy ;
 out1_tmp.BillingAddress = row1.BillingAddress ;
-out1_tmp.ShippingStreet = StringHandling.EREPLACE(StringHandling.EREPLACE(row1.ShippingStreet,"\n",""),"\r","") ;
+out1_tmp.ShippingStreet = StringHandling.EREPLACE(StringHandling.EREPLACE(row1.ShippingStreet,"\n",""),"\r","");
 out1_tmp.ShippingCity = row1.ShippingCity ;
 out1_tmp.ShippingState = row1.ShippingState ;
 out1_tmp.ShippingPostalCode = row1.ShippingPostalCode ;
@@ -10435,32 +9648,14 @@ out1_tmp.Industry = row1.Industry ;
 out1_tmp.NumberOfEmployees = row1.NumberOfEmployees ;
 out1_tmp.Description = row1.Description ;
 out1_tmp.OwnerId = row1.OwnerId ;
-out1_tmp.CreatedDate = (row1.CreatedDate == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.CreatedDate))).getTime())/1000 ;
+out1_tmp.CreatedDate = row1.CreatedDate ;
 out1_tmp.CreatedById = row1.CreatedById ;
-out1_tmp.LastModifiedDate = (row1.LastModifiedDate == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.LastModifiedDate))).getTime())/1000 ;
+out1_tmp.LastModifiedDate = row1.LastModifiedDate ;
 out1_tmp.LastModifiedById = row1.LastModifiedById ;
-out1_tmp.SystemModstamp = (row1.SystemModstamp == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.SystemModstamp))).getTime())/1000 ;
-out1_tmp.LastActivityDate = (row1.LastActivityDate == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.LastActivityDate))).getTime())/1000 ;
-out1_tmp.LastViewedDate = (row1.LastViewedDate == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.LastViewedDate))).getTime())/1000 ;
-out1_tmp.LastReferencedDate = (row1.LastReferencedDate == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.LastReferencedDate))).getTime())/1000 ;
+out1_tmp.SystemModstamp = row1.SystemModstamp ;
+out1_tmp.LastActivityDate = row1.LastActivityDate ;
+out1_tmp.LastViewedDate = row1.LastViewedDate ;
+out1_tmp.LastReferencedDate = row1.LastReferencedDate ;
 out1_tmp.Jigsaw = row1.Jigsaw ;
 out1_tmp.JigsawCompanyId = row1.JigsawCompanyId ;
 out1_tmp.AccountSource = row1.AccountSource ;
@@ -10474,10 +9669,7 @@ out1_tmp.NoodleCRM__External_Id__c = row1.NoodleCRM__External_Id__c ;
 out1_tmp.NoodleCRM__NumberofLocations__c = row1.NoodleCRM__NumberofLocations__c ;
 out1_tmp.NoodleCRM__Online_App_Display_Name__c = row1.NoodleCRM__Online_App_Display_Name__c ;
 out1_tmp.NoodleCRM__Record_Type_Developer_Name__c = row1.NoodleCRM__Record_Type_Developer_Name__c ;
-out1_tmp.NoodleCRM__SLAExpirationDate__c = (row1.NoodleCRM__SLAExpirationDate__c == null)
-?
-null
-:(TalendDate.parseDate("yyyy-MM-dd HH:mm:ss",(TalendDate.formatDate("yyyy-MM-dd HH:mm:ss",row1.NoodleCRM__SLAExpirationDate__c))).getTime())/1000 ;
+out1_tmp.NoodleCRM__SLAExpirationDate__c = row1.NoodleCRM__SLAExpirationDate__c ;
 out1_tmp.NoodleCRM__SLASerialNumber__c = row1.NoodleCRM__SLASerialNumber__c ;
 out1_tmp.NoodleCRM__SLA__c = row1.NoodleCRM__SLA__c ;
 out1_tmp.NoodleCRM__School__c = row1.NoodleCRM__School__c ;
@@ -10534,16 +9726,14 @@ if(out1 != null) {
 
 	
 	/**
-	 * [tWriteJSONField_1_Out main ] start
+	 * [tFileOutputDelimited_1 main ] start
 	 */
 
 	
 
 	
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 					if(execStat){
@@ -10551,1413 +9741,92 @@ if(out1 != null) {
 					}
 					
 
-	if(txf_tWriteJSONField_1_Out.getLastException()!=null) {
-		currentComponent = txf_tWriteJSONField_1_Out.getCurrentComponent();
-		throw txf_tWriteJSONField_1_Out.getLastException();
-	}
-	
-	if(txf_tWriteJSONField_1_Out.getLastError()!=null) {
-		throw txf_tWriteJSONField_1_Out.getLastError();
-	}
-	nb_line_tWriteJSONField_1_Out++;
-	valueMap_tWriteJSONField_1_Out.clear();
-	arraysValueMap_tWriteJSONField_1_Out.clear();
-	valueMap_tWriteJSONField_1_Out.put("Id",
-	(
-            out1.Id.toString()
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Id",
-	(
-            out1.Id.toString()
-		));
-	valueMap_tWriteJSONField_1_Out.put("IsDeleted",
-	(
-		out1.IsDeleted != null?
-            out1.IsDeleted.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("IsDeleted",
-	(
-		out1.IsDeleted != null?
-            out1.IsDeleted.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("MasterRecordId",
-	(
-		out1.MasterRecordId != null?
-            out1.MasterRecordId.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("MasterRecordId",
-	(
-		out1.MasterRecordId != null?
-            out1.MasterRecordId.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Name",
-	(
-		out1.Name != null?
-            out1.Name.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Name",
-	(
-		out1.Name != null?
-            out1.Name.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Type",
-	(
-		out1.Type != null?
-            out1.Type.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Type",
-	(
-		out1.Type != null?
-            out1.Type.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("RecordTypeId",
-	(
-		out1.RecordTypeId != null?
-            out1.RecordTypeId.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("RecordTypeId",
-	(
-		out1.RecordTypeId != null?
-            out1.RecordTypeId.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ParentId",
-	(
-		out1.ParentId != null?
-            out1.ParentId.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ParentId",
-	(
-		out1.ParentId != null?
-            out1.ParentId.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingStreet",
-	(
-		out1.BillingStreet != null?
-            out1.BillingStreet.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingStreet",
-	(
-		out1.BillingStreet != null?
-            out1.BillingStreet.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingCity",
-	(
-		out1.BillingCity != null?
-            out1.BillingCity.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingCity",
-	(
-		out1.BillingCity != null?
-            out1.BillingCity.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingState",
-	(
-		out1.BillingState != null?
-            out1.BillingState.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingState",
-	(
-		out1.BillingState != null?
-            out1.BillingState.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingPostalCode",
-	(
-		out1.BillingPostalCode != null?
-            out1.BillingPostalCode.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingPostalCode",
-	(
-		out1.BillingPostalCode != null?
-            out1.BillingPostalCode.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingCountry",
-	(
-		out1.BillingCountry != null?
-            out1.BillingCountry.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingCountry",
-	(
-		out1.BillingCountry != null?
-            out1.BillingCountry.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingLatitude",
-	(
-		out1.BillingLatitude != null?
-            out1.BillingLatitude.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingLatitude",
-	(
-		out1.BillingLatitude != null?
-            out1.BillingLatitude.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingLongitude",
-	(
-		out1.BillingLongitude != null?
-            out1.BillingLongitude.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingLongitude",
-	(
-		out1.BillingLongitude != null?
-            out1.BillingLongitude.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingGeocodeAccuracy",
-	(
-		out1.BillingGeocodeAccuracy != null?
-            out1.BillingGeocodeAccuracy.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingGeocodeAccuracy",
-	(
-		out1.BillingGeocodeAccuracy != null?
-            out1.BillingGeocodeAccuracy.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("BillingAddress",
-	(
-		out1.BillingAddress != null?
-            out1.BillingAddress.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("BillingAddress",
-	(
-		out1.BillingAddress != null?
-            out1.BillingAddress.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingStreet",
-	(
-		out1.ShippingStreet != null?
-            out1.ShippingStreet.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingStreet",
-	(
-		out1.ShippingStreet != null?
-            out1.ShippingStreet.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingCity",
-	(
-		out1.ShippingCity != null?
-            out1.ShippingCity.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingCity",
-	(
-		out1.ShippingCity != null?
-            out1.ShippingCity.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingState",
-	(
-		out1.ShippingState != null?
-            out1.ShippingState.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingState",
-	(
-		out1.ShippingState != null?
-            out1.ShippingState.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingPostalCode",
-	(
-		out1.ShippingPostalCode != null?
-            out1.ShippingPostalCode.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingPostalCode",
-	(
-		out1.ShippingPostalCode != null?
-            out1.ShippingPostalCode.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingCountry",
-	(
-		out1.ShippingCountry != null?
-            out1.ShippingCountry.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingCountry",
-	(
-		out1.ShippingCountry != null?
-            out1.ShippingCountry.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingLatitude",
-	(
-		out1.ShippingLatitude != null?
-            out1.ShippingLatitude.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingLatitude",
-	(
-		out1.ShippingLatitude != null?
-            out1.ShippingLatitude.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingLongitude",
-	(
-		out1.ShippingLongitude != null?
-            out1.ShippingLongitude.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingLongitude",
-	(
-		out1.ShippingLongitude != null?
-            out1.ShippingLongitude.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingGeocodeAccuracy",
-	(
-		out1.ShippingGeocodeAccuracy != null?
-            out1.ShippingGeocodeAccuracy.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingGeocodeAccuracy",
-	(
-		out1.ShippingGeocodeAccuracy != null?
-            out1.ShippingGeocodeAccuracy.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("ShippingAddress",
-	(
-		out1.ShippingAddress != null?
-            out1.ShippingAddress.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("ShippingAddress",
-	(
-		out1.ShippingAddress != null?
-            out1.ShippingAddress.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Phone",
-	(
-		out1.Phone != null?
-            out1.Phone.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Phone",
-	(
-		out1.Phone != null?
-            out1.Phone.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Website",
-	(
-		out1.Website != null?
-            out1.Website.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Website",
-	(
-		out1.Website != null?
-            out1.Website.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("PhotoUrl",
-	(
-		out1.PhotoUrl != null?
-            out1.PhotoUrl.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("PhotoUrl",
-	(
-		out1.PhotoUrl != null?
-            out1.PhotoUrl.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Industry",
-	(
-		out1.Industry != null?
-            out1.Industry.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Industry",
-	(
-		out1.Industry != null?
-            out1.Industry.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NumberOfEmployees",
-	(
-		out1.NumberOfEmployees != null?
-            out1.NumberOfEmployees.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NumberOfEmployees",
-	(
-		out1.NumberOfEmployees != null?
-            out1.NumberOfEmployees.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Description",
-	(
-		out1.Description != null?
-            out1.Description.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Description",
-	(
-		out1.Description != null?
-            out1.Description.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("OwnerId",
-	(
-		out1.OwnerId != null?
-            out1.OwnerId.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("OwnerId",
-	(
-		out1.OwnerId != null?
-            out1.OwnerId.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("CreatedDate",
-	(
-		out1.CreatedDate != null?
-            out1.CreatedDate.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("CreatedDate",
-	(
-		out1.CreatedDate != null?
-            out1.CreatedDate.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("CreatedById",
-	(
-		out1.CreatedById != null?
-            out1.CreatedById.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("CreatedById",
-	(
-		out1.CreatedById != null?
-            out1.CreatedById.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("LastModifiedDate",
-	(
-		out1.LastModifiedDate != null?
-            out1.LastModifiedDate.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("LastModifiedDate",
-	(
-		out1.LastModifiedDate != null?
-            out1.LastModifiedDate.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("LastModifiedById",
-	(
-		out1.LastModifiedById != null?
-            out1.LastModifiedById.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("LastModifiedById",
-	(
-		out1.LastModifiedById != null?
-            out1.LastModifiedById.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("SystemModstamp",
-	(
-		out1.SystemModstamp != null?
-            out1.SystemModstamp.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("SystemModstamp",
-	(
-		out1.SystemModstamp != null?
-            out1.SystemModstamp.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("LastActivityDate",
-	(
-		out1.LastActivityDate != null?
-            out1.LastActivityDate.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("LastActivityDate",
-	(
-		out1.LastActivityDate != null?
-            out1.LastActivityDate.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("LastViewedDate",
-	(
-		out1.LastViewedDate != null?
-            out1.LastViewedDate.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("LastViewedDate",
-	(
-		out1.LastViewedDate != null?
-            out1.LastViewedDate.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("LastReferencedDate",
-	(
-		out1.LastReferencedDate != null?
-            out1.LastReferencedDate.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("LastReferencedDate",
-	(
-		out1.LastReferencedDate != null?
-            out1.LastReferencedDate.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("Jigsaw",
-	(
-		out1.Jigsaw != null?
-            out1.Jigsaw.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("Jigsaw",
-	(
-		out1.Jigsaw != null?
-            out1.Jigsaw.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("JigsawCompanyId",
-	(
-		out1.JigsawCompanyId != null?
-            out1.JigsawCompanyId.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("JigsawCompanyId",
-	(
-		out1.JigsawCompanyId != null?
-            out1.JigsawCompanyId.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("AccountSource",
-	(
-		out1.AccountSource != null?
-            out1.AccountSource.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("AccountSource",
-	(
-		out1.AccountSource != null?
-            out1.AccountSource.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("SicDesc",
-	(
-		out1.SicDesc != null?
-            out1.SicDesc.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("SicDesc",
-	(
-		out1.SicDesc != null?
-            out1.SicDesc.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("hed__Current_Address__c",
-	(
-		out1.hed__Current_Address__c != null?
-            out1.hed__Current_Address__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("hed__Current_Address__c",
-	(
-		out1.hed__Current_Address__c != null?
-            out1.hed__Current_Address__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("hed__Primary_Contact__c",
-	(
-		out1.hed__Primary_Contact__c != null?
-            out1.hed__Primary_Contact__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("hed__Primary_Contact__c",
-	(
-		out1.hed__Primary_Contact__c != null?
-            out1.hed__Primary_Contact__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__Active__c",
-	(
-		out1.NoodleCRM__Active__c != null?
-            out1.NoodleCRM__Active__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__Active__c",
-	(
-		out1.NoodleCRM__Active__c != null?
-            out1.NoodleCRM__Active__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__CustomerPriority__c",
-	(
-		out1.NoodleCRM__CustomerPriority__c != null?
-            out1.NoodleCRM__CustomerPriority__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__CustomerPriority__c",
-	(
-		out1.NoodleCRM__CustomerPriority__c != null?
-            out1.NoodleCRM__CustomerPriority__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__External_Id_Alternate__c",
-	(
-		out1.NoodleCRM__External_Id_Alternate__c != null?
-            out1.NoodleCRM__External_Id_Alternate__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__External_Id_Alternate__c",
-	(
-		out1.NoodleCRM__External_Id_Alternate__c != null?
-            out1.NoodleCRM__External_Id_Alternate__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__External_Id__c",
-	(
-		out1.NoodleCRM__External_Id__c != null?
-            out1.NoodleCRM__External_Id__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__External_Id__c",
-	(
-		out1.NoodleCRM__External_Id__c != null?
-            out1.NoodleCRM__External_Id__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__NumberofLocations__c",
-	(
-		out1.NoodleCRM__NumberofLocations__c != null?
-            out1.NoodleCRM__NumberofLocations__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__NumberofLocations__c",
-	(
-		out1.NoodleCRM__NumberofLocations__c != null?
-            out1.NoodleCRM__NumberofLocations__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__Online_App_Display_Name__c",
-	(
-		out1.NoodleCRM__Online_App_Display_Name__c != null?
-            out1.NoodleCRM__Online_App_Display_Name__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__Online_App_Display_Name__c",
-	(
-		out1.NoodleCRM__Online_App_Display_Name__c != null?
-            out1.NoodleCRM__Online_App_Display_Name__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__Record_Type_Developer_Name__c",
-	(
-		out1.NoodleCRM__Record_Type_Developer_Name__c != null?
-            out1.NoodleCRM__Record_Type_Developer_Name__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__Record_Type_Developer_Name__c",
-	(
-		out1.NoodleCRM__Record_Type_Developer_Name__c != null?
-            out1.NoodleCRM__Record_Type_Developer_Name__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLAExpirationDate__c",
-	(
-		out1.NoodleCRM__SLAExpirationDate__c != null?
-            out1.NoodleCRM__SLAExpirationDate__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLAExpirationDate__c",
-	(
-		out1.NoodleCRM__SLAExpirationDate__c != null?
-            out1.NoodleCRM__SLAExpirationDate__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLASerialNumber__c",
-	(
-		out1.NoodleCRM__SLASerialNumber__c != null?
-            out1.NoodleCRM__SLASerialNumber__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLASerialNumber__c",
-	(
-		out1.NoodleCRM__SLASerialNumber__c != null?
-            out1.NoodleCRM__SLASerialNumber__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLA__c",
-	(
-		out1.NoodleCRM__SLA__c != null?
-            out1.NoodleCRM__SLA__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__SLA__c",
-	(
-		out1.NoodleCRM__SLA__c != null?
-            out1.NoodleCRM__SLA__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__School__c",
-	(
-		out1.NoodleCRM__School__c != null?
-            out1.NoodleCRM__School__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__School__c",
-	(
-		out1.NoodleCRM__School__c != null?
-            out1.NoodleCRM__School__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__University__c",
-	(
-		out1.NoodleCRM__University__c != null?
-            out1.NoodleCRM__University__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__University__c",
-	(
-		out1.NoodleCRM__University__c != null?
-            out1.NoodleCRM__University__c.toString():null
-		));
-	valueMap_tWriteJSONField_1_Out.put("NoodleCRM__UpsellOpportunity__c",
-	(
-		out1.NoodleCRM__UpsellOpportunity__c != null?
-            out1.NoodleCRM__UpsellOpportunity__c.toString():null
-		));
-	arraysValueMap_tWriteJSONField_1_Out.put("NoodleCRM__UpsellOpportunity__c",
-	(
-		out1.NoodleCRM__UpsellOpportunity__c != null?
-            out1.NoodleCRM__UpsellOpportunity__c.toString():null
-		));
-		String strTemp_tWriteJSONField_1_Out = "";
-	if(strCompCache_tWriteJSONField_1_Out==null){
-		strCompCache_tWriteJSONField_1_Out=strTemp_tWriteJSONField_1_Out;
-		
-	}else{  
-    		nestXMLTool_tWriteJSONField_1_Out.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out.getRootElement());			
-			java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();	
-			org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(strWriter_tWriteJSONField_1_Out, format_tWriteJSONField_1_Out);
-			output_tWriteJSONField_1_Out.write(doc_tWriteJSONField_1_Out);
-		    output_tWriteJSONField_1_Out.close();
-			
-				  		  row16Struct row_tWriteJSONField_1_Out = new row16Struct();
-						  
-					     		row_tWriteJSONField_1_Out.data = strWriter_tWriteJSONField_1_Out.toString();
-					     		listGroupby_tWriteJSONField_1_Out.add(row_tWriteJSONField_1_Out);
-					
-		    doc_tWriteJSONField_1_Out.clearContent();
-			needRoot_tWriteJSONField_1_Out = true;
-			for(int i_tWriteJSONField_1_Out=0;i_tWriteJSONField_1_Out<orders_tWriteJSONField_1_Out.length;i_tWriteJSONField_1_Out++){
-				orders_tWriteJSONField_1_Out[i_tWriteJSONField_1_Out] = 0;
-			}
-			
-			if(groupbyList_tWriteJSONField_1_Out != null && groupbyList_tWriteJSONField_1_Out.size() >= 0){
-				groupbyList_tWriteJSONField_1_Out.clear();
-			}
-			strCompCache_tWriteJSONField_1_Out=strTemp_tWriteJSONField_1_Out;
-	}
 
-	org.dom4j.Element subTreeRootParent_tWriteJSONField_1_Out = null;
-	
-	// build root xml tree 
-	if (needRoot_tWriteJSONField_1_Out) {
-		needRoot_tWriteJSONField_1_Out=false;
-		org.dom4j.Element root_tWriteJSONField_1_Out = doc_tWriteJSONField_1_Out.addElement("rootTag");
-		subTreeRootParent_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out;
-		org.dom4j.Element root_0_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("IsDeleted");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("IsDeleted")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_0_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("IsDeleted"));
-            root_0_tWriteJSONField_1_Out.addAttribute("type", "boolean");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_0_tWriteJSONField_1_Out,"null");
-			root_0_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_1_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("MasterRecordId");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("MasterRecordId")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_1_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("MasterRecordId"));
-			root_1_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_1_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_1_tWriteJSONField_1_Out,"null");
-			root_1_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_2_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Name");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Name")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_2_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Name"));
-			root_2_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_2_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_2_tWriteJSONField_1_Out,"null");
-			root_2_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_3_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Type");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Type")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_3_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Type"));
-			root_3_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_3_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_3_tWriteJSONField_1_Out,"null");
-			root_3_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_4_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("RecordTypeId");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("RecordTypeId")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_4_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("RecordTypeId"));
-			root_4_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_4_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_4_tWriteJSONField_1_Out,"null");
-			root_4_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_5_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ParentId");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ParentId")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_5_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ParentId"));
-			root_5_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_5_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_5_tWriteJSONField_1_Out,"null");
-			root_5_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_6_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingStreet");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingStreet")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_6_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingStreet"));
-			root_6_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_6_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_6_tWriteJSONField_1_Out,"null");
-			root_6_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_7_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingCity");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingCity")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_7_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingCity"));
-			root_7_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_7_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_7_tWriteJSONField_1_Out,"null");
-			root_7_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_8_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingState");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingState")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_8_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingState"));
-			root_8_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_8_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_8_tWriteJSONField_1_Out,"null");
-			root_8_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_9_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingPostalCode");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingPostalCode")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_9_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingPostalCode"));
-			root_9_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_9_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_9_tWriteJSONField_1_Out,"null");
-			root_9_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_10_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingCountry");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingCountry")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_10_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingCountry"));
-			root_10_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_10_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_10_tWriteJSONField_1_Out,"null");
-			root_10_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_11_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingLatitude");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingLatitude")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_11_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingLatitude"));
-            root_11_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_11_tWriteJSONField_1_Out,"null");
-			root_11_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_12_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingLongitude");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingLongitude")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_12_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingLongitude"));
-            root_12_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_12_tWriteJSONField_1_Out,"null");
-			root_12_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_13_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingGeocodeAccuracy");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingGeocodeAccuracy")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_13_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingGeocodeAccuracy"));
-			root_13_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_13_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_13_tWriteJSONField_1_Out,"null");
-			root_13_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_14_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("BillingAddress");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("BillingAddress")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_14_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("BillingAddress"));
-			root_14_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_14_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_14_tWriteJSONField_1_Out,"null");
-			root_14_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_15_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingStreet");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingStreet")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_15_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingStreet"));
-			root_15_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_15_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_15_tWriteJSONField_1_Out,"null");
-			root_15_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_16_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingCity");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingCity")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_16_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingCity"));
-			root_16_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_16_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_16_tWriteJSONField_1_Out,"null");
-			root_16_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_17_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingState");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingState")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_17_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingState"));
-			root_17_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_17_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_17_tWriteJSONField_1_Out,"null");
-			root_17_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_18_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingPostalCode");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingPostalCode")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_18_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingPostalCode"));
-			root_18_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_18_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_18_tWriteJSONField_1_Out,"null");
-			root_18_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_19_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingCountry");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingCountry")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_19_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingCountry"));
-			root_19_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_19_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_19_tWriteJSONField_1_Out,"null");
-			root_19_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_20_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingLatitude");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingLatitude")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_20_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingLatitude"));
-            root_20_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_20_tWriteJSONField_1_Out,"null");
-			root_20_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_21_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingLongitude");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingLongitude")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_21_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingLongitude"));
-            root_21_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_21_tWriteJSONField_1_Out,"null");
-			root_21_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_22_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingGeocodeAccuracy");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingGeocodeAccuracy")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_22_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingGeocodeAccuracy"));
-			root_22_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_22_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_22_tWriteJSONField_1_Out,"null");
-			root_22_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_23_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("ShippingAddress");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("ShippingAddress")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_23_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("ShippingAddress"));
-			root_23_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_23_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_23_tWriteJSONField_1_Out,"null");
-			root_23_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_24_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Phone");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Phone")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_24_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Phone"));
-			root_24_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_24_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_24_tWriteJSONField_1_Out,"null");
-			root_24_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_25_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Website");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Website")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_25_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Website"));
-			root_25_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_25_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_25_tWriteJSONField_1_Out,"null");
-			root_25_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_26_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("PhotoUrl");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("PhotoUrl")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_26_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("PhotoUrl"));
-			root_26_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_26_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_26_tWriteJSONField_1_Out,"null");
-			root_26_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_27_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Industry");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Industry")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_27_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Industry"));
-			root_27_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_27_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_27_tWriteJSONField_1_Out,"null");
-			root_27_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_28_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NumberOfEmployees");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NumberOfEmployees")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_28_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NumberOfEmployees"));
-            root_28_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_28_tWriteJSONField_1_Out,"null");
-			root_28_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_29_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Description");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Description")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_29_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Description"));
-			root_29_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_29_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_29_tWriteJSONField_1_Out,"null");
-			root_29_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_30_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("OwnerId");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("OwnerId")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_30_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("OwnerId"));
-			root_30_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_30_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_30_tWriteJSONField_1_Out,"null");
-			root_30_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_31_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("CreatedDate");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("CreatedDate")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_31_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("CreatedDate"));
-            root_31_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_31_tWriteJSONField_1_Out,"null");
-			root_31_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_32_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("CreatedById");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("CreatedById")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_32_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("CreatedById"));
-			root_32_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_32_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_32_tWriteJSONField_1_Out,"null");
-			root_32_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_33_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("LastModifiedDate");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("LastModifiedDate")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_33_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("LastModifiedDate"));
-            root_33_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_33_tWriteJSONField_1_Out,"null");
-			root_33_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_34_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("LastModifiedById");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("LastModifiedById")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_34_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("LastModifiedById"));
-			root_34_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_34_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_34_tWriteJSONField_1_Out,"null");
-			root_34_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_35_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("SystemModstamp");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("SystemModstamp")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_35_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("SystemModstamp"));
-            root_35_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_35_tWriteJSONField_1_Out,"null");
-			root_35_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_36_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("LastActivityDate");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("LastActivityDate")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_36_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("LastActivityDate"));
-            root_36_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_36_tWriteJSONField_1_Out,"null");
-			root_36_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_37_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("LastViewedDate");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("LastViewedDate")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_37_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("LastViewedDate"));
-            root_37_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_37_tWriteJSONField_1_Out,"null");
-			root_37_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_38_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("LastReferencedDate");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("LastReferencedDate")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_38_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("LastReferencedDate"));
-            root_38_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_38_tWriteJSONField_1_Out,"null");
-			root_38_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_39_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("Jigsaw");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Jigsaw")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_39_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Jigsaw"));
-			root_39_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_39_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_39_tWriteJSONField_1_Out,"null");
-			root_39_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_40_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("JigsawCompanyId");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("JigsawCompanyId")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_40_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("JigsawCompanyId"));
-			root_40_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_40_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_40_tWriteJSONField_1_Out,"null");
-			root_40_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_41_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("AccountSource");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("AccountSource")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_41_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("AccountSource"));
-			root_41_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_41_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_41_tWriteJSONField_1_Out,"null");
-			root_41_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_42_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("SicDesc");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("SicDesc")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_42_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("SicDesc"));
-			root_42_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_42_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_42_tWriteJSONField_1_Out,"null");
-			root_42_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_43_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("hed__Current_Address__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("hed__Current_Address__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_43_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("hed__Current_Address__c"));
-			root_43_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_43_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_43_tWriteJSONField_1_Out,"null");
-			root_43_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_44_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("hed__Primary_Contact__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("hed__Primary_Contact__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_44_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("hed__Primary_Contact__c"));
-			root_44_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_44_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_44_tWriteJSONField_1_Out,"null");
-			root_44_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_45_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__Active__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Active__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_45_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Active__c"));
-			root_45_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_45_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_45_tWriteJSONField_1_Out,"null");
-			root_45_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_46_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__CustomerPriority__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__CustomerPriority__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_46_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__CustomerPriority__c"));
-			root_46_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_46_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_46_tWriteJSONField_1_Out,"null");
-			root_46_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_47_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__External_Id_Alternate__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__External_Id_Alternate__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_47_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__External_Id_Alternate__c"));
-			root_47_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_47_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_47_tWriteJSONField_1_Out,"null");
-			root_47_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_48_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__External_Id__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__External_Id__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_48_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__External_Id__c"));
-			root_48_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_48_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_48_tWriteJSONField_1_Out,"null");
-			root_48_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_49_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__NumberofLocations__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__NumberofLocations__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_49_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__NumberofLocations__c"));
-            root_49_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_49_tWriteJSONField_1_Out,"null");
-			root_49_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_50_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__Online_App_Display_Name__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Online_App_Display_Name__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_50_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Online_App_Display_Name__c"));
-			root_50_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_50_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_50_tWriteJSONField_1_Out,"null");
-			root_50_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_51_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__Record_Type_Developer_Name__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Record_Type_Developer_Name__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_51_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__Record_Type_Developer_Name__c"));
-			root_51_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_51_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_51_tWriteJSONField_1_Out,"null");
-			root_51_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_52_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__SLAExpirationDate__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLAExpirationDate__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_52_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLAExpirationDate__c"));
-            root_52_tWriteJSONField_1_Out.addAttribute("type", "number");
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_52_tWriteJSONField_1_Out,"null");
-			root_52_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_53_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__SLASerialNumber__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLASerialNumber__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_53_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLASerialNumber__c"));
-			root_53_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_53_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_53_tWriteJSONField_1_Out,"null");
-			root_53_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_54_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__SLA__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLA__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_54_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__SLA__c"));
-			root_54_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_54_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_54_tWriteJSONField_1_Out,"null");
-			root_54_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_55_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__School__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__School__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_55_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__School__c"));
-			root_55_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_55_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_55_tWriteJSONField_1_Out,"null");
-			root_55_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_56_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__University__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__University__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_56_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__University__c"));
-			root_56_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_56_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_56_tWriteJSONField_1_Out,"null");
-			root_56_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		org.dom4j.Element root_57_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out.addElement("NoodleCRM__UpsellOpportunity__c");
-		if(
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__UpsellOpportunity__c")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_57_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("NoodleCRM__UpsellOpportunity__c"));
-			root_57_tWriteJSONField_1_Out.addAttribute("type", "string");
-			root_57_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(root_57_tWriteJSONField_1_Out,"null");
-			root_57_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
-		root4Group_tWriteJSONField_1_Out = subTreeRootParent_tWriteJSONField_1_Out;
-	}else{
-		subTreeRootParent_tWriteJSONField_1_Out=root4Group_tWriteJSONField_1_Out;
-	}
-	// build group xml tree 
-	// build loop xml tree
-		org.dom4j.Element loop_tWriteJSONField_1_Out = org.dom4j.DocumentHelper.createElement("Id");
-        if(orders_tWriteJSONField_1_Out[0]==0){
-        	orders_tWriteJSONField_1_Out[0] = 0;
-        }
-        if(1 < orders_tWriteJSONField_1_Out.length){
-        		orders_tWriteJSONField_1_Out[1] = 0;
-        }
-        subTreeRootParent_tWriteJSONField_1_Out.elements().add(orders_tWriteJSONField_1_Out[0]++,loop_tWriteJSONField_1_Out);
-		if(
-		valueMap_tWriteJSONField_1_Out.get("Id")!=null){
-			nestXMLTool_tWriteJSONField_1_Out .setText(loop_tWriteJSONField_1_Out,
-		valueMap_tWriteJSONField_1_Out.get("Id"));
-			loop_tWriteJSONField_1_Out.addAttribute("type", "string");
-			loop_tWriteJSONField_1_Out.addAttribute("class", "string");
-				
-		}
-		else {
-			nestXMLTool_tWriteJSONField_1_Out .setText(loop_tWriteJSONField_1_Out,"null");
-			loop_tWriteJSONField_1_Out.addAttribute("null", "true");
-		}
+                        String[] rowtFileOutputDelimited_1=new String[59];
+                            rowtFileOutputDelimited_1[0]=out1.Id == null ? null : out1.Id;
+                            rowtFileOutputDelimited_1[1]=out1.IsDeleted == null ? null : String.valueOf(out1.IsDeleted);
+                            rowtFileOutputDelimited_1[2]=out1.MasterRecordId == null ? null : out1.MasterRecordId;
+                            rowtFileOutputDelimited_1[3]=out1.Name == null ? null : out1.Name;
+                            rowtFileOutputDelimited_1[4]=out1.Type == null ? null : out1.Type;
+                            rowtFileOutputDelimited_1[5]=out1.RecordTypeId == null ? null : out1.RecordTypeId;
+                            rowtFileOutputDelimited_1[6]=out1.ParentId == null ? null : out1.ParentId;
+                            rowtFileOutputDelimited_1[7]=out1.BillingStreet == null ? null : out1.BillingStreet;
+                            rowtFileOutputDelimited_1[8]=out1.BillingCity == null ? null : out1.BillingCity;
+                            rowtFileOutputDelimited_1[9]=out1.BillingState == null ? null : out1.BillingState;
+                            rowtFileOutputDelimited_1[10]=out1.BillingPostalCode == null ? null : out1.BillingPostalCode;
+                            rowtFileOutputDelimited_1[11]=out1.BillingCountry == null ? null : out1.BillingCountry;
+                            rowtFileOutputDelimited_1[12]=out1.BillingLatitude == null ? null : String.valueOf(out1.BillingLatitude);
+                            rowtFileOutputDelimited_1[13]=out1.BillingLongitude == null ? null : String.valueOf(out1.BillingLongitude);
+                            rowtFileOutputDelimited_1[14]=out1.BillingGeocodeAccuracy == null ? null : out1.BillingGeocodeAccuracy;
+                            rowtFileOutputDelimited_1[15]=out1.BillingAddress == null ? null : out1.BillingAddress;
+                            rowtFileOutputDelimited_1[16]=out1.ShippingStreet == null ? null : out1.ShippingStreet;
+                            rowtFileOutputDelimited_1[17]=out1.ShippingCity == null ? null : out1.ShippingCity;
+                            rowtFileOutputDelimited_1[18]=out1.ShippingState == null ? null : out1.ShippingState;
+                            rowtFileOutputDelimited_1[19]=out1.ShippingPostalCode == null ? null : out1.ShippingPostalCode;
+                            rowtFileOutputDelimited_1[20]=out1.ShippingCountry == null ? null : out1.ShippingCountry;
+                            rowtFileOutputDelimited_1[21]=out1.ShippingLatitude == null ? null : String.valueOf(out1.ShippingLatitude);
+                            rowtFileOutputDelimited_1[22]=out1.ShippingLongitude == null ? null : String.valueOf(out1.ShippingLongitude);
+                            rowtFileOutputDelimited_1[23]=out1.ShippingGeocodeAccuracy == null ? null : out1.ShippingGeocodeAccuracy;
+                            rowtFileOutputDelimited_1[24]=out1.ShippingAddress == null ? null : out1.ShippingAddress;
+                            rowtFileOutputDelimited_1[25]=out1.Phone == null ? null : out1.Phone;
+                            rowtFileOutputDelimited_1[26]=out1.Website == null ? null : out1.Website;
+                            rowtFileOutputDelimited_1[27]=out1.PhotoUrl == null ? null : out1.PhotoUrl;
+                            rowtFileOutputDelimited_1[28]=out1.Industry == null ? null : out1.Industry;
+                            rowtFileOutputDelimited_1[29]=out1.NumberOfEmployees == null ? null : String.valueOf(out1.NumberOfEmployees);
+                            rowtFileOutputDelimited_1[30]=out1.Description == null ? null : out1.Description;
+                            rowtFileOutputDelimited_1[31]=out1.OwnerId == null ? null : out1.OwnerId;
+                            rowtFileOutputDelimited_1[32]=out1.CreatedDate == null ? null : FormatterUtils.format_Date(out1.CreatedDate, "yyyy-MM-dd HH:mm:ss");
+                            rowtFileOutputDelimited_1[33]=out1.CreatedById == null ? null : out1.CreatedById;
+                            rowtFileOutputDelimited_1[34]=out1.LastModifiedDate == null ? null : FormatterUtils.format_Date(out1.LastModifiedDate, "yyyy-MM-dd HH:mm:ss");
+                            rowtFileOutputDelimited_1[35]=out1.LastModifiedById == null ? null : out1.LastModifiedById;
+                            rowtFileOutputDelimited_1[36]=out1.SystemModstamp == null ? null : FormatterUtils.format_Date(out1.SystemModstamp, "yyyy-MM-dd HH:mm:ss");
+                            rowtFileOutputDelimited_1[37]=out1.LastActivityDate == null ? null : FormatterUtils.format_Date(out1.LastActivityDate, "yyyy-MM-dd");
+                            rowtFileOutputDelimited_1[38]=out1.LastViewedDate == null ? null : FormatterUtils.format_Date(out1.LastViewedDate, "yyyy-MM-dd HH:mm:ss");
+                            rowtFileOutputDelimited_1[39]=out1.LastReferencedDate == null ? null : FormatterUtils.format_Date(out1.LastReferencedDate, "yyyy-MM-dd HH:mm:ss");
+                            rowtFileOutputDelimited_1[40]=out1.Jigsaw == null ? null : out1.Jigsaw;
+                            rowtFileOutputDelimited_1[41]=out1.JigsawCompanyId == null ? null : out1.JigsawCompanyId;
+                            rowtFileOutputDelimited_1[42]=out1.AccountSource == null ? null : out1.AccountSource;
+                            rowtFileOutputDelimited_1[43]=out1.SicDesc == null ? null : out1.SicDesc;
+                            rowtFileOutputDelimited_1[44]=out1.hed__Current_Address__c == null ? null : out1.hed__Current_Address__c;
+                            rowtFileOutputDelimited_1[45]=out1.hed__Primary_Contact__c == null ? null : out1.hed__Primary_Contact__c;
+                            rowtFileOutputDelimited_1[46]=out1.NoodleCRM__Active__c == null ? null : out1.NoodleCRM__Active__c;
+                            rowtFileOutputDelimited_1[47]=out1.NoodleCRM__CustomerPriority__c == null ? null : out1.NoodleCRM__CustomerPriority__c;
+                            rowtFileOutputDelimited_1[48]=out1.NoodleCRM__External_Id_Alternate__c == null ? null : out1.NoodleCRM__External_Id_Alternate__c;
+                            rowtFileOutputDelimited_1[49]=out1.NoodleCRM__External_Id__c == null ? null : out1.NoodleCRM__External_Id__c;
+                            rowtFileOutputDelimited_1[50]=out1.NoodleCRM__NumberofLocations__c == null ? null : String.valueOf(out1.NoodleCRM__NumberofLocations__c);
+                            rowtFileOutputDelimited_1[51]=out1.NoodleCRM__Online_App_Display_Name__c == null ? null : out1.NoodleCRM__Online_App_Display_Name__c;
+                            rowtFileOutputDelimited_1[52]=out1.NoodleCRM__Record_Type_Developer_Name__c == null ? null : out1.NoodleCRM__Record_Type_Developer_Name__c;
+                            rowtFileOutputDelimited_1[53]=out1.NoodleCRM__SLAExpirationDate__c == null ? null : FormatterUtils.format_Date(out1.NoodleCRM__SLAExpirationDate__c, "yyyy-MM-dd");
+                            rowtFileOutputDelimited_1[54]=out1.NoodleCRM__SLASerialNumber__c == null ? null : out1.NoodleCRM__SLASerialNumber__c;
+                            rowtFileOutputDelimited_1[55]=out1.NoodleCRM__SLA__c == null ? null : out1.NoodleCRM__SLA__c;
+                            rowtFileOutputDelimited_1[56]=out1.NoodleCRM__School__c == null ? null : out1.NoodleCRM__School__c;
+                            rowtFileOutputDelimited_1[57]=out1.NoodleCRM__University__c == null ? null : out1.NoodleCRM__University__c;
+                            rowtFileOutputDelimited_1[58]=out1.NoodleCRM__UpsellOpportunity__c == null ? null : out1.NoodleCRM__UpsellOpportunity__c;
+                nb_line_tFileOutputDelimited_1++;
+                resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
+                                       CsvWritertFileOutputDelimited_1.writeNext(rowtFileOutputDelimited_1);
+
+
+
 
  
 
 
-	tos_count_tWriteJSONField_1_Out++;
+	tos_count_tFileOutputDelimited_1++;
 
 /**
- * [tWriteJSONField_1_Out main ] stop
+ * [tFileOutputDelimited_1 main ] stop
  */
 	
 	/**
-	 * [tWriteJSONField_1_Out process_data_begin ] start
+	 * [tFileOutputDelimited_1 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 
@@ -11966,20 +9835,18 @@ if(out1 != null) {
 
 
 /**
- * [tWriteJSONField_1_Out process_data_begin ] stop
+ * [tFileOutputDelimited_1 process_data_begin ] stop
  */
 	
 	/**
-	 * [tWriteJSONField_1_Out process_data_end ] start
+	 * [tFileOutputDelimited_1 process_data_end ] start
 	 */
 
 	
 
 	
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 
@@ -11988,7 +9855,7 @@ if(out1 != null) {
 
 
 /**
- * [tWriteJSONField_1_Out process_data_end ] stop
+ * [tFileOutputDelimited_1 process_data_end ] stop
  */
 
 } // End of branch "out1"
@@ -12142,64 +10009,66 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 	
 	/**
-	 * [tWriteJSONField_1_Out end ] start
+	 * [tFileOutputDelimited_1 end ] start
 	 */
 
 	
 
 	
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 
-if(nb_line_tWriteJSONField_1_Out > 0){  
-    nestXMLTool_tWriteJSONField_1_Out.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out.getRootElement());
-	java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();
-	org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(strWriter_tWriteJSONField_1_Out, format_tWriteJSONField_1_Out);
-	output_tWriteJSONField_1_Out.write(doc_tWriteJSONField_1_Out);
-    output_tWriteJSONField_1_Out.close();
-					row16Struct row_tWriteJSONField_1_Out = new row16Struct();
-						  
-					     		row_tWriteJSONField_1_Out.data = strWriter_tWriteJSONField_1_Out.toString();
-					     		listGroupby_tWriteJSONField_1_Out.add(row_tWriteJSONField_1_Out);
-		    		
 
-}
-globalMap.put("tWriteJSONField_1_Out_NB_LINE",nb_line_tWriteJSONField_1_Out);
-globalMap.put("tWriteJSONField_1_In_FINISH" + (listGroupby_tWriteJSONField_1_Out==null?"":listGroupby_tWriteJSONField_1_Out.hashCode()), "true");
-	
-		txf_tWriteJSONField_1_Out.join();
+
 		
-		if(txf_tWriteJSONField_1_Out.getLastException()!=null) {
-			currentComponent = txf_tWriteJSONField_1_Out.getCurrentComponent();
-			throw txf_tWriteJSONField_1_Out.getLastException();
-		}
+			
 		
-		if(txf_tWriteJSONField_1_Out.getLastError()!=null) {
-			throw txf_tWriteJSONField_1_Out.getLastError();
-		}
+				
+					if(CsvWritertFileOutputDelimited_1!=null) {
+				    	CsvWritertFileOutputDelimited_1.close();
+				    }
+					
+		    	globalMap.put("tFileOutputDelimited_1_NB_LINE",nb_line_tFileOutputDelimited_1);
+			
+		
+		
+		resourceMap.put("finish_tFileOutputDelimited_1", true);
 	
-resourceMap.put("finish_tWriteJSONField_1_Out", true);
+
 				if(execStat){
 			  		runStat.updateStat(resourceMap,iterateId,2,0,"out1");
 			  	}
 			  	
  
 
-ok_Hash.put("tWriteJSONField_1_Out", true);
-end_Hash.put("tWriteJSONField_1_Out", System.currentTimeMillis());
+ok_Hash.put("tFileOutputDelimited_1", true);
+end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
 
+   			if ((((Integer)globalMap.get("tSalesforceInput_12_NB_LINE")).intValue() != ((Integer)globalMap.get("tFileOutputDelimited_1_NB_LINE")).intValue())) {
+   				
+					if(execStat){
+   	 					runStat.updateStatOnConnection("If1", 0, "true");
+					}
+				tDie_1Process(globalMap);
+			}
+
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "false");
+					}   	 
+   				}
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk10", 0, "ok");
 				}
+				tFileArchive_1Process(globalMap);
 
 
 
 /**
- * [tWriteJSONField_1_Out end ] stop
+ * [tFileOutputDelimited_1 end ] stop
  */
 
 
@@ -12217,8 +10086,6 @@ end_Hash.put("tWriteJSONField_1_Out", System.currentTimeMillis());
 			}catch(java.lang.Exception e){	
 				
 				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-					te.setVirtualComponentName(currentVirtualComponent);
 				
 				throw te;
 			}catch(java.lang.Error error){	
@@ -12286,34 +10153,38 @@ if(resourceMap.get("finish_tSalesforceInput_12")==null){
 
 	
 	/**
-	 * [tWriteJSONField_1_Out finally ] start
+	 * [tFileOutputDelimited_1 finally ] start
 	 */
 
 	
 
 	
 	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_Out";
+	currentComponent="tFileOutputDelimited_1";
 
 	
 
-		java.util.Queue listGroupby_tWriteJSONField_1_Out = (java.util.Queue)globalMap.get("queue_tWriteJSONField_1_In");
-		if(resourceMap.get("finish_tWriteJSONField_1_Out") == null){
-			globalMap.put("tWriteJSONField_1_In_FINISH_WITH_EXCEPTION" + (listGroupby_tWriteJSONField_1_Out==null?"":listGroupby_tWriteJSONField_1_Out.hashCode()), "true");
+
+		if(resourceMap.get("finish_tFileOutputDelimited_1") == null){ 
+			
+				
+			
+					com.talend.csv.CSVWriter CsvWritertFileOutputDelimited_1 = (com.talend.csv.CSVWriter)resourceMap.get("CsvWriter_tFileOutputDelimited_1");
+					
+						if(CsvWritertFileOutputDelimited_1!=null) {
+					    	CsvWritertFileOutputDelimited_1.close();
+					    }
+						
+			
 		}
 	
-	if (listGroupby_tWriteJSONField_1_Out != null) {
-		globalMap.put("tWriteJSONField_1_In_FINISH" + (listGroupby_tWriteJSONField_1_Out==null?"":listGroupby_tWriteJSONField_1_Out.hashCode()), "true");
-	}
 
  
 
 
 
 /**
- * [tWriteJSONField_1_Out finally ] stop
+ * [tFileOutputDelimited_1 finally ] stop
  */
 
 
@@ -12544,6 +10415,775 @@ end_Hash.put("tDie_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tDie_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tFileArchive_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tFileArchive_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tFileArchive_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tFileArchive_1", false);
+		start_Hash.put("tFileArchive_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tFileArchive_1";
+
+	
+		int tos_count_tFileArchive_1 = 0;
+		
+
+ 
+
+
+
+/**
+ * [tFileArchive_1 begin ] stop
+ */
+	
+	/**
+	 * [tFileArchive_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileArchive_1";
+
+	
+
+	
+
+		String sourceFile_tFileArchive_1 = context.staging_S3_dir + "account.csv";
+	
+
+    if (java.nio.file.Files.notExists(java.nio.file.Paths.get(sourceFile_tFileArchive_1), java.nio.file.LinkOption.NOFOLLOW_LINKS)){
+        throw new java.io.FileNotFoundException(sourceFile_tFileArchive_1 + " (The system cannot find the path specified)");
+    }
+
+    String zipFile_tFileArchive_1 = context.staging_S3_dir + "account.csv.gz";
+    
+    com.talend.compress.zip.Zip zip_tFileArchive_1 = new com.talend.compress.zip.Zip(sourceFile_tFileArchive_1, zipFile_tFileArchive_1);
+    zip_tFileArchive_1.setOverwriteExistTargetZip(true);
+	zip_tFileArchive_1.setMakeTargetDir(true);
+	zip_tFileArchive_1.setCompressLevel(9);
+	zip_tFileArchive_1.setArchiveFormat("gzip");
+	zip_tFileArchive_1.setAllFiles(true);
+	
+	
+		zip_tFileArchive_1.setSyncFlush(false);
+	
+  
+  
+   globalMap.put("tFileArchive_1_ARCHIVE_FILEPATH",zipFile_tFileArchive_1);
+   
+   globalMap.put("tFileArchive_1_ARCHIVE_FILENAME", new java.io.File(zipFile_tFileArchive_1).getName());
+
+   zip_tFileArchive_1.doZip();
+
+
+ 
+
+
+	tos_count_tFileArchive_1++;
+
+/**
+ * [tFileArchive_1 main ] stop
+ */
+	
+	/**
+	 * [tFileArchive_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileArchive_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileArchive_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tFileArchive_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileArchive_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileArchive_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tFileArchive_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileArchive_1";
+
+	
+
+ 
+
+ok_Hash.put("tFileArchive_1", true);
+end_Hash.put("tFileArchive_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk8", 0, "ok");
+				}
+				tS3Put_1Process(globalMap);
+
+
+
+/**
+ * [tFileArchive_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tFileArchive_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tFileArchive_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tFileArchive_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tFileArchive_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tS3Put_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tS3Put_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tS3Put_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tS3Put_1", false);
+		start_Hash.put("tS3Put_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tS3Put_1";
+
+	
+		int tos_count_tS3Put_1 = 0;
+		
+	
+	
+		com.amazonaws.services.s3.AmazonS3Client conn_tS3Put_1 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
+		
+	String key_tS3Put_1 = context.nd_s3_data_lake_path_sfdc +"/sfdc/account/latest/university_id="+context.university_code+"/account.csv.gz";
+	
+	int partSizeInBytes_tS3Put_1 = 5 * 1024 * 1024;
+	if(partSizeInBytes_tS3Put_1 < 5 << 20 ) {
+		
+		partSizeInBytes_tS3Put_1 = 5 << 20;
+	}
+	
+	
+	Object fileOrStream_tS3Put_1 = context.staging_S3_dir + "account.csv.gz";
+	
+	boolean useStream_tS3Put_1 = false;
+	java.io.InputStream uploadStream_tS3Put_1 = null;
+	
+	com.amazonaws.services.s3.transfer.TransferManager tm_tS3Put_1 = null;
+	
+	try{
+		
+		
+		if(fileOrStream_tS3Put_1 instanceof String){
+		    useStream_tS3Put_1 = false;
+		}else if(fileOrStream_tS3Put_1 instanceof java.io.InputStream){
+		    useStream_tS3Put_1 = true;
+		}
+		
+    com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Put_1 = new com.amazonaws.services.s3.model.ObjectMetadata();
+		
+		
+  		
+		
+		if(!useStream_tS3Put_1) {
+				java.io.File inputFile_tS3Put_1 = new java.io.File((String)fileOrStream_tS3Put_1);
+				
+				long multipart_upload_threshold_tS3Put_1 = 5 * 1024 * 1024;
+				
+    		tm_tS3Put_1 = com.amazonaws.services.s3.transfer.TransferManagerBuilder
+    			.standard()
+    			.withMinimumUploadPartSize((long)partSizeInBytes_tS3Put_1)
+    			.withMultipartUploadThreshold(multipart_upload_threshold_tS3Put_1)
+    			.withS3Client(conn_tS3Put_1)
+    			.build();
+    			
+  			com.amazonaws.services.s3.model.PutObjectRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.PutObjectRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, inputFile_tS3Put_1).withMetadata(objectMetadata_tS3Put_1);
+			
+
+  			
+
+  		
+  			com.amazonaws.services.s3.transfer.Upload upload_tS3Put_1 = tm_tS3Put_1.upload(putRequest_tS3Put_1);
+  		
+  			upload_tS3Put_1.waitForCompletion();
+  			
+		} else {
+				java.io.InputStream sourceStream_tS3Put_1 = ((java.io.InputStream)fileOrStream_tS3Put_1);
+				
+  			class S3StreamUtil {
+    	    public int getLength(byte[] output) {
+    		    for (int i = output.length - 1; i > 0; i--) {
+    			    if (output[i] != 0) {
+    				    return i + 1;
+    			    }
+    		    }
+    		    return 0;
+    	    }
+      	}
+      	
+      	S3StreamUtil streamUtil_tS3Put_1 = new S3StreamUtil();
+    		byte[] buffer_tS3Put_1 = new byte[partSizeInBytes_tS3Put_1];
+    		sourceStream_tS3Put_1.read(buffer_tS3Put_1);
+    		long curPartSize_tS3Put_1 = streamUtil_tS3Put_1.getLength(buffer_tS3Put_1);
+    		boolean multiUpload_tS3Put_1 = curPartSize_tS3Put_1 == partSizeInBytes_tS3Put_1;
+    		
+    		if(!multiUpload_tS3Put_1) {
+    				objectMetadata_tS3Put_1.setContentLength(curPartSize_tS3Put_1);
+    				uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1,0,Long.valueOf(curPartSize_tS3Put_1).intValue());
+    				com.amazonaws.services.s3.model.PutObjectRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.PutObjectRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, uploadStream_tS3Put_1, objectMetadata_tS3Put_1);
+			
+    				
+    				
+
+    				
+    				conn_tS3Put_1.putObject(putRequest_tS3Put_1);
+    		} else {
+    				uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1);
+      			java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Put_1 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
+      			com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Put_1 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, objectMetadata_tS3Put_1);
+      			
+      			
+
+      			
+      			com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResponse_tS3Put_1 = conn_tS3Put_1.initiateMultipartUpload(putRequest_tS3Put_1);
+      			String uploadId_tS3Put_1 = initResponse_tS3Put_1.getUploadId();
+      			int partNumber_tS3Put_1 = 1;
+      			boolean streamHasNext_tS3Put_1 = true;
+      			byte[] probeAvailability_tS3Put_1 = new byte[1];
+				try {
+					while (streamHasNext_tS3Put_1) {
+        						com.amazonaws.services.s3.model.UploadPartRequest uploadRequest_tS3Put_1 = new com.amazonaws.services.s3.model.UploadPartRequest()
+                    	.withBucketName(context.nd_s3_bucket_QA_sfdc)
+                    	.withKey(key_tS3Put_1)
+						.withUploadId(uploadId_tS3Put_1)
+                    	.withPartNumber(partNumber_tS3Put_1)
+						.withPartSize(curPartSize_tS3Put_1);
+            		    uploadRequest_tS3Put_1.setInputStream(uploadStream_tS3Put_1);
+            		    streamHasNext_tS3Put_1 = sourceStream_tS3Put_1.read(probeAvailability_tS3Put_1) != -1;
+            		    if(!streamHasNext_tS3Put_1){
+                    	    uploadRequest_tS3Put_1.setLastPart(true);
+                    	}
+
+                		partTags_tS3Put_1.add(conn_tS3Put_1.uploadPart(uploadRequest_tS3Put_1).getPartETag());
+                  	    partNumber_tS3Put_1++;
+
+          		     	if(uploadStream_tS3Put_1!=null){
+      		         			uploadStream_tS3Put_1.close();
+          		     	}
+          		     	buffer_tS3Put_1 = new byte[partSizeInBytes_tS3Put_1];
+          		     	sourceStream_tS3Put_1.read(buffer_tS3Put_1,1,partSizeInBytes_tS3Put_1-1);
+          		     	buffer_tS3Put_1[0] = probeAvailability_tS3Put_1[0];
+          		     	probeAvailability_tS3Put_1 = new byte[1];
+          		     	curPartSize_tS3Put_1 = streamUtil_tS3Put_1.getLength(buffer_tS3Put_1);
+          		     	uploadStream_tS3Put_1 = new java.io.ByteArrayInputStream(buffer_tS3Put_1);
+        				}
+        				
+            		com.amazonaws.services.s3.model.CompleteMultipartUploadRequest compRequest_tS3Put_1 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1,
+                        uploadId_tS3Put_1, partTags_tS3Put_1);
+            		conn_tS3Put_1.completeMultipartUpload(compRequest_tS3Put_1);
+            } catch (java.lang.Exception uploadException_tS3Put_1) {
+  							conn_tS3Put_1.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(context.nd_s3_bucket_QA_sfdc, key_tS3Put_1, uploadId_tS3Put_1));
+    						throw uploadException_tS3Put_1;
+            }
+    		}
+		}
+		
+		
+	}catch(java.lang.Exception e_tS3Put_1){
+		
+			throw(e_tS3Put_1);
+		
+	}finally{
+		if(useStream_tS3Put_1 && uploadStream_tS3Put_1!=null){
+    	uploadStream_tS3Put_1.close();
+    }
+    
+    if(tm_tS3Put_1 != null){
+        tm_tS3Put_1.shutdownNow(false);
+    }
+	    
+		
+	}     
+
+ 
+
+
+
+/**
+ * [tS3Put_1 begin ] stop
+ */
+	
+	/**
+	 * [tS3Put_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Put_1";
+
+	
+
+ 
+
+
+	tos_count_tS3Put_1++;
+
+/**
+ * [tS3Put_1 main ] stop
+ */
+	
+	/**
+	 * [tS3Put_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Put_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Put_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tS3Put_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Put_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Put_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tS3Put_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Put_1";
+
+	
+
+ 
+
+ok_Hash.put("tS3Put_1", true);
+end_Hash.put("tS3Put_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk11", 0, "ok");
+				}
+				tJava_4Process(globalMap);
+
+
+
+/**
+ * [tS3Put_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tS3Put_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Put_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Put_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tS3Put_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tJava_4Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_4_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tJava_4 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJava_4", false);
+		start_Hash.put("tJava_4", System.currentTimeMillis());
+		
+	
+	currentComponent="tJava_4";
+
+	
+		int tos_count_tJava_4 = 0;
+		
+
+
+System.out.println("Step 5: Completed Uploading Latest Run File To Latest Folder");
+System.out.println("Step 6: Number of source records from salesforce object  : "+  ((Integer)globalMap.get("tSalesforceInput_12_NB_LINE"))+ " Records and S3 file records count :" +((Integer)globalMap.get("tFileOutputDelimited_1_NB_LINE"))+ " Records");
+System.out.println("************************************************************");
+
+
+ 
+
+
+
+/**
+ * [tJava_4 begin ] stop
+ */
+	
+	/**
+	 * [tJava_4 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_4";
+
+	
+
+ 
+
+
+	tos_count_tJava_4++;
+
+/**
+ * [tJava_4 main ] stop
+ */
+	
+	/**
+	 * [tJava_4 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_4";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_4 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJava_4 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_4";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_4 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_4 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_4";
+
+	
+
+ 
+
+ok_Hash.put("tJava_4", true);
+end_Hash.put("tJava_4", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tJava_4 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tJava_4 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_4";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_4 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tJava_4_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -90596,672 +89236,6 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
 		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
 	}
 	
-
-
-public static class row16Struct implements routines.system.IPersistableRow<row16Struct> {
-    final static byte[] commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_cwru = new byte[0];
-    static byte[] commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru = new byte[0];
-
-	
-			    public String data;
-
-				public String getData () {
-					return this.data;
-				}
-				
-
-
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru.length) {
-				if(length < 1024 && commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru.length == 0) {
-   					commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru = new byte[1024];
-				} else {
-   					commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru, 0, length);
-			strReturn = new String(commonByteArray_T_NP_31_sfdc_s3_sync_job_cwru, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_cwru) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.data = readString(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// String
-				
-						writeString(this.data,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("data="+data);
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row16Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-public void tWriteJSONField_1_InProcess(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-		String currentVirtualComponent = null;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		row16Struct row16 = new row16Struct();
-
-
-
-
-	
-	/**
-	 * [tFileOutputDelimited_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tFileOutputDelimited_1", false);
-		start_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-					if(execStat) {
-						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row16");
-					}
-				
-		int tos_count_tFileOutputDelimited_1 = 0;
-		
-
-String fileName_tFileOutputDelimited_1 = "";
-    fileName_tFileOutputDelimited_1 = (new java.io.File(context.staging_S3_dir  + "account.json")).getAbsolutePath().replace("\\","/");
-    String fullName_tFileOutputDelimited_1 = null;
-    String extension_tFileOutputDelimited_1 = null;
-    String directory_tFileOutputDelimited_1 = null;
-    if((fileName_tFileOutputDelimited_1.indexOf("/") != -1)) {
-        if(fileName_tFileOutputDelimited_1.lastIndexOf(".") < fileName_tFileOutputDelimited_1.lastIndexOf("/")) {
-            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
-            extension_tFileOutputDelimited_1 = "";
-        } else {
-            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("."));
-            extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
-        }
-        directory_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("/"));
-    } else {
-        if(fileName_tFileOutputDelimited_1.lastIndexOf(".") != -1) {
-            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(0, fileName_tFileOutputDelimited_1.lastIndexOf("."));
-            extension_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1.substring(fileName_tFileOutputDelimited_1.lastIndexOf("."));
-        } else {
-            fullName_tFileOutputDelimited_1 = fileName_tFileOutputDelimited_1;
-            extension_tFileOutputDelimited_1 = "";
-        }
-        directory_tFileOutputDelimited_1 = "";
-    }
-    boolean isFileGenerated_tFileOutputDelimited_1 = true;
-    java.io.File filetFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
-    globalMap.put("tFileOutputDelimited_1_FILE_NAME",fileName_tFileOutputDelimited_1);
-            int nb_line_tFileOutputDelimited_1 = 0;
-            int splitedFileNo_tFileOutputDelimited_1 = 0;
-            int currentRow_tFileOutputDelimited_1 = 0;
-
-            final String OUT_DELIM_tFileOutputDelimited_1 = /** Start field tFileOutputDelimited_1:FIELDSEPARATOR */"^"/** End field tFileOutputDelimited_1:FIELDSEPARATOR */;
-
-            final String OUT_DELIM_ROWSEP_tFileOutputDelimited_1 = /** Start field tFileOutputDelimited_1:ROWSEPARATOR */"\n"/** End field tFileOutputDelimited_1:ROWSEPARATOR */;
-
-                    //create directory only if not exists
-                    if(directory_tFileOutputDelimited_1 != null && directory_tFileOutputDelimited_1.trim().length() != 0) {
-                        java.io.File dir_tFileOutputDelimited_1 = new java.io.File(directory_tFileOutputDelimited_1);
-                        if(!dir_tFileOutputDelimited_1.exists()) {
-                            dir_tFileOutputDelimited_1.mkdirs();
-                        }
-                    }
-
-                        //routines.system.Row
-                        java.io.Writer outtFileOutputDelimited_1 = null;
-
-                        java.io.File fileToDelete_tFileOutputDelimited_1 = new java.io.File(fileName_tFileOutputDelimited_1);
-                        if(fileToDelete_tFileOutputDelimited_1.exists()) {
-                            fileToDelete_tFileOutputDelimited_1.delete();
-                        }
-                        outtFileOutputDelimited_1 = new java.io.BufferedWriter(new java.io.OutputStreamWriter(
-                        new java.io.FileOutputStream(fileName_tFileOutputDelimited_1, false),"UTF-8"));
-
-
-        resourceMap.put("out_tFileOutputDelimited_1", outtFileOutputDelimited_1);
-resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
-
- 
-
-
-
-/**
- * [tFileOutputDelimited_1 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tWriteJSONField_1_In begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tWriteJSONField_1_In", false);
-		start_Hash.put("tWriteJSONField_1_In", System.currentTimeMillis());
-		
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-		int tos_count_tWriteJSONField_1_In = 0;
-		
-
-				int nb_line_tWriteJSONField_1_In = 0;
-				net.sf.json.xml.XMLSerializer xmlSerializer_tWriteJSONField_1_In = new net.sf.json.xml.XMLSerializer(); 
-			    xmlSerializer_tWriteJSONField_1_In.clearNamespaces();
-			    xmlSerializer_tWriteJSONField_1_In.setSkipNamespaces(true);
-			    xmlSerializer_tWriteJSONField_1_In.setForceTopLevelObject(false);
-				xmlSerializer_tWriteJSONField_1_In.setUseEmptyStrings(true);
-				
-					   java.util.Queue<row16Struct> queue_tWriteJSONField_1_In = (java.util.Queue<row16Struct>) globalMap.get("queue_tWriteJSONField_1_In");
-					
-				String readFinishMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH"+(queue_tWriteJSONField_1_In==null?"":queue_tWriteJSONField_1_In.hashCode());
-				String str_tWriteJSONField_1_In = null;
-				
-				while(!globalMap.containsKey(readFinishMarkWithPipeId_tWriteJSONField_1_In) || !queue_tWriteJSONField_1_In.isEmpty()) {
-					if (!queue_tWriteJSONField_1_In.isEmpty()) {
-			
-
- 
-
-
-
-/**
- * [tWriteJSONField_1_In begin ] stop
- */
-	
-	/**
-	 * [tWriteJSONField_1_In main ] start
-	 */
-
-	
-
-	
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-
-                    row16Struct result_tWriteJSONField_1_In = queue_tWriteJSONField_1_In.poll();
-                    str_tWriteJSONField_1_In = result_tWriteJSONField_1_In.data;
-        //Convert XML to JSON
-        net.sf.json.JsonStandard jsonStandard_tWriteJSONField_1_In =  net.sf.json.JsonStandard.LEGACY  ;
-        xmlSerializer_tWriteJSONField_1_In.setJsonStandard(jsonStandard_tWriteJSONField_1_In);
-        net.sf.json.JSON json_tWriteJSONField_1_In = xmlSerializer_tWriteJSONField_1_In.read(str_tWriteJSONField_1_In);
-        row16.data = net.sf.json.util.JSONUtils.jsonToStandardizedString(json_tWriteJSONField_1_In, jsonStandard_tWriteJSONField_1_In);
-    
-        nb_line_tWriteJSONField_1_In++;
-
- 
-
-
-	tos_count_tWriteJSONField_1_In++;
-
-/**
- * [tWriteJSONField_1_In main ] stop
- */
-	
-	/**
-	 * [tWriteJSONField_1_In process_data_begin ] start
-	 */
-
-	
-
-	
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-
- 
-
-
-
-/**
- * [tWriteJSONField_1_In process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tFileOutputDelimited_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-					if(execStat){
-						runStat.updateStatOnConnection(iterateId,1,1,"row16");
-					}
-					
-
-
-                    StringBuilder sb_tFileOutputDelimited_1 = new StringBuilder();
-                            if(row16.data != null) {
-                        sb_tFileOutputDelimited_1.append(
-                            row16.data
-                        );
-                            }
-                    sb_tFileOutputDelimited_1.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
-
-
-                    nb_line_tFileOutputDelimited_1++;
-                    resourceMap.put("nb_line_tFileOutputDelimited_1", nb_line_tFileOutputDelimited_1);
-
-                        outtFileOutputDelimited_1.write(sb_tFileOutputDelimited_1.toString());
-
-
-
-
- 
-
-
-	tos_count_tFileOutputDelimited_1++;
-
-/**
- * [tFileOutputDelimited_1 main ] stop
- */
-	
-	/**
-	 * [tFileOutputDelimited_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileOutputDelimited_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tFileOutputDelimited_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-
- 
-
-
-
-/**
- * [tFileOutputDelimited_1 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tWriteJSONField_1_In process_data_end ] start
-	 */
-
-	
-
-	
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-
- 
-
-
-
-/**
- * [tWriteJSONField_1_In process_data_end ] stop
- */
-	
-	/**
-	 * [tWriteJSONField_1_In end ] start
-	 */
-
-	
-
-	
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-
-					}
-				}
-				
-					String readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH_WITH_EXCEPTION"+(queue_tWriteJSONField_1_In==null?"":queue_tWriteJSONField_1_In.hashCode());
-					if(globalMap.containsKey(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In)){
-						if(!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
-							globalMap.put(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In, null);// syn
-						}
-						globalMap.remove(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In);
-						return;
-					}
-					globalMap.remove("queue_tWriteJSONField_1_In");
-    			
-				if(!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
-					globalMap.put(readFinishMarkWithPipeId_tWriteJSONField_1_In,null);//syn
-				}
-				globalMap.remove(readFinishMarkWithPipeId_tWriteJSONField_1_In);
-			
-globalMap.put("tWriteJSONField_1_NB_LINE",nb_line_tWriteJSONField_1_In);
- 
-
-ok_Hash.put("tWriteJSONField_1_In", true);
-end_Hash.put("tWriteJSONField_1_In", System.currentTimeMillis());
-
-
-
-
-/**
- * [tWriteJSONField_1_In end ] stop
- */
-
-	
-	/**
-	 * [tFileOutputDelimited_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-
-
-
-		
-			
-					if(outtFileOutputDelimited_1!=null) {
-						outtFileOutputDelimited_1.flush();
-						outtFileOutputDelimited_1.close();
-					}
-				
-				globalMap.put("tFileOutputDelimited_1_NB_LINE",nb_line_tFileOutputDelimited_1);
-				globalMap.put("tFileOutputDelimited_1_FILE_NAME",fileName_tFileOutputDelimited_1);
-			
-		
-		
-		resourceMap.put("finish_tFileOutputDelimited_1", true);
-	
-
-				if(execStat){
-			  		runStat.updateStat(resourceMap,iterateId,2,0,"row16");
-			  	}
-			  	
- 
-
-ok_Hash.put("tFileOutputDelimited_1", true);
-end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
-
-   			if ((((Integer)globalMap.get("tSalesforceInput_12_NB_LINE")).intValue() != ((Integer)globalMap.get("tFileOutputDelimited_1_NB_LINE")).intValue())) {
-   				
-					if(execStat){
-   	 					runStat.updateStatOnConnection("If1", 0, "true");
-					}
-				tDie_1Process(globalMap);
-			}
-
-			   
-   				else{
-					if(execStat){   
-   	 					runStat.updateStatOnConnection("If1", 0, "false");
-					}   	 
-   				}
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk8", 0, "ok");
-				}
-				tFileArchive_1Process(globalMap);
-
-
-
-/**
- * [tFileOutputDelimited_1 end ] stop
- */
-
-
-
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-					te.setVirtualComponentName(currentVirtualComponent);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tWriteJSONField_1_In finally ] start
-	 */
-
-	
-
-	
-	
-		currentVirtualComponent = "tWriteJSONField_1";
-	
-	currentComponent="tWriteJSONField_1_In";
-
-	
-
- 
-
-
-
-/**
- * [tWriteJSONField_1_In finally ] stop
- */
-
-	
-	/**
-	 * [tFileOutputDelimited_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tFileOutputDelimited_1";
-
-	
-
-
-		if(resourceMap.get("finish_tFileOutputDelimited_1") == null){ 
-			
-				
-						java.io.Writer outtFileOutputDelimited_1 = (java.io.Writer)resourceMap.get("out_tFileOutputDelimited_1");
-						if(outtFileOutputDelimited_1!=null) {
-							outtFileOutputDelimited_1.flush();
-							outtFileOutputDelimited_1.close();
-						}
-					
-				
-			
-		}
-	
-
- 
-
-
-
-/**
- * [tFileOutputDelimited_1 finally ] stop
- */
-
-
-
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 1);
-	}
-	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -91450,23 +89424,6 @@ end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
                                     }
                                 }
                             }
-                        context.setContextType("nd_aws_access_key", "id_String");
-                            context.nd_aws_access_key=(String) context.getProperty("nd_aws_access_key");
-                        context.setContextType("nd_aws_secret_key", "id_Password");
-                            String pwd_nd_aws_secret_key_value = context.getProperty("nd_aws_secret_key");
-                            context.nd_aws_secret_key = null;
-                            if(pwd_nd_aws_secret_key_value!=null) {
-                                if(context_param.containsKey("nd_aws_secret_key")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.nd_aws_secret_key = pwd_nd_aws_secret_key_value;
-                                } else if (!pwd_nd_aws_secret_key_value.isEmpty()) {
-                                    try {
-                                        context.nd_aws_secret_key = routines.system.PasswordEncryptUtil.decryptPassword(pwd_nd_aws_secret_key_value);
-                                        context.put("nd_aws_secret_key",context.nd_aws_secret_key);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
                         context.setContextType("nd_s3_bucket_QA_sfdc", "id_String");
                             context.nd_s3_bucket_QA_sfdc=(String) context.getProperty("nd_s3_bucket_QA_sfdc");
                         context.setContextType("nd_s3_data_lake_path_sfdc", "id_String");
@@ -91641,10 +89598,6 @@ end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
                 context.sfdc_issuer_token = (String) parentContextMap.get("sfdc_issuer_token");
             }if (parentContextMap.containsKey("sfdc_keystore_password")) {
                 context.sfdc_keystore_password = (java.lang.String) parentContextMap.get("sfdc_keystore_password");
-            }if (parentContextMap.containsKey("nd_aws_access_key")) {
-                context.nd_aws_access_key = (String) parentContextMap.get("nd_aws_access_key");
-            }if (parentContextMap.containsKey("nd_aws_secret_key")) {
-                context.nd_aws_secret_key = (java.lang.String) parentContextMap.get("nd_aws_secret_key");
             }if (parentContextMap.containsKey("nd_s3_bucket_QA_sfdc")) {
                 context.nd_s3_bucket_QA_sfdc = (String) parentContextMap.get("nd_s3_bucket_QA_sfdc");
             }if (parentContextMap.containsKey("nd_s3_data_lake_path_sfdc")) {
@@ -91717,7 +89670,6 @@ end_Hash.put("tFileOutputDelimited_1", System.currentTimeMillis());
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
 			parametersToEncrypt.add("sfdc_keystore_password");
-			parametersToEncrypt.add("nd_aws_secret_key");
 			parametersToEncrypt.add("NP_Salesforce_oauth_clientSecret");
 			parametersToEncrypt.add("NP_Salesforce_oauth2JwtFlow_keyStorePassword");
 			parametersToEncrypt.add("NP_Salesforce_proxy_userPassword_password");
@@ -91973,6 +89925,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     3468051 characters generated by Talend Open Studio for Data Integration 
- *     on the February 18, 2021 at 11:16:25 AM PST
+ *     3405246 characters generated by Talend Open Studio for Data Integration 
+ *     on the February 18, 2021 at 1:24:05 PM PST
  ************************************************************************************************/

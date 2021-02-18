@@ -297,18 +297,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(nd_aws_access_key != null){
-				
-					this.setProperty("nd_aws_access_key", nd_aws_access_key.toString());
-				
-			}
-			
-			if(nd_aws_secret_key != null){
-				
-					this.setProperty("nd_aws_secret_key", nd_aws_secret_key.toString());
-				
-			}
-			
 			if(nd_s3_bucket_QA_sfdc != null){
 				
 					this.setProperty("nd_s3_bucket_QA_sfdc", nd_s3_bucket_QA_sfdc.toString());
@@ -318,162 +306,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			if(nd_s3_data_lake_path_sfdc != null){
 				
 					this.setProperty("nd_s3_data_lake_path_sfdc", nd_s3_data_lake_path_sfdc.toString());
-				
-			}
-			
-			if(NP_Salesforce_apiVersion != null){
-				
-					this.setProperty("NP_Salesforce_apiVersion", NP_Salesforce_apiVersion.toString());
-				
-			}
-			
-			if(NP_Salesforce_clientId != null){
-				
-					this.setProperty("NP_Salesforce_clientId", NP_Salesforce_clientId.toString());
-				
-			}
-			
-			if(NP_Salesforce_endpoint != null){
-				
-					this.setProperty("NP_Salesforce_endpoint", NP_Salesforce_endpoint.toString());
-				
-			}
-			
-			if(NP_Salesforce_loginType != null){
-				
-					this.setProperty("NP_Salesforce_loginType", NP_Salesforce_loginType.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth_callbackHost != null){
-				
-					this.setProperty("NP_Salesforce_oauth_callbackHost", NP_Salesforce_oauth_callbackHost.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth_callbackPort != null){
-				
-					this.setProperty("NP_Salesforce_oauth_callbackPort", NP_Salesforce_oauth_callbackPort.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth_clientId != null){
-				
-					this.setProperty("NP_Salesforce_oauth_clientId", NP_Salesforce_oauth_clientId.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth_clientSecret != null){
-				
-					this.setProperty("NP_Salesforce_oauth_clientSecret", NP_Salesforce_oauth_clientSecret.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth_tokenFile != null){
-				
-					this.setProperty("NP_Salesforce_oauth_tokenFile", NP_Salesforce_oauth_tokenFile.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2FlowType != null){
-				
-					this.setProperty("NP_Salesforce_oauth2FlowType", NP_Salesforce_oauth2FlowType.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_audience != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_audience", NP_Salesforce_oauth2JwtFlow_audience.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_certificateAlias != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_certificateAlias", NP_Salesforce_oauth2JwtFlow_certificateAlias.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_expirationTime != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_expirationTime", NP_Salesforce_oauth2JwtFlow_expirationTime.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_issuer != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_issuer", NP_Salesforce_oauth2JwtFlow_issuer.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_keyStore != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_keyStore", NP_Salesforce_oauth2JwtFlow_keyStore.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_keyStorePassword != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_keyStorePassword", NP_Salesforce_oauth2JwtFlow_keyStorePassword.toString());
-				
-			}
-			
-			if(NP_Salesforce_oauth2JwtFlow_subject != null){
-				
-					this.setProperty("NP_Salesforce_oauth2JwtFlow_subject", NP_Salesforce_oauth2JwtFlow_subject.toString());
-				
-			}
-			
-			if(NP_Salesforce_proxy_host != null){
-				
-					this.setProperty("NP_Salesforce_proxy_host", NP_Salesforce_proxy_host.toString());
-				
-			}
-			
-			if(NP_Salesforce_proxy_port != null){
-				
-					this.setProperty("NP_Salesforce_proxy_port", NP_Salesforce_proxy_port.toString());
-				
-			}
-			
-			if(NP_Salesforce_proxy_userPassword_password != null){
-				
-					this.setProperty("NP_Salesforce_proxy_userPassword_password", NP_Salesforce_proxy_userPassword_password.toString());
-				
-			}
-			
-			if(NP_Salesforce_proxy_userPassword_userId != null){
-				
-					this.setProperty("NP_Salesforce_proxy_userPassword_userId", NP_Salesforce_proxy_userPassword_userId.toString());
-				
-			}
-			
-			if(NP_Salesforce_sessionDirectory != null){
-				
-					this.setProperty("NP_Salesforce_sessionDirectory", NP_Salesforce_sessionDirectory.toString());
-				
-			}
-			
-			if(NP_Salesforce_timeout != null){
-				
-					this.setProperty("NP_Salesforce_timeout", NP_Salesforce_timeout.toString());
-				
-			}
-			
-			if(NP_Salesforce_userPassword_password != null){
-				
-					this.setProperty("NP_Salesforce_userPassword_password", NP_Salesforce_userPassword_password.toString());
-				
-			}
-			
-			if(NP_Salesforce_userPassword_securityKey != null){
-				
-					this.setProperty("NP_Salesforce_userPassword_securityKey", NP_Salesforce_userPassword_securityKey.toString());
-				
-			}
-			
-			if(NP_Salesforce_userPassword_userId != null){
-				
-					this.setProperty("NP_Salesforce_userPassword_userId", NP_Salesforce_userPassword_userId.toString());
 				
 			}
 			
@@ -525,14 +357,6 @@ public java.lang.String sfdc_keystore_password;
 public java.lang.String getSfdc_keystore_password(){
 	return this.sfdc_keystore_password;
 }
-public String nd_aws_access_key;
-public String getNd_aws_access_key(){
-	return this.nd_aws_access_key;
-}
-public java.lang.String nd_aws_secret_key;
-public java.lang.String getNd_aws_secret_key(){
-	return this.nd_aws_secret_key;
-}
 public String nd_s3_bucket_QA_sfdc;
 public String getNd_s3_bucket_QA_sfdc(){
 	return this.nd_s3_bucket_QA_sfdc;
@@ -540,110 +364,6 @@ public String getNd_s3_bucket_QA_sfdc(){
 public String nd_s3_data_lake_path_sfdc;
 public String getNd_s3_data_lake_path_sfdc(){
 	return this.nd_s3_data_lake_path_sfdc;
-}
-public String NP_Salesforce_apiVersion;
-public String getNP_Salesforce_apiVersion(){
-	return this.NP_Salesforce_apiVersion;
-}
-public String NP_Salesforce_clientId;
-public String getNP_Salesforce_clientId(){
-	return this.NP_Salesforce_clientId;
-}
-public String NP_Salesforce_endpoint;
-public String getNP_Salesforce_endpoint(){
-	return this.NP_Salesforce_endpoint;
-}
-public String NP_Salesforce_loginType;
-public String getNP_Salesforce_loginType(){
-	return this.NP_Salesforce_loginType;
-}
-public String NP_Salesforce_oauth_callbackHost;
-public String getNP_Salesforce_oauth_callbackHost(){
-	return this.NP_Salesforce_oauth_callbackHost;
-}
-public Integer NP_Salesforce_oauth_callbackPort;
-public Integer getNP_Salesforce_oauth_callbackPort(){
-	return this.NP_Salesforce_oauth_callbackPort;
-}
-public String NP_Salesforce_oauth_clientId;
-public String getNP_Salesforce_oauth_clientId(){
-	return this.NP_Salesforce_oauth_clientId;
-}
-public java.lang.String NP_Salesforce_oauth_clientSecret;
-public java.lang.String getNP_Salesforce_oauth_clientSecret(){
-	return this.NP_Salesforce_oauth_clientSecret;
-}
-public String NP_Salesforce_oauth_tokenFile;
-public String getNP_Salesforce_oauth_tokenFile(){
-	return this.NP_Salesforce_oauth_tokenFile;
-}
-public String NP_Salesforce_oauth2FlowType;
-public String getNP_Salesforce_oauth2FlowType(){
-	return this.NP_Salesforce_oauth2FlowType;
-}
-public String NP_Salesforce_oauth2JwtFlow_audience;
-public String getNP_Salesforce_oauth2JwtFlow_audience(){
-	return this.NP_Salesforce_oauth2JwtFlow_audience;
-}
-public String NP_Salesforce_oauth2JwtFlow_certificateAlias;
-public String getNP_Salesforce_oauth2JwtFlow_certificateAlias(){
-	return this.NP_Salesforce_oauth2JwtFlow_certificateAlias;
-}
-public Integer NP_Salesforce_oauth2JwtFlow_expirationTime;
-public Integer getNP_Salesforce_oauth2JwtFlow_expirationTime(){
-	return this.NP_Salesforce_oauth2JwtFlow_expirationTime;
-}
-public String NP_Salesforce_oauth2JwtFlow_issuer;
-public String getNP_Salesforce_oauth2JwtFlow_issuer(){
-	return this.NP_Salesforce_oauth2JwtFlow_issuer;
-}
-public String NP_Salesforce_oauth2JwtFlow_keyStore;
-public String getNP_Salesforce_oauth2JwtFlow_keyStore(){
-	return this.NP_Salesforce_oauth2JwtFlow_keyStore;
-}
-public java.lang.String NP_Salesforce_oauth2JwtFlow_keyStorePassword;
-public java.lang.String getNP_Salesforce_oauth2JwtFlow_keyStorePassword(){
-	return this.NP_Salesforce_oauth2JwtFlow_keyStorePassword;
-}
-public String NP_Salesforce_oauth2JwtFlow_subject;
-public String getNP_Salesforce_oauth2JwtFlow_subject(){
-	return this.NP_Salesforce_oauth2JwtFlow_subject;
-}
-public String NP_Salesforce_proxy_host;
-public String getNP_Salesforce_proxy_host(){
-	return this.NP_Salesforce_proxy_host;
-}
-public Integer NP_Salesforce_proxy_port;
-public Integer getNP_Salesforce_proxy_port(){
-	return this.NP_Salesforce_proxy_port;
-}
-public java.lang.String NP_Salesforce_proxy_userPassword_password;
-public java.lang.String getNP_Salesforce_proxy_userPassword_password(){
-	return this.NP_Salesforce_proxy_userPassword_password;
-}
-public String NP_Salesforce_proxy_userPassword_userId;
-public String getNP_Salesforce_proxy_userPassword_userId(){
-	return this.NP_Salesforce_proxy_userPassword_userId;
-}
-public String NP_Salesforce_sessionDirectory;
-public String getNP_Salesforce_sessionDirectory(){
-	return this.NP_Salesforce_sessionDirectory;
-}
-public Integer NP_Salesforce_timeout;
-public Integer getNP_Salesforce_timeout(){
-	return this.NP_Salesforce_timeout;
-}
-public java.lang.String NP_Salesforce_userPassword_password;
-public java.lang.String getNP_Salesforce_userPassword_password(){
-	return this.NP_Salesforce_userPassword_password;
-}
-public java.lang.String NP_Salesforce_userPassword_securityKey;
-public java.lang.String getNP_Salesforce_userPassword_securityKey(){
-	return this.NP_Salesforce_userPassword_securityKey;
-}
-public String NP_Salesforce_userPassword_userId;
-public String getNP_Salesforce_userPassword_userId(){
-	return this.NP_Salesforce_userPassword_userId;
 }
 public String sfdc_audience_url;
 public String getSfdc_audience_url(){
@@ -2179,13 +1899,13 @@ private class TalendException extends Exception {
 					tJava_42_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tSalesforceConnection_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tSalesforceConnection_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tSalesforceConnection_2_onSubJobError(exception, errorComponent, globalMap);
+					tSalesforceConnection_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tPostjob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -2818,7 +2538,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tSalesforceConnection_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tSalesforceConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -9004,7 +8724,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_5.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_5.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -9022,7 +8742,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_5.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_5.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -15438,7 +15158,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_14.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_14.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -15456,7 +15176,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_14.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_14.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -23673,7 +23393,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_13.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_13.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -23691,7 +23411,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_13.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_13.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -30305,7 +30025,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_11.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_11.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -30323,7 +30043,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_11.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_11.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -34290,7 +34010,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_10.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_10.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -34308,7 +34028,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_10.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_10.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -37879,7 +37599,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_9.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_9.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -37897,7 +37617,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_9.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_9.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -42163,7 +41883,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_7.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_7.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -42181,7 +41901,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_7.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_7.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -46576,7 +46296,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_8.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_8.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -46594,7 +46314,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_8.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_8.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -50340,7 +50060,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_6.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_6.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -50358,7 +50078,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_6.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_6.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -55539,7 +55259,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_3.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_3.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -55557,7 +55277,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_3.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_3.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -68250,7 +67970,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_2.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_2.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -68268,7 +67988,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_2.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_2.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -79391,7 +79111,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_1.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_1.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -79409,7 +79129,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_1.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_1.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -85058,7 +84778,7 @@ out1Struct out1 = new out1Struct();
 		
 
 String fileName_tFileOutputDelimited_1 = "";
-    fileName_tFileOutputDelimited_1 = (new java.io.File(context.staging_S3_dir  + "account.json")).getAbsolutePath().replace("\\","/");
+    fileName_tFileOutputDelimited_1 = (new java.io.File(context.staging_S3_dir  + "account.csv")).getAbsolutePath().replace("\\","/");
     String fullName_tFileOutputDelimited_1 = null;
     String extension_tFileOutputDelimited_1 = null;
     String directory_tFileOutputDelimited_1 = null;
@@ -85410,7 +85130,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_12.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_12.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -85428,7 +85148,7 @@ org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties pro
  		                        org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
  		                    
  		                    props_tSalesforceInput_12.module.connection.referencedComponent.setValue("componentInstanceId",
- 		                    "tSalesforceConnection_2");
+ 		                    "tSalesforceConnection_1");
  		                    
  		                    props_tSalesforceInput_12.module.connection.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
@@ -88758,7 +88478,7 @@ ok_Hash.put("tJava_1", true);
 end_Hash.put("tJava_1", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk122", 0, "ok");
 				}
 				tS3Connection_1Process(globalMap);
 
@@ -88868,12 +88588,7 @@ public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap
 	
 	
 	    
-    
-    		
-	final String decryptedPassword_tS3Connection_1 = context.nd_aws_secret_key; 
-
-			com.amazonaws.auth.AWSCredentials credentials_tS3Connection_1 = new com.amazonaws.auth.BasicAWSCredentials(context.nd_aws_access_key,decryptedPassword_tS3Connection_1);
-			com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.internal.StaticCredentialsProvider(credentials_tS3Connection_1);
+		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
 		
 		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
 		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
@@ -88994,7 +88709,7 @@ ok_Hash.put("tS3Connection_1", true);
 end_Hash.put("tS3Connection_1", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk19", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
 				}
 				tJava_42Process(globalMap);
 
@@ -89104,7 +88819,7 @@ public void tJava_42Process(final java.util.Map<String, Object> globalMap) throw
 
 
 context.sfdc_keystore_password = System.getenv("TALEND_SFDC_JKS_PASSWORD");
-//System.out.println(context.sfdc_keystore_password );
+System.out.println(context.sfdc_keystore_password );
  
 
 
@@ -89192,9 +88907,9 @@ ok_Hash.put("tJava_42", true);
 end_Hash.put("tJava_42", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk122", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk19", 0, "ok");
 				}
-				tSalesforceConnection_2Process(globalMap);
+				tSalesforceConnection_1Process(globalMap);
 
 
 
@@ -89255,8 +88970,8 @@ end_Hash.put("tJava_42", System.currentTimeMillis());
 	}
 	
 
-public void tSalesforceConnection_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 0);
+public void tSalesforceConnection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tSalesforceConnection_1_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -89282,104 +88997,104 @@ public void tSalesforceConnection_2Process(final java.util.Map<String, Object> g
 
 	
 	/**
-	 * [tSalesforceConnection_2 begin ] start
+	 * [tSalesforceConnection_1 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tSalesforceConnection_2", false);
-		start_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
+		ok_Hash.put("tSalesforceConnection_1", false);
+		start_Hash.put("tSalesforceConnection_1", System.currentTimeMillis());
 		
 	
-	currentComponent="tSalesforceConnection_2";
+	currentComponent="tSalesforceConnection_1";
 
 	
-		int tos_count_tSalesforceConnection_2 = 0;
+		int tos_count_tSalesforceConnection_1 = 0;
 		
 
 
-org.talend.components.api.component.ComponentDefinition def_tSalesforceConnection_2 =
+org.talend.components.api.component.ComponentDefinition def_tSalesforceConnection_1 =
         new org.talend.components.salesforce.tsalesforceconnection.TSalesforceConnectionDefinition();
 
-org.talend.components.salesforce.SalesforceConnectionProperties props_tSalesforceConnection_2 =
-        (org.talend.components.salesforce.SalesforceConnectionProperties) def_tSalesforceConnection_2.createRuntimeProperties();
- 		                    props_tSalesforceConnection_2.setValue("endpoint",
+org.talend.components.salesforce.SalesforceConnectionProperties props_tSalesforceConnection_1 =
+        (org.talend.components.salesforce.SalesforceConnectionProperties) def_tSalesforceConnection_1.createRuntimeProperties();
+ 		                    props_tSalesforceConnection_1.setValue("endpoint",
  		                    "https://login.salesforce.com/services/oauth2");
  		                    
- 		                    props_tSalesforceConnection_2.setValue("loginType",
+ 		                    props_tSalesforceConnection_1.setValue("loginType",
  		                        org.talend.components.salesforce.SalesforceConnectionProperties.LoginType.OAuth);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("bulkConnection",
+ 		                    props_tSalesforceConnection_1.setValue("bulkConnection",
  		                    true);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("needCompression",
+ 		                    props_tSalesforceConnection_1.setValue("needCompression",
  		                    false);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("timeout",
+ 		                    props_tSalesforceConnection_1.setValue("timeout",
  		                    60000);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("httpTraceMessage",
+ 		                    props_tSalesforceConnection_1.setValue("httpTraceMessage",
  		                    false);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("clientId",
+ 		                    props_tSalesforceConnection_1.setValue("clientId",
  		                    "");
  		                    
- 		                    props_tSalesforceConnection_2.setValue("oauth2FlowType",
+ 		                    props_tSalesforceConnection_1.setValue("oauth2FlowType",
  		                        org.talend.components.common.oauth.OAuth2FlowType.JWT_Flow);
  		                    
- 		                    props_tSalesforceConnection_2.setValue("apiVersion",
+ 		                    props_tSalesforceConnection_1.setValue("apiVersion",
  		                    "47.0");
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("issuer",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("issuer",
  		                    context.sfdc_issuer_token);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("subject",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("subject",
  		                    context.sfdc_subject_user);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("expirationTime",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("expirationTime",
  		                    600);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStore",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("keyStore",
  		                    context.sfdc_keystore_path);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStorePassword",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("keyStorePassword",
  		                    context.sfdc_keystore_password);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("certificateAlias",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("certificateAlias",
  		                    context.sfdc_certificate_alias);
  		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("audience",
+ 		                    props_tSalesforceConnection_1.oauth2JwtFlow.setValue("audience",
  		                    context.sfdc_audience_url);
  		                    
- 		                    props_tSalesforceConnection_2.userPassword.setValue("useAuth",
+ 		                    props_tSalesforceConnection_1.userPassword.setValue("useAuth",
  		                    false);
  		                    
- 		                    props_tSalesforceConnection_2.proxy.setValue("useProxy",
+ 		                    props_tSalesforceConnection_1.proxy.setValue("useProxy",
  		                    false);
  		                    
- 		                    props_tSalesforceConnection_2.proxy.userPassword.setValue("useAuth",
+ 		                    props_tSalesforceConnection_1.proxy.userPassword.setValue("useAuth",
  		                    false);
  		                    
- 		                    props_tSalesforceConnection_2.referencedComponent.setValue("referenceDefinitionName",
+ 		                    props_tSalesforceConnection_1.referencedComponent.setValue("referenceDefinitionName",
  		                    "tSalesforceConnection");
  		                    
-    if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceConnection_2.referencedComponent.referenceType.getValue()) {
-        final String referencedComponentInstanceId_tSalesforceConnection_2 = props_tSalesforceConnection_2.referencedComponent.componentInstanceId.getStringValue();
-        if (referencedComponentInstanceId_tSalesforceConnection_2 != null) {
-            org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceConnection_2 = (org.talend.daikon.properties.Properties) globalMap.get(
-                referencedComponentInstanceId_tSalesforceConnection_2 + "_COMPONENT_RUNTIME_PROPERTIES");
-            props_tSalesforceConnection_2.referencedComponent.setReference(referencedComponentProperties_tSalesforceConnection_2);
+    if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceConnection_1.referencedComponent.referenceType.getValue()) {
+        final String referencedComponentInstanceId_tSalesforceConnection_1 = props_tSalesforceConnection_1.referencedComponent.componentInstanceId.getStringValue();
+        if (referencedComponentInstanceId_tSalesforceConnection_1 != null) {
+            org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceConnection_1 = (org.talend.daikon.properties.Properties) globalMap.get(
+                referencedComponentInstanceId_tSalesforceConnection_1 + "_COMPONENT_RUNTIME_PROPERTIES");
+            props_tSalesforceConnection_1.referencedComponent.setReference(referencedComponentProperties_tSalesforceConnection_1);
         }
     }
-globalMap.put("tSalesforceConnection_2_COMPONENT_RUNTIME_PROPERTIES", props_tSalesforceConnection_2);
+globalMap.put("tSalesforceConnection_1_COMPONENT_RUNTIME_PROPERTIES", props_tSalesforceConnection_1);
 globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.3");
 globalMap.put("TALEND_COMPONENTS_VERSION", "0.28.2");
-java.net.URL mappings_url_tSalesforceConnection_2= this.getClass().getResource("/xmlMappings");
-globalMap.put("tSalesforceConnection_2_MAPPINGS_URL", mappings_url_tSalesforceConnection_2);
+java.net.URL mappings_url_tSalesforceConnection_1= this.getClass().getResource("/xmlMappings");
+globalMap.put("tSalesforceConnection_1_MAPPINGS_URL", mappings_url_tSalesforceConnection_1);
 
-org.talend.components.api.container.RuntimeContainer container_tSalesforceConnection_2 = new org.talend.components.api.container.RuntimeContainer() {
+org.talend.components.api.container.RuntimeContainer container_tSalesforceConnection_1 = new org.talend.components.api.container.RuntimeContainer() {
     public Object getComponentData(String componentId, String key) {
         return globalMap.get(componentId + "_" + key);
     }
@@ -89389,7 +89104,7 @@ org.talend.components.api.container.RuntimeContainer container_tSalesforceConnec
     }
 
     public String getCurrentComponentId() {
-        return "tSalesforceConnection_2";
+        return "tSalesforceConnection_1";
     }
 
     public Object getGlobalData(String key) {
@@ -89397,33 +89112,33 @@ org.talend.components.api.container.RuntimeContainer container_tSalesforceConnec
     }
 };
 
-int nb_line_tSalesforceConnection_2 = 0;
+int nb_line_tSalesforceConnection_1 = 0;
 
-org.talend.components.api.component.ConnectorTopology topology_tSalesforceConnection_2 = null;
-topology_tSalesforceConnection_2 = org.talend.components.api.component.ConnectorTopology.NONE;
+org.talend.components.api.component.ConnectorTopology topology_tSalesforceConnection_1 = null;
+topology_tSalesforceConnection_1 = org.talend.components.api.component.ConnectorTopology.NONE;
 
-org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceConnection_2 = def_tSalesforceConnection_2.getRuntimeInfo(
-    org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tSalesforceConnection_2, topology_tSalesforceConnection_2);
-java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceConnection_2 = def_tSalesforceConnection_2.getSupportedConnectorTopologies();
+org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceConnection_1 = def_tSalesforceConnection_1.getRuntimeInfo(
+    org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tSalesforceConnection_1, topology_tSalesforceConnection_1);
+java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceConnection_1 = def_tSalesforceConnection_1.getSupportedConnectorTopologies();
 
-org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.RuntimableRuntime)(Class.forName(runtime_info_tSalesforceConnection_2.getRuntimeClassName()).newInstance());
-org.talend.daikon.properties.ValidationResult initVr_tSalesforceConnection_2 = componentRuntime_tSalesforceConnection_2.initialize(container_tSalesforceConnection_2, props_tSalesforceConnection_2);
+org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceConnection_1 = (org.talend.components.api.component.runtime.RuntimableRuntime)(Class.forName(runtime_info_tSalesforceConnection_1.getRuntimeClassName()).newInstance());
+org.talend.daikon.properties.ValidationResult initVr_tSalesforceConnection_1 = componentRuntime_tSalesforceConnection_1.initialize(container_tSalesforceConnection_1, props_tSalesforceConnection_1);
 
-if (initVr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
-    throw new RuntimeException(initVr_tSalesforceConnection_2.getMessage());
+if (initVr_tSalesforceConnection_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
+    throw new RuntimeException(initVr_tSalesforceConnection_1.getMessage());
 }
 
-if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
-	org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization)componentRuntime_tSalesforceConnection_2;
-	compDriverInitialization_tSalesforceConnection_2.runAtDriver(container_tSalesforceConnection_2);
+if(componentRuntime_tSalesforceConnection_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+	org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceConnection_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization)componentRuntime_tSalesforceConnection_1;
+	compDriverInitialization_tSalesforceConnection_1.runAtDriver(container_tSalesforceConnection_1);
 }
 
-org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceConnection_2 = null;
-if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
-	sourceOrSink_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.SourceOrSink)componentRuntime_tSalesforceConnection_2;
-	org.talend.daikon.properties.ValidationResult vr_tSalesforceConnection_2 = sourceOrSink_tSalesforceConnection_2.validate(container_tSalesforceConnection_2);
-	if (vr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
-    	throw new RuntimeException(vr_tSalesforceConnection_2.getMessage());
+org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceConnection_1 = null;
+if(componentRuntime_tSalesforceConnection_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+	sourceOrSink_tSalesforceConnection_1 = (org.talend.components.api.component.runtime.SourceOrSink)componentRuntime_tSalesforceConnection_1;
+	org.talend.daikon.properties.ValidationResult vr_tSalesforceConnection_1 = sourceOrSink_tSalesforceConnection_1.validate(container_tSalesforceConnection_1);
+	if (vr_tSalesforceConnection_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
+    	throw new RuntimeException(vr_tSalesforceConnection_1.getMessage());
 	}
 }
 
@@ -89432,18 +89147,18 @@ if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api
 
 
 /**
- * [tSalesforceConnection_2 begin ] stop
+ * [tSalesforceConnection_1 begin ] stop
  */
 	
 	/**
-	 * [tSalesforceConnection_2 main ] start
+	 * [tSalesforceConnection_1 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSalesforceConnection_2";
+	currentComponent="tSalesforceConnection_1";
 
 	
 
@@ -89451,42 +89166,21 @@ if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api
  
 
 
-	tos_count_tSalesforceConnection_2++;
+	tos_count_tSalesforceConnection_1++;
 
 /**
- * [tSalesforceConnection_2 main ] stop
+ * [tSalesforceConnection_1 main ] stop
  */
 	
 	/**
-	 * [tSalesforceConnection_2 process_data_begin ] start
+	 * [tSalesforceConnection_1 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSalesforceConnection_2";
-
-	
-
-
- 
-
-
-
-/**
- * [tSalesforceConnection_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tSalesforceConnection_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
+	currentComponent="tSalesforceConnection_1";
 
 	
 
@@ -89496,32 +89190,53 @@ if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api
 
 
 /**
- * [tSalesforceConnection_2 process_data_end ] stop
+ * [tSalesforceConnection_1 process_data_begin ] stop
  */
 	
 	/**
-	 * [tSalesforceConnection_2 end ] start
+	 * [tSalesforceConnection_1 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSalesforceConnection_2";
+	currentComponent="tSalesforceConnection_1";
+
+	
+
+
+ 
+
+
+
+/**
+ * [tSalesforceConnection_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tSalesforceConnection_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_1";
 
 	
 // end of generic
 
  
 
-ok_Hash.put("tSalesforceConnection_2", true);
-end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
+ok_Hash.put("tSalesforceConnection_1", true);
+end_Hash.put("tSalesforceConnection_1", System.currentTimeMillis());
 
 
 
 
 /**
- * [tSalesforceConnection_2 end ] stop
+ * [tSalesforceConnection_1 end ] stop
  */
 				}//end the resume
 
@@ -89546,14 +89261,14 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tSalesforceConnection_2 finally ] start
+	 * [tSalesforceConnection_1 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tSalesforceConnection_2";
+	currentComponent="tSalesforceConnection_1";
 
 	
 // finally of generic
@@ -89563,7 +89278,7 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
 
 
 /**
- * [tSalesforceConnection_2 finally ] stop
+ * [tSalesforceConnection_1 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -89574,7 +89289,7 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 1);
+		globalMap.put("tSalesforceConnection_1_SUBPROCESS_STATE", 1);
 	}
 	
     public String resuming_logs_dir_path = null;
@@ -89765,164 +89480,10 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
                                     }
                                 }
                             }
-                        context.setContextType("nd_aws_access_key", "id_String");
-                            context.nd_aws_access_key=(String) context.getProperty("nd_aws_access_key");
-                        context.setContextType("nd_aws_secret_key", "id_Password");
-                            String pwd_nd_aws_secret_key_value = context.getProperty("nd_aws_secret_key");
-                            context.nd_aws_secret_key = null;
-                            if(pwd_nd_aws_secret_key_value!=null) {
-                                if(context_param.containsKey("nd_aws_secret_key")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.nd_aws_secret_key = pwd_nd_aws_secret_key_value;
-                                } else if (!pwd_nd_aws_secret_key_value.isEmpty()) {
-                                    try {
-                                        context.nd_aws_secret_key = routines.system.PasswordEncryptUtil.decryptPassword(pwd_nd_aws_secret_key_value);
-                                        context.put("nd_aws_secret_key",context.nd_aws_secret_key);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
                         context.setContextType("nd_s3_bucket_QA_sfdc", "id_String");
                             context.nd_s3_bucket_QA_sfdc=(String) context.getProperty("nd_s3_bucket_QA_sfdc");
                         context.setContextType("nd_s3_data_lake_path_sfdc", "id_String");
                             context.nd_s3_data_lake_path_sfdc=(String) context.getProperty("nd_s3_data_lake_path_sfdc");
-                        context.setContextType("NP_Salesforce_apiVersion", "id_String");
-                            context.NP_Salesforce_apiVersion=(String) context.getProperty("NP_Salesforce_apiVersion");
-                        context.setContextType("NP_Salesforce_clientId", "id_String");
-                            context.NP_Salesforce_clientId=(String) context.getProperty("NP_Salesforce_clientId");
-                        context.setContextType("NP_Salesforce_endpoint", "id_String");
-                            context.NP_Salesforce_endpoint=(String) context.getProperty("NP_Salesforce_endpoint");
-                        context.setContextType("NP_Salesforce_loginType", "id_String");
-                            context.NP_Salesforce_loginType=(String) context.getProperty("NP_Salesforce_loginType");
-                        context.setContextType("NP_Salesforce_oauth_callbackHost", "id_String");
-                            context.NP_Salesforce_oauth_callbackHost=(String) context.getProperty("NP_Salesforce_oauth_callbackHost");
-                        context.setContextType("NP_Salesforce_oauth_callbackPort", "id_Integer");
-                            try{
-                                context.NP_Salesforce_oauth_callbackPort=routines.system.ParserUtils.parseTo_Integer (context.getProperty("NP_Salesforce_oauth_callbackPort"));
-                            } catch(NumberFormatException e){
-                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "NP_Salesforce_oauth_callbackPort", e.getMessage()));
-                                context.NP_Salesforce_oauth_callbackPort=null;
-                            }
-                        context.setContextType("NP_Salesforce_oauth_clientId", "id_String");
-                            context.NP_Salesforce_oauth_clientId=(String) context.getProperty("NP_Salesforce_oauth_clientId");
-                        context.setContextType("NP_Salesforce_oauth_clientSecret", "id_Password");
-                            String pwd_NP_Salesforce_oauth_clientSecret_value = context.getProperty("NP_Salesforce_oauth_clientSecret");
-                            context.NP_Salesforce_oauth_clientSecret = null;
-                            if(pwd_NP_Salesforce_oauth_clientSecret_value!=null) {
-                                if(context_param.containsKey("NP_Salesforce_oauth_clientSecret")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.NP_Salesforce_oauth_clientSecret = pwd_NP_Salesforce_oauth_clientSecret_value;
-                                } else if (!pwd_NP_Salesforce_oauth_clientSecret_value.isEmpty()) {
-                                    try {
-                                        context.NP_Salesforce_oauth_clientSecret = routines.system.PasswordEncryptUtil.decryptPassword(pwd_NP_Salesforce_oauth_clientSecret_value);
-                                        context.put("NP_Salesforce_oauth_clientSecret",context.NP_Salesforce_oauth_clientSecret);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
-                        context.setContextType("NP_Salesforce_oauth_tokenFile", "id_String");
-                            context.NP_Salesforce_oauth_tokenFile=(String) context.getProperty("NP_Salesforce_oauth_tokenFile");
-                        context.setContextType("NP_Salesforce_oauth2FlowType", "id_String");
-                            context.NP_Salesforce_oauth2FlowType=(String) context.getProperty("NP_Salesforce_oauth2FlowType");
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_audience", "id_String");
-                            context.NP_Salesforce_oauth2JwtFlow_audience=(String) context.getProperty("NP_Salesforce_oauth2JwtFlow_audience");
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_certificateAlias", "id_String");
-                            context.NP_Salesforce_oauth2JwtFlow_certificateAlias=(String) context.getProperty("NP_Salesforce_oauth2JwtFlow_certificateAlias");
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_expirationTime", "id_Integer");
-                            try{
-                                context.NP_Salesforce_oauth2JwtFlow_expirationTime=routines.system.ParserUtils.parseTo_Integer (context.getProperty("NP_Salesforce_oauth2JwtFlow_expirationTime"));
-                            } catch(NumberFormatException e){
-                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "NP_Salesforce_oauth2JwtFlow_expirationTime", e.getMessage()));
-                                context.NP_Salesforce_oauth2JwtFlow_expirationTime=null;
-                            }
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_issuer", "id_String");
-                            context.NP_Salesforce_oauth2JwtFlow_issuer=(String) context.getProperty("NP_Salesforce_oauth2JwtFlow_issuer");
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_keyStore", "id_String");
-                            context.NP_Salesforce_oauth2JwtFlow_keyStore=(String) context.getProperty("NP_Salesforce_oauth2JwtFlow_keyStore");
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_keyStorePassword", "id_Password");
-                            String pwd_NP_Salesforce_oauth2JwtFlow_keyStorePassword_value = context.getProperty("NP_Salesforce_oauth2JwtFlow_keyStorePassword");
-                            context.NP_Salesforce_oauth2JwtFlow_keyStorePassword = null;
-                            if(pwd_NP_Salesforce_oauth2JwtFlow_keyStorePassword_value!=null) {
-                                if(context_param.containsKey("NP_Salesforce_oauth2JwtFlow_keyStorePassword")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.NP_Salesforce_oauth2JwtFlow_keyStorePassword = pwd_NP_Salesforce_oauth2JwtFlow_keyStorePassword_value;
-                                } else if (!pwd_NP_Salesforce_oauth2JwtFlow_keyStorePassword_value.isEmpty()) {
-                                    try {
-                                        context.NP_Salesforce_oauth2JwtFlow_keyStorePassword = routines.system.PasswordEncryptUtil.decryptPassword(pwd_NP_Salesforce_oauth2JwtFlow_keyStorePassword_value);
-                                        context.put("NP_Salesforce_oauth2JwtFlow_keyStorePassword",context.NP_Salesforce_oauth2JwtFlow_keyStorePassword);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
-                        context.setContextType("NP_Salesforce_oauth2JwtFlow_subject", "id_String");
-                            context.NP_Salesforce_oauth2JwtFlow_subject=(String) context.getProperty("NP_Salesforce_oauth2JwtFlow_subject");
-                        context.setContextType("NP_Salesforce_proxy_host", "id_String");
-                            context.NP_Salesforce_proxy_host=(String) context.getProperty("NP_Salesforce_proxy_host");
-                        context.setContextType("NP_Salesforce_proxy_port", "id_Integer");
-                            try{
-                                context.NP_Salesforce_proxy_port=routines.system.ParserUtils.parseTo_Integer (context.getProperty("NP_Salesforce_proxy_port"));
-                            } catch(NumberFormatException e){
-                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "NP_Salesforce_proxy_port", e.getMessage()));
-                                context.NP_Salesforce_proxy_port=null;
-                            }
-                        context.setContextType("NP_Salesforce_proxy_userPassword_password", "id_Password");
-                            String pwd_NP_Salesforce_proxy_userPassword_password_value = context.getProperty("NP_Salesforce_proxy_userPassword_password");
-                            context.NP_Salesforce_proxy_userPassword_password = null;
-                            if(pwd_NP_Salesforce_proxy_userPassword_password_value!=null) {
-                                if(context_param.containsKey("NP_Salesforce_proxy_userPassword_password")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.NP_Salesforce_proxy_userPassword_password = pwd_NP_Salesforce_proxy_userPassword_password_value;
-                                } else if (!pwd_NP_Salesforce_proxy_userPassword_password_value.isEmpty()) {
-                                    try {
-                                        context.NP_Salesforce_proxy_userPassword_password = routines.system.PasswordEncryptUtil.decryptPassword(pwd_NP_Salesforce_proxy_userPassword_password_value);
-                                        context.put("NP_Salesforce_proxy_userPassword_password",context.NP_Salesforce_proxy_userPassword_password);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
-                        context.setContextType("NP_Salesforce_proxy_userPassword_userId", "id_String");
-                            context.NP_Salesforce_proxy_userPassword_userId=(String) context.getProperty("NP_Salesforce_proxy_userPassword_userId");
-                        context.setContextType("NP_Salesforce_sessionDirectory", "id_String");
-                            context.NP_Salesforce_sessionDirectory=(String) context.getProperty("NP_Salesforce_sessionDirectory");
-                        context.setContextType("NP_Salesforce_timeout", "id_Integer");
-                            try{
-                                context.NP_Salesforce_timeout=routines.system.ParserUtils.parseTo_Integer (context.getProperty("NP_Salesforce_timeout"));
-                            } catch(NumberFormatException e){
-                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "NP_Salesforce_timeout", e.getMessage()));
-                                context.NP_Salesforce_timeout=null;
-                            }
-                        context.setContextType("NP_Salesforce_userPassword_password", "id_Password");
-                            String pwd_NP_Salesforce_userPassword_password_value = context.getProperty("NP_Salesforce_userPassword_password");
-                            context.NP_Salesforce_userPassword_password = null;
-                            if(pwd_NP_Salesforce_userPassword_password_value!=null) {
-                                if(context_param.containsKey("NP_Salesforce_userPassword_password")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.NP_Salesforce_userPassword_password = pwd_NP_Salesforce_userPassword_password_value;
-                                } else if (!pwd_NP_Salesforce_userPassword_password_value.isEmpty()) {
-                                    try {
-                                        context.NP_Salesforce_userPassword_password = routines.system.PasswordEncryptUtil.decryptPassword(pwd_NP_Salesforce_userPassword_password_value);
-                                        context.put("NP_Salesforce_userPassword_password",context.NP_Salesforce_userPassword_password);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
-                        context.setContextType("NP_Salesforce_userPassword_securityKey", "id_Password");
-                            String pwd_NP_Salesforce_userPassword_securityKey_value = context.getProperty("NP_Salesforce_userPassword_securityKey");
-                            context.NP_Salesforce_userPassword_securityKey = null;
-                            if(pwd_NP_Salesforce_userPassword_securityKey_value!=null) {
-                                if(context_param.containsKey("NP_Salesforce_userPassword_securityKey")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.NP_Salesforce_userPassword_securityKey = pwd_NP_Salesforce_userPassword_securityKey_value;
-                                } else if (!pwd_NP_Salesforce_userPassword_securityKey_value.isEmpty()) {
-                                    try {
-                                        context.NP_Salesforce_userPassword_securityKey = routines.system.PasswordEncryptUtil.decryptPassword(pwd_NP_Salesforce_userPassword_securityKey_value);
-                                        context.put("NP_Salesforce_userPassword_securityKey",context.NP_Salesforce_userPassword_securityKey);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
-                        context.setContextType("NP_Salesforce_userPassword_userId", "id_String");
-                            context.NP_Salesforce_userPassword_userId=(String) context.getProperty("NP_Salesforce_userPassword_userId");
                         context.setContextType("sfdc_audience_url", "id_String");
                             context.sfdc_audience_url=(String) context.getProperty("sfdc_audience_url");
                         context.setContextType("sfdc_certificate_alias", "id_String");
@@ -89956,66 +89517,10 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
                 context.sfdc_issuer_token = (String) parentContextMap.get("sfdc_issuer_token");
             }if (parentContextMap.containsKey("sfdc_keystore_password")) {
                 context.sfdc_keystore_password = (java.lang.String) parentContextMap.get("sfdc_keystore_password");
-            }if (parentContextMap.containsKey("nd_aws_access_key")) {
-                context.nd_aws_access_key = (String) parentContextMap.get("nd_aws_access_key");
-            }if (parentContextMap.containsKey("nd_aws_secret_key")) {
-                context.nd_aws_secret_key = (java.lang.String) parentContextMap.get("nd_aws_secret_key");
             }if (parentContextMap.containsKey("nd_s3_bucket_QA_sfdc")) {
                 context.nd_s3_bucket_QA_sfdc = (String) parentContextMap.get("nd_s3_bucket_QA_sfdc");
             }if (parentContextMap.containsKey("nd_s3_data_lake_path_sfdc")) {
                 context.nd_s3_data_lake_path_sfdc = (String) parentContextMap.get("nd_s3_data_lake_path_sfdc");
-            }if (parentContextMap.containsKey("NP_Salesforce_apiVersion")) {
-                context.NP_Salesforce_apiVersion = (String) parentContextMap.get("NP_Salesforce_apiVersion");
-            }if (parentContextMap.containsKey("NP_Salesforce_clientId")) {
-                context.NP_Salesforce_clientId = (String) parentContextMap.get("NP_Salesforce_clientId");
-            }if (parentContextMap.containsKey("NP_Salesforce_endpoint")) {
-                context.NP_Salesforce_endpoint = (String) parentContextMap.get("NP_Salesforce_endpoint");
-            }if (parentContextMap.containsKey("NP_Salesforce_loginType")) {
-                context.NP_Salesforce_loginType = (String) parentContextMap.get("NP_Salesforce_loginType");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth_callbackHost")) {
-                context.NP_Salesforce_oauth_callbackHost = (String) parentContextMap.get("NP_Salesforce_oauth_callbackHost");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth_callbackPort")) {
-                context.NP_Salesforce_oauth_callbackPort = (Integer) parentContextMap.get("NP_Salesforce_oauth_callbackPort");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth_clientId")) {
-                context.NP_Salesforce_oauth_clientId = (String) parentContextMap.get("NP_Salesforce_oauth_clientId");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth_clientSecret")) {
-                context.NP_Salesforce_oauth_clientSecret = (java.lang.String) parentContextMap.get("NP_Salesforce_oauth_clientSecret");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth_tokenFile")) {
-                context.NP_Salesforce_oauth_tokenFile = (String) parentContextMap.get("NP_Salesforce_oauth_tokenFile");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2FlowType")) {
-                context.NP_Salesforce_oauth2FlowType = (String) parentContextMap.get("NP_Salesforce_oauth2FlowType");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_audience")) {
-                context.NP_Salesforce_oauth2JwtFlow_audience = (String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_audience");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_certificateAlias")) {
-                context.NP_Salesforce_oauth2JwtFlow_certificateAlias = (String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_certificateAlias");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_expirationTime")) {
-                context.NP_Salesforce_oauth2JwtFlow_expirationTime = (Integer) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_expirationTime");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_issuer")) {
-                context.NP_Salesforce_oauth2JwtFlow_issuer = (String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_issuer");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_keyStore")) {
-                context.NP_Salesforce_oauth2JwtFlow_keyStore = (String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_keyStore");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_keyStorePassword")) {
-                context.NP_Salesforce_oauth2JwtFlow_keyStorePassword = (java.lang.String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_keyStorePassword");
-            }if (parentContextMap.containsKey("NP_Salesforce_oauth2JwtFlow_subject")) {
-                context.NP_Salesforce_oauth2JwtFlow_subject = (String) parentContextMap.get("NP_Salesforce_oauth2JwtFlow_subject");
-            }if (parentContextMap.containsKey("NP_Salesforce_proxy_host")) {
-                context.NP_Salesforce_proxy_host = (String) parentContextMap.get("NP_Salesforce_proxy_host");
-            }if (parentContextMap.containsKey("NP_Salesforce_proxy_port")) {
-                context.NP_Salesforce_proxy_port = (Integer) parentContextMap.get("NP_Salesforce_proxy_port");
-            }if (parentContextMap.containsKey("NP_Salesforce_proxy_userPassword_password")) {
-                context.NP_Salesforce_proxy_userPassword_password = (java.lang.String) parentContextMap.get("NP_Salesforce_proxy_userPassword_password");
-            }if (parentContextMap.containsKey("NP_Salesforce_proxy_userPassword_userId")) {
-                context.NP_Salesforce_proxy_userPassword_userId = (String) parentContextMap.get("NP_Salesforce_proxy_userPassword_userId");
-            }if (parentContextMap.containsKey("NP_Salesforce_sessionDirectory")) {
-                context.NP_Salesforce_sessionDirectory = (String) parentContextMap.get("NP_Salesforce_sessionDirectory");
-            }if (parentContextMap.containsKey("NP_Salesforce_timeout")) {
-                context.NP_Salesforce_timeout = (Integer) parentContextMap.get("NP_Salesforce_timeout");
-            }if (parentContextMap.containsKey("NP_Salesforce_userPassword_password")) {
-                context.NP_Salesforce_userPassword_password = (java.lang.String) parentContextMap.get("NP_Salesforce_userPassword_password");
-            }if (parentContextMap.containsKey("NP_Salesforce_userPassword_securityKey")) {
-                context.NP_Salesforce_userPassword_securityKey = (java.lang.String) parentContextMap.get("NP_Salesforce_userPassword_securityKey");
-            }if (parentContextMap.containsKey("NP_Salesforce_userPassword_userId")) {
-                context.NP_Salesforce_userPassword_userId = (String) parentContextMap.get("NP_Salesforce_userPassword_userId");
             }if (parentContextMap.containsKey("sfdc_audience_url")) {
                 context.sfdc_audience_url = (String) parentContextMap.get("sfdc_audience_url");
             }if (parentContextMap.containsKey("sfdc_certificate_alias")) {
@@ -90032,12 +89537,6 @@ end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
 			parametersToEncrypt.add("sfdc_keystore_password");
-			parametersToEncrypt.add("nd_aws_secret_key");
-			parametersToEncrypt.add("NP_Salesforce_oauth_clientSecret");
-			parametersToEncrypt.add("NP_Salesforce_oauth2JwtFlow_keyStorePassword");
-			parametersToEncrypt.add("NP_Salesforce_proxy_userPassword_password");
-			parametersToEncrypt.add("NP_Salesforce_userPassword_password");
-			parametersToEncrypt.add("NP_Salesforce_userPassword_securityKey");
         //Resume: jobStart
         resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
 
@@ -90174,7 +89673,7 @@ if (execStat) {
 
 
 
-            connections.put("conn_tSalesforceConnection_2", globalMap.get("conn_tSalesforceConnection_2"));
+            connections.put("conn_tSalesforceConnection_1", globalMap.get("conn_tSalesforceConnection_1"));
 
 
         return connections;
@@ -90288,6 +89787,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     3426080 characters generated by Talend Open Studio for Data Integration 
- *     on the February 18, 2021 at 11:16:03 AM PST
+ *     3395500 characters generated by Talend Open Studio for Data Integration 
+ *     on the February 18, 2021 at 1:30:16 PM PST
  ************************************************************************************************/
