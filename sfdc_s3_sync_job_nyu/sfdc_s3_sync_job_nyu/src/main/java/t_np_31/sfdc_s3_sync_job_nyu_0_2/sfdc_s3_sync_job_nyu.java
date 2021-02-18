@@ -52,123 +52,6 @@ import java.text.SimpleDateFormat;
 import java.util.Properties;
 import javax.activation.*;
 
-	//the import part of tJava_9
-	//import java.util.List;
-
-	//the import part of tJava_10
-	//import java.util.List;
-
-	//the import part of tJava_4
-	//import java.util.List;
-
-	//the import part of tJava_36
-	//import java.util.List;
-
-	//the import part of tJava_37
-	//import java.util.List;
-
-	//the import part of tJava_35
-	//import java.util.List;
-
-	//the import part of tJava_38
-	//import java.util.List;
-
-	//the import part of tJava_39
-	//import java.util.List;
-
-	//the import part of tJava_34
-	//import java.util.List;
-
-	//the import part of tJava_40
-	//import java.util.List;
-
-	//the import part of tJava_41
-	//import java.util.List;
-
-	//the import part of tJava_33
-	//import java.util.List;
-
-	//the import part of tJava_30
-	//import java.util.List;
-
-	//the import part of tJava_31
-	//import java.util.List;
-
-	//the import part of tJava_32
-	//import java.util.List;
-
-	//the import part of tJava_25
-	//import java.util.List;
-
-	//the import part of tJava_26
-	//import java.util.List;
-
-	//the import part of tJava_29
-	//import java.util.List;
-
-	//the import part of tJava_23
-	//import java.util.List;
-
-	//the import part of tJava_24
-	//import java.util.List;
-
-	//the import part of tJava_28
-	//import java.util.List;
-
-	//the import part of tJava_21
-	//import java.util.List;
-
-	//the import part of tJava_22
-	//import java.util.List;
-
-	//the import part of tJava_27
-	//import java.util.List;
-
-	//the import part of tJava_18
-	//import java.util.List;
-
-	//the import part of tJava_19
-	//import java.util.List;
-
-	//the import part of tJava_20
-	//import java.util.List;
-
-	//the import part of tJava_15
-	//import java.util.List;
-
-	//the import part of tJava_16
-	//import java.util.List;
-
-	//the import part of tJava_17
-	//import java.util.List;
-
-	//the import part of tJava_6
-	//import java.util.List;
-
-	//the import part of tJava_8
-	//import java.util.List;
-
-	//the import part of tJava_7
-	//import java.util.List;
-
-	//the import part of tJava_13
-	//import java.util.List;
-
-	//the import part of tJava_14
-	//import java.util.List;
-
-	//the import part of tJava_3
-	//import java.util.List;
-
-	//the import part of tJava_11
-	//import java.util.List;
-
-	//the import part of tJava_12
-	//import java.util.List;
-
-	//the import part of tJava_5
-	//import java.util.List;
-
 	//the import part of tJavaRow_2
 	import java.util.concurrent.ConcurrentHashMap;
 
@@ -178,6 +61,84 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 	//the import part of tJava_42
+	//import java.util.List;
+
+	//the import part of tJava_6
+	//import java.util.List;
+
+	//the import part of tJava_4
+	//import java.util.List;
+
+	//the import part of tJava_21
+	//import java.util.List;
+
+	//the import part of tJava_35
+	//import java.util.List;
+
+	//the import part of tJava_19
+	//import java.util.List;
+
+	//the import part of tJava_34
+	//import java.util.List;
+
+	//the import part of tJava_18
+	//import java.util.List;
+
+	//the import part of tJava_33
+	//import java.util.List;
+
+	//the import part of tJava_16
+	//import java.util.List;
+
+	//the import part of tJava_32
+	//import java.util.List;
+
+	//the import part of tJava_15
+	//import java.util.List;
+
+	//the import part of tJava_29
+	//import java.util.List;
+
+	//the import part of tJava_14
+	//import java.util.List;
+
+	//the import part of tJava_28
+	//import java.util.List;
+
+	//the import part of tJava_13
+	//import java.util.List;
+
+	//the import part of tJava_27
+	//import java.util.List;
+
+	//the import part of tJava_12
+	//import java.util.List;
+
+	//the import part of tJava_20
+	//import java.util.List;
+
+	//the import part of tJava_11
+	//import java.util.List;
+
+	//the import part of tJava_17
+	//import java.util.List;
+
+	//the import part of tJava_10
+	//import java.util.List;
+
+	//the import part of tJava_7
+	//import java.util.List;
+
+	//the import part of tJava_9
+	//import java.util.List;
+
+	//the import part of tJava_3
+	//import java.util.List;
+
+	//the import part of tJava_8
+	//import java.util.List;
+
+	//the import part of tJava_5
 	//import java.util.List;
 
 
@@ -809,6 +770,78 @@ private class TalendException extends Exception {
 					tJava_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tLogCatcher_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tJavaRow_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tPrejob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tPrejob_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tChronometerStart_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tChronometerStart_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tJava_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tJava_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tS3Connection_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tS3Connection_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tJava_42_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tJava_42_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tSalesforceConnection_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tSalesforceConnection_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tS3Copy_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -818,31 +851,13 @@ private class TalendException extends Exception {
 					tS3Copy_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_9_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_9_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_10_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_10_onSubJobError(exception, errorComponent, globalMap);
+					tJava_6_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_12_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -989,13 +1004,13 @@ private class TalendException extends Exception {
 					tS3Copy_10_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tS3Copy_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tS3Copy_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tS3Copy_13_onSubJobError(exception, errorComponent, globalMap);
+					tS3Copy_11_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tS3Copy_12_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1007,40 +1022,22 @@ private class TalendException extends Exception {
 					tS3Copy_12_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tS3Copy_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tS3Copy_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tS3Copy_11_onSubJobError(exception, errorComponent, globalMap);
+					tS3Copy_13_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_36_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_21_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_36_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_11_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_37_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_37_onSubJobError(exception, errorComponent, globalMap);
+					tJava_21_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_14_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1106,31 +1103,13 @@ private class TalendException extends Exception {
 					tJava_35_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_38_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_19_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_38_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_12_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_12_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_39_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_39_onSubJobError(exception, errorComponent, globalMap);
+					tJava_19_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1196,31 +1175,13 @@ private class TalendException extends Exception {
 					tJava_34_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_40_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_18_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_40_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_13_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_41_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_41_onSubJobError(exception, errorComponent, globalMap);
+					tJava_18_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1286,31 +1247,13 @@ private class TalendException extends Exception {
 					tJava_33_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_30_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_16_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_30_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_10_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_10_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_31_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_31_onSubJobError(exception, errorComponent, globalMap);
+					tJava_16_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_10_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1376,31 +1319,13 @@ private class TalendException extends Exception {
 					tJava_32_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_25_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_15_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_25_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_9_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_9_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_26_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_26_onSubJobError(exception, errorComponent, globalMap);
+					tJava_15_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_9_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1466,31 +1391,13 @@ private class TalendException extends Exception {
 					tJava_29_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_23_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_14_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_23_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_8_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_8_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_24_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_24_onSubJobError(exception, errorComponent, globalMap);
+					tJava_14_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_7_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1556,31 +1463,13 @@ private class TalendException extends Exception {
 					tJava_28_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_21_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_21_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_7_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_7_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_22_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_22_onSubJobError(exception, errorComponent, globalMap);
+					tJava_13_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_8_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1646,31 +1535,13 @@ private class TalendException extends Exception {
 					tJava_27_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_18_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_12_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_18_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_6_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_19_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_19_onSubJobError(exception, errorComponent, globalMap);
+					tJava_12_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1736,31 +1607,13 @@ private class TalendException extends Exception {
 					tJava_20_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_15_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_15_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_5_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_5_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_16_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_16_onSubJobError(exception, errorComponent, globalMap);
+					tJava_11_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_5_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1826,31 +1679,13 @@ private class TalendException extends Exception {
 					tJava_17_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_6_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_10_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_6_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_4_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_4_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_8_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_8_onSubJobError(exception, errorComponent, globalMap);
+					tJava_10_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -1916,31 +1751,13 @@ private class TalendException extends Exception {
 					tJava_7_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_13_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_9_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_13_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_3_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_14_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_14_onSubJobError(exception, errorComponent, globalMap);
+					tJava_9_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_15_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -2006,31 +1823,13 @@ private class TalendException extends Exception {
 					tDie_3_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tJava_11_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_8_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
 				
 				status = "failure";
 				
-					tJava_11_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Delete_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Delete_2_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_12_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_12_onSubJobError(exception, errorComponent, globalMap);
+					tJava_8_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
 			public void tSalesforceInput_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -2096,78 +1895,6 @@ private class TalendException extends Exception {
 					tDie_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
-			public void tLogCatcher_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJavaRow_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tPrejob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tPrejob_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tChronometerStart_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tChronometerStart_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tS3Connection_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tS3Connection_1_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tJava_42_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tJava_42_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
-			public void tSalesforceConnection_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-				
-				end_Hash.put(errorComponent, System.currentTimeMillis());
-				
-				status = "failure";
-				
-					tSalesforceConnection_2_onSubJobError(exception, errorComponent, globalMap);
-			}
-			
 			public void tPostjob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -2183,22 +1910,47 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
+			public void tLogCatcher_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tPrejob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tChronometerStart_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tJava_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tS3Connection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tJava_42_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tSalesforceConnection_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
 			public void tS3Copy_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_9_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_10_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2273,7 +2025,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tS3Copy_13_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tS3Copy_11_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2283,22 +2035,12 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tS3Copy_11_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tS3Copy_13_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_36_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_11_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_37_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_21_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2328,17 +2070,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_38_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_12_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_39_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_19_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2368,17 +2100,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_40_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_13_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_41_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_18_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2408,17 +2130,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_30_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_10_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_31_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_16_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2448,17 +2160,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_25_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_9_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_26_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_15_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2488,17 +2190,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_23_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_8_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_24_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_14_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2528,17 +2220,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_21_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_7_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_22_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_13_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2568,17 +2250,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_18_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_19_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_12_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2608,17 +2280,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_15_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_5_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_16_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_11_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2648,17 +2310,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_6_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_4_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_8_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_10_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2688,17 +2340,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_13_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_14_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_9_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2728,17 +2370,7 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
 			}
-			public void tJava_11_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Delete_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_12_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+			public void tJava_8_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -2764,41 +2396,6 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tDie_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tLogCatcher_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tPrejob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tChronometerStart_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tS3Connection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tJava_42_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
-
-resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
-
-			}
-			public void tSalesforceConnection_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -3409,6 +3006,2075 @@ end_Hash.put("tJava_2", System.currentTimeMillis());
 	}
 	
 
+
+public static class row17Struct implements routines.system.IPersistableRow<row17Struct> {
+    final static byte[] commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_nyu = new byte[0];
+    static byte[] commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[0];
+
+	
+			    public java.util.Date moment;
+
+				public java.util.Date getMoment () {
+					return this.moment;
+				}
+				
+			    public String pid;
+
+				public String getPid () {
+					return this.pid;
+				}
+				
+			    public String root_pid;
+
+				public String getRoot_pid () {
+					return this.root_pid;
+				}
+				
+			    public String father_pid;
+
+				public String getFather_pid () {
+					return this.father_pid;
+				}
+				
+			    public String project;
+
+				public String getProject () {
+					return this.project;
+				}
+				
+			    public String job;
+
+				public String getJob () {
+					return this.job;
+				}
+				
+			    public String context;
+
+				public String getContext () {
+					return this.context;
+				}
+				
+			    public Integer priority;
+
+				public Integer getPriority () {
+					return this.priority;
+				}
+				
+			    public String type;
+
+				public String getType () {
+					return this.type;
+				}
+				
+			    public String origin;
+
+				public String getOrigin () {
+					return this.origin;
+				}
+				
+			    public String message;
+
+				public String getMessage () {
+					return this.message;
+				}
+				
+			    public Integer code;
+
+				public Integer getCode () {
+					return this.code;
+				}
+				
+
+
+
+	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
+		java.util.Date dateReturn = null;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			dateReturn = null;
+		} else {
+	    	dateReturn = new Date(dis.readLong());
+		}
+		return dateReturn;
+	}
+
+    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
+		if(date1 == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeLong(date1.getTime());
+    	}
+    }
+
+	private String readString(ObjectInputStream dis) throws IOException{
+		String strReturn = null;
+		int length = 0;
+        length = dis.readInt();
+		if (length == -1) {
+			strReturn = null;
+		} else {
+			if(length > commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu.length) {
+				if(length < 1024 && commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu.length == 0) {
+   					commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[1024];
+				} else {
+   					commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[2 * length];
+   				}
+			}
+			dis.readFully(commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu, 0, length);
+			strReturn = new String(commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu, 0, length, utf8Charset);
+		}
+		return strReturn;
+	}
+
+    private void writeString(String str, ObjectOutputStream dos) throws IOException{
+		if(str == null) {
+            dos.writeInt(-1);
+		} else {
+            byte[] byteArray = str.getBytes(utf8Charset);
+	    	dos.writeInt(byteArray.length);
+			dos.write(byteArray);
+    	}
+    }
+	private Integer readInteger(ObjectInputStream dis) throws IOException{
+		Integer intReturn;
+        int length = 0;
+        length = dis.readByte();
+		if (length == -1) {
+			intReturn = null;
+		} else {
+	    	intReturn = dis.readInt();
+		}
+		return intReturn;
+	}
+
+	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
+		if(intNum == null) {
+            dos.writeByte(-1);
+		} else {
+			dos.writeByte(0);
+	    	dos.writeInt(intNum);
+    	}
+	}
+
+    public void readData(ObjectInputStream dis) {
+
+		synchronized(commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_nyu) {
+
+        	try {
+
+        		int length = 0;
+		
+					this.moment = readDate(dis);
+					
+					this.pid = readString(dis);
+					
+					this.root_pid = readString(dis);
+					
+					this.father_pid = readString(dis);
+					
+					this.project = readString(dis);
+					
+					this.job = readString(dis);
+					
+					this.context = readString(dis);
+					
+						this.priority = readInteger(dis);
+					
+					this.type = readString(dis);
+					
+					this.origin = readString(dis);
+					
+					this.message = readString(dis);
+					
+						this.code = readInteger(dis);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+
+		
+
+        }
+
+		
+
+      }
+
+
+    }
+
+    public void writeData(ObjectOutputStream dos) {
+        try {
+
+		
+					// java.util.Date
+				
+						writeDate(this.moment,dos);
+					
+					// String
+				
+						writeString(this.pid,dos);
+					
+					// String
+				
+						writeString(this.root_pid,dos);
+					
+					// String
+				
+						writeString(this.father_pid,dos);
+					
+					// String
+				
+						writeString(this.project,dos);
+					
+					// String
+				
+						writeString(this.job,dos);
+					
+					// String
+				
+						writeString(this.context,dos);
+					
+					// Integer
+				
+						writeInteger(this.priority,dos);
+					
+					// String
+				
+						writeString(this.type,dos);
+					
+					// String
+				
+						writeString(this.origin,dos);
+					
+					// String
+				
+						writeString(this.message,dos);
+					
+					// Integer
+				
+						writeInteger(this.code,dos);
+					
+        	} catch (IOException e) {
+	            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+    public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString());
+		sb.append("[");
+		sb.append("moment="+String.valueOf(moment));
+		sb.append(",pid="+pid);
+		sb.append(",root_pid="+root_pid);
+		sb.append(",father_pid="+father_pid);
+		sb.append(",project="+project);
+		sb.append(",job="+job);
+		sb.append(",context="+context);
+		sb.append(",priority="+String.valueOf(priority));
+		sb.append(",type="+type);
+		sb.append(",origin="+origin);
+		sb.append(",message="+message);
+		sb.append(",code="+String.valueOf(code));
+	    sb.append("]");
+
+	    return sb.toString();
+    }
+
+    /**
+     * Compare keys
+     */
+    public int compareTo(row17Struct other) {
+
+		int returnValue = -1;
+		
+	    return returnValue;
+    }
+
+
+    private int checkNullsAndCompare(Object object1, Object object2) {
+        int returnValue = 0;
+		if (object1 instanceof Comparable && object2 instanceof Comparable) {
+            returnValue = ((Comparable) object1).compareTo(object2);
+        } else if (object1 != null && object2 != null) {
+            returnValue = compareStrings(object1.toString(), object2.toString());
+        } else if (object1 == null && object2 != null) {
+            returnValue = 1;
+        } else if (object1 != null && object2 == null) {
+            returnValue = -1;
+        } else {
+            returnValue = 0;
+        }
+
+        return returnValue;
+    }
+
+    private int compareStrings(String string1, String string2) {
+        return string1.compareTo(string2);
+    }
+
+
+}
+public void tLogCatcher_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		row17Struct row17 = new row17Struct();
+
+
+
+
+	
+	/**
+	 * [tJavaRow_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJavaRow_2", false);
+		start_Hash.put("tJavaRow_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tJavaRow_2";
+
+	
+					if(execStat) {
+						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row17");
+					}
+				
+		int tos_count_tJavaRow_2 = 0;
+		
+
+int nb_line_tJavaRow_2 = 0;
+
+ 
+
+
+
+/**
+ * [tJavaRow_2 begin ] stop
+ */
+
+
+
+	
+	/**
+	 * [tLogCatcher_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tLogCatcher_1", false);
+		start_Hash.put("tLogCatcher_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tLogCatcher_1";
+
+	
+		int tos_count_tLogCatcher_1 = 0;
+		
+
+try {
+	for (LogCatcherUtils.LogCatcherMessage lcm : tLogCatcher_1.getMessages()) {
+		row17.type = lcm.getType();
+		row17.origin = (lcm.getOrigin()==null || lcm.getOrigin().length()<1 ? null : lcm.getOrigin());
+		row17.priority = lcm.getPriority();
+		row17.message = lcm.getMessage();
+		row17.code = lcm.getCode();
+		
+		row17.moment = java.util.Calendar.getInstance().getTime();
+	
+    	row17.pid = pid;
+		row17.root_pid = rootPid;
+		row17.father_pid = fatherPid;
+	
+    	row17.project = projectName;
+    	row17.job = jobName;
+    	row17.context = contextStr;
+    		
+ 
+
+
+
+/**
+ * [tLogCatcher_1 begin ] stop
+ */
+	
+	/**
+	 * [tLogCatcher_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogCatcher_1";
+
+	
+
+ 
+
+
+	tos_count_tLogCatcher_1++;
+
+/**
+ * [tLogCatcher_1 main ] stop
+ */
+	
+	/**
+	 * [tLogCatcher_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogCatcher_1 process_data_begin ] stop
+ */
+
+	
+	/**
+	 * [tJavaRow_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_2";
+
+	
+					if(execStat){
+						runStat.updateStatOnConnection(iterateId,1,1,"row17");
+					}
+					
+
+    String msg=null;
+String ChildJobStatus = (String) ((java.util.Map) globalMap.get("sharedMap")).get("Failure?");
+String ParentJobStatus = (String) globalMap.get("parent_status");
+
+if (ChildJobStatus.equals("True")) {
+	msg = (String)((java.util.Map) globalMap.get("sharedMap")).get("ExceptionMsg"); 
+	}
+else if (ParentJobStatus.equals("running")) {
+	msg = "Origin: " + row17.origin + ", Error: " + row17.message;
+	}
+
+System.out.println("The following job has failed: " + projectName + "." + jobName + ".\nPlease check the application log for more detailed information on the cause.\nException caught: \"" + msg + "\"");
+globalMap.put("error_msg", msg);
+globalMap.put("error_code", row17.code);
+    nb_line_tJavaRow_2++;   
+
+ 
+
+
+	tos_count_tJavaRow_2++;
+
+/**
+ * [tJavaRow_2 main ] stop
+ */
+	
+	/**
+	 * [tJavaRow_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_2 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJavaRow_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_2 process_data_end ] stop
+ */
+
+
+
+	
+	/**
+	 * [tLogCatcher_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogCatcher_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tLogCatcher_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogCatcher_1";
+
+	
+	}
+} catch (Exception e_tLogCatcher_1) {
+	logIgnoredError(String.format("tLogCatcher_1 - tLogCatcher failed to process log message(s) due to internal error: %s", e_tLogCatcher_1), e_tLogCatcher_1);
+}
+
+ 
+
+ok_Hash.put("tLogCatcher_1", true);
+end_Hash.put("tLogCatcher_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLogCatcher_1 end ] stop
+ */
+
+	
+	/**
+	 * [tJavaRow_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_2";
+
+	
+
+globalMap.put("tJavaRow_2_NB_LINE",nb_line_tJavaRow_2);
+				if(execStat){
+			  		runStat.updateStat(resourceMap,iterateId,2,0,"row17");
+			  	}
+			  	
+ 
+
+ok_Hash.put("tJavaRow_2", true);
+end_Hash.put("tJavaRow_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tJavaRow_2 end ] stop
+ */
+
+
+
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tLogCatcher_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLogCatcher_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLogCatcher_1 finally ] stop
+ */
+
+	
+	/**
+	 * [tJavaRow_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJavaRow_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJavaRow_2 finally ] stop
+ */
+
+
+
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tPrejob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tPrejob_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tPrejob_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tPrejob_1", false);
+		start_Hash.put("tPrejob_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tPrejob_1";
+
+	
+		int tos_count_tPrejob_1 = 0;
+		
+
+ 
+
+
+
+/**
+ * [tPrejob_1 begin ] stop
+ */
+	
+	/**
+	 * [tPrejob_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPrejob_1";
+
+	
+
+ 
+
+
+	tos_count_tPrejob_1++;
+
+/**
+ * [tPrejob_1 main ] stop
+ */
+	
+	/**
+	 * [tPrejob_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPrejob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tPrejob_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tPrejob_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPrejob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tPrejob_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tPrejob_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPrejob_1";
+
+	
+
+ 
+
+ok_Hash.put("tPrejob_1", true);
+end_Hash.put("tPrejob_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
+				}
+				tChronometerStart_1Process(globalMap);
+
+
+
+/**
+ * [tPrejob_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tPrejob_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tPrejob_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tPrejob_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tChronometerStart_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tChronometerStart_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tChronometerStart_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tChronometerStart_1", false);
+		start_Hash.put("tChronometerStart_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tChronometerStart_1";
+
+	
+		int tos_count_tChronometerStart_1 = 0;
+		
+
+	
+	
+	Long currentTimetChronometerStart_1 = System.currentTimeMillis();
+	
+	globalMap.put("tChronometerStart_1",currentTimetChronometerStart_1);
+	globalMap.put("tChronometerStart_1_STARTTIME", currentTimetChronometerStart_1);
+ 
+
+
+
+/**
+ * [tChronometerStart_1 begin ] stop
+ */
+	
+	/**
+	 * [tChronometerStart_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStart_1";
+
+	
+
+ 
+
+
+	tos_count_tChronometerStart_1++;
+
+/**
+ * [tChronometerStart_1 main ] stop
+ */
+	
+	/**
+	 * [tChronometerStart_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStart_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStart_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tChronometerStart_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStart_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStart_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tChronometerStart_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStart_1";
+
+	
+
+ 
+
+ok_Hash.put("tChronometerStart_1", true);
+end_Hash.put("tChronometerStart_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
+				}
+				tJava_1Process(globalMap);
+
+
+
+/**
+ * [tChronometerStart_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tChronometerStart_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tChronometerStart_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tChronometerStart_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tChronometerStart_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tJava_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tJava_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJava_1", false);
+		start_Hash.put("tJava_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tJava_1";
+
+	
+		int tos_count_tJava_1 = 0;
+		
+
+
+Date start_datetime = new Date((Long)globalMap.get("tChronometerStart_1_STARTTIME"));
+String start_time = TalendDate.formatDate("EEE, MMM dd HH:mm:ss.SSS z yyyy",start_datetime);
+System.out.println("\n*** " + jobName + " ***");
+System.out.println("Start Time: "+start_time);
+System.out.println("Environment: " + contextStr);
+//context.email_subject_stem = "SalesForce LCV Object Refresh";
+
+globalMap.put("datetime", TalendDate.formatDate("yyyyMMddHHmm", new Date()));
+globalMap.put("compare_result", "true");
+
+ConcurrentHashMap<String, String> CHM = new ConcurrentHashMap<String, String>();
+CHM.put("Failure?", "False");
+globalMap.put("sharedMap", CHM);
+globalMap.put("parent_status", "running");
+
+
+
+
+
+ 
+
+
+
+/**
+ * [tJava_1 begin ] stop
+ */
+	
+	/**
+	 * [tJava_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+	tos_count_tJava_1++;
+
+/**
+ * [tJava_1 main ] stop
+ */
+	
+	/**
+	 * [tJava_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJava_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+ok_Hash.put("tJava_1", true);
+end_Hash.put("tJava_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
+				}
+				tS3Connection_1Process(globalMap);
+
+
+
+/**
+ * [tJava_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tJava_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tS3Connection_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tS3Connection_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tS3Connection_1", false);
+		start_Hash.put("tS3Connection_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tS3Connection_1";
+
+	
+		int tos_count_tS3Connection_1 = 0;
+		
+	
+	
+	    
+		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
+		
+		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
+		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
+		
+				com.amazonaws.services.s3.AmazonS3 conn_tS3Connection_1 = com.amazonaws.services.s3.AmazonS3ClientBuilder.standard()
+					
+		            
+		            	
+				        .withRegion("us-east-1") // The first region to try your request against
+                        .withForceGlobalBucketAccessEnabled(true) // If a bucket is in a different region, try again in the correct region
+		            
+		            
+
+                    .withCredentials(credentialsProvider_tS3Connection_1)
+                    .withClientConfiguration(cc_tS3Connection_1)
+                    .build();
+			
+	
+		try{
+			conn_tS3Connection_1.getBucketLoggingConfiguration("Check-Connection-Only");
+	}catch(com.amazonaws.AmazonServiceException ase_tS3Connection_1){
+			if(ase_tS3Connection_1.getErrorCode().equals("NoSuchBucket")){
+			//ignore
+			}else{
+					throw ase_tS3Connection_1;
+			}
+	}
+	
+	
+	
+	globalMap.put("conn_" + "tS3Connection_1",conn_tS3Connection_1);
+	
+
+ 
+
+
+
+/**
+ * [tS3Connection_1 begin ] stop
+ */
+	
+	/**
+	 * [tS3Connection_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Connection_1";
+
+	
+
+ 
+
+
+	tos_count_tS3Connection_1++;
+
+/**
+ * [tS3Connection_1 main ] stop
+ */
+	
+	/**
+	 * [tS3Connection_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Connection_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Connection_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tS3Connection_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Connection_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Connection_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tS3Connection_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Connection_1";
+
+	
+
+ 
+
+ok_Hash.put("tS3Connection_1", true);
+end_Hash.put("tS3Connection_1", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk19", 0, "ok");
+				}
+				tJava_42Process(globalMap);
+
+
+
+/**
+ * [tS3Connection_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tS3Connection_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Connection_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tS3Connection_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tS3Connection_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tJava_42Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_42_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tJava_42 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJava_42", false);
+		start_Hash.put("tJava_42", System.currentTimeMillis());
+		
+	
+	currentComponent="tJava_42";
+
+	
+		int tos_count_tJava_42 = 0;
+		
+
+
+context.sfdc_keystore_password = System.getenv("TALEND_SFDC_JKS_PASSWORD");
+//System.out.println(context.sfdc_keystore_password );
+ 
+
+
+
+/**
+ * [tJava_42 begin ] stop
+ */
+	
+	/**
+	 * [tJava_42 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_42";
+
+	
+
+ 
+
+
+	tos_count_tJava_42++;
+
+/**
+ * [tJava_42 main ] stop
+ */
+	
+	/**
+	 * [tJava_42 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_42";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_42 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJava_42 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_42";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_42 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_42 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_42";
+
+	
+
+ 
+
+ok_Hash.put("tJava_42", true);
+end_Hash.put("tJava_42", System.currentTimeMillis());
+
+				if(execStat){   
+   	 				runStat.updateStatOnConnection("OnComponentOk121", 0, "ok");
+				}
+				tSalesforceConnection_2Process(globalMap);
+
+
+
+/**
+ * [tJava_42 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tJava_42 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_42";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_42 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tJava_42_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tSalesforceConnection_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tSalesforceConnection_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tSalesforceConnection_2", false);
+		start_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+		int tos_count_tSalesforceConnection_2 = 0;
+		
+
+
+org.talend.components.api.component.ComponentDefinition def_tSalesforceConnection_2 =
+        new org.talend.components.salesforce.tsalesforceconnection.TSalesforceConnectionDefinition();
+
+org.talend.components.salesforce.SalesforceConnectionProperties props_tSalesforceConnection_2 =
+        (org.talend.components.salesforce.SalesforceConnectionProperties) def_tSalesforceConnection_2.createRuntimeProperties();
+ 		                    props_tSalesforceConnection_2.setValue("endpoint",
+ 		                    "https://login.salesforce.com/services/oauth2");
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("loginType",
+ 		                        org.talend.components.salesforce.SalesforceConnectionProperties.LoginType.OAuth);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("bulkConnection",
+ 		                    true);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("needCompression",
+ 		                    false);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("timeout",
+ 		                    60000);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("httpTraceMessage",
+ 		                    false);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("clientId",
+ 		                    "");
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("oauth2FlowType",
+ 		                        org.talend.components.common.oauth.OAuth2FlowType.JWT_Flow);
+ 		                    
+ 		                    props_tSalesforceConnection_2.setValue("apiVersion",
+ 		                    "47.0");
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("issuer",
+ 		                    context.sfdc_issuer_token);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("subject",
+ 		                    context.sfdc_subject_user);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("expirationTime",
+ 		                    600);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStore",
+ 		                    context.sfdc_keystore_path);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStorePassword",
+ 		                    context.sfdc_keystore_password);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("certificateAlias",
+ 		                    context.sfdc_certificate_alias);
+ 		                    
+ 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("audience",
+ 		                    context.sfdc_audience_url);
+ 		                    
+ 		                    props_tSalesforceConnection_2.userPassword.setValue("useAuth",
+ 		                    false);
+ 		                    
+ 		                    props_tSalesforceConnection_2.proxy.setValue("useProxy",
+ 		                    false);
+ 		                    
+ 		                    props_tSalesforceConnection_2.proxy.userPassword.setValue("useAuth",
+ 		                    false);
+ 		                    
+ 		                    props_tSalesforceConnection_2.referencedComponent.setValue("referenceDefinitionName",
+ 		                    "tSalesforceConnection");
+ 		                    
+    if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceConnection_2.referencedComponent.referenceType.getValue()) {
+        final String referencedComponentInstanceId_tSalesforceConnection_2 = props_tSalesforceConnection_2.referencedComponent.componentInstanceId.getStringValue();
+        if (referencedComponentInstanceId_tSalesforceConnection_2 != null) {
+            org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceConnection_2 = (org.talend.daikon.properties.Properties) globalMap.get(
+                referencedComponentInstanceId_tSalesforceConnection_2 + "_COMPONENT_RUNTIME_PROPERTIES");
+            props_tSalesforceConnection_2.referencedComponent.setReference(referencedComponentProperties_tSalesforceConnection_2);
+        }
+    }
+globalMap.put("tSalesforceConnection_2_COMPONENT_RUNTIME_PROPERTIES", props_tSalesforceConnection_2);
+globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.3");
+globalMap.put("TALEND_COMPONENTS_VERSION", "0.28.2");
+java.net.URL mappings_url_tSalesforceConnection_2= this.getClass().getResource("/xmlMappings");
+globalMap.put("tSalesforceConnection_2_MAPPINGS_URL", mappings_url_tSalesforceConnection_2);
+
+org.talend.components.api.container.RuntimeContainer container_tSalesforceConnection_2 = new org.talend.components.api.container.RuntimeContainer() {
+    public Object getComponentData(String componentId, String key) {
+        return globalMap.get(componentId + "_" + key);
+    }
+
+    public void setComponentData(String componentId, String key, Object data) {
+        globalMap.put(componentId + "_" + key, data);
+    }
+
+    public String getCurrentComponentId() {
+        return "tSalesforceConnection_2";
+    }
+
+    public Object getGlobalData(String key) {
+    	return globalMap.get(key);
+    }
+};
+
+int nb_line_tSalesforceConnection_2 = 0;
+
+org.talend.components.api.component.ConnectorTopology topology_tSalesforceConnection_2 = null;
+topology_tSalesforceConnection_2 = org.talend.components.api.component.ConnectorTopology.NONE;
+
+org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceConnection_2 = def_tSalesforceConnection_2.getRuntimeInfo(
+    org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tSalesforceConnection_2, topology_tSalesforceConnection_2);
+java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceConnection_2 = def_tSalesforceConnection_2.getSupportedConnectorTopologies();
+
+org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.RuntimableRuntime)(Class.forName(runtime_info_tSalesforceConnection_2.getRuntimeClassName()).newInstance());
+org.talend.daikon.properties.ValidationResult initVr_tSalesforceConnection_2 = componentRuntime_tSalesforceConnection_2.initialize(container_tSalesforceConnection_2, props_tSalesforceConnection_2);
+
+if (initVr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
+    throw new RuntimeException(initVr_tSalesforceConnection_2.getMessage());
+}
+
+if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+	org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization)componentRuntime_tSalesforceConnection_2;
+	compDriverInitialization_tSalesforceConnection_2.runAtDriver(container_tSalesforceConnection_2);
+}
+
+org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceConnection_2 = null;
+if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+	sourceOrSink_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.SourceOrSink)componentRuntime_tSalesforceConnection_2;
+	org.talend.daikon.properties.ValidationResult vr_tSalesforceConnection_2 = sourceOrSink_tSalesforceConnection_2.validate(container_tSalesforceConnection_2);
+	if (vr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
+    	throw new RuntimeException(vr_tSalesforceConnection_2.getMessage());
+	}
+}
+
+ 
+
+
+
+/**
+ * [tSalesforceConnection_2 begin ] stop
+ */
+	
+	/**
+	 * [tSalesforceConnection_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+
+
+ 
+
+
+	tos_count_tSalesforceConnection_2++;
+
+/**
+ * [tSalesforceConnection_2 main ] stop
+ */
+	
+	/**
+	 * [tSalesforceConnection_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+
+
+ 
+
+
+
+/**
+ * [tSalesforceConnection_2 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tSalesforceConnection_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+
+
+ 
+
+
+
+/**
+ * [tSalesforceConnection_2 process_data_end ] stop
+ */
+	
+	/**
+	 * [tSalesforceConnection_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+// end of generic
+
+ 
+
+ok_Hash.put("tSalesforceConnection_2", true);
+end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tSalesforceConnection_2 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tSalesforceConnection_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tSalesforceConnection_2";
+
+	
+// finally of generic
+
+ 
+
+
+
+/**
+ * [tSalesforceConnection_2 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 1);
+	}
+	
+
 public void tS3Copy_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
 	globalMap.put("tS3Copy_1_SUBPROCESS_STATE", 0);
 
@@ -3638,7 +5304,7 @@ end_Hash.put("tS3Copy_1", System.currentTimeMillis());
 				if(execStat){   
    	 				runStat.updateStatOnConnection("OnComponentOk20", 0, "ok");
 				}
-				tJava_9Process(globalMap);
+				tJava_6Process(globalMap);
 
 
 
@@ -3709,8 +5375,8 @@ end_Hash.put("tS3Copy_1", System.currentTimeMillis());
 	}
 	
 
-public void tJava_9Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_9_SUBPROCESS_STATE", 0);
+public void tJava_6Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_6_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -3737,495 +5403,65 @@ public void tJava_9Process(final java.util.Map<String, Object> globalMap) throws
 
 	
 	/**
-	 * [tJava_9 begin ] start
+	 * [tJava_6 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_9", false);
-		start_Hash.put("tJava_9", System.currentTimeMillis());
+		ok_Hash.put("tJava_6", false);
+		start_Hash.put("tJava_6", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_9";
+	currentComponent="tJava_6";
 
 	
-		int tos_count_tJava_9 = 0;
+		int tos_count_tJava_6 = 0;
 		
 
 
 System.out.println("Step 1: Running For Account Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_9 begin ] stop
- */
-	
-	/**
-	 * [tJava_9 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_9";
-
-	
-
- 
-
-
-	tos_count_tJava_9++;
-
-/**
- * [tJava_9 main ] stop
- */
-	
-	/**
-	 * [tJava_9 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_9";
-
-	
-
- 
-
-
-
-/**
- * [tJava_9 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_9 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_9";
-
-	
-
- 
-
-
-
-/**
- * [tJava_9 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_9 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_9";
-
-	
-
- 
-
-ok_Hash.put("tJava_9", true);
-end_Hash.put("tJava_9", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk21", 0, "ok");
-				}
-				tS3Delete_1Process(globalMap);
-
-
-
-/**
- * [tJava_9 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_9 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_9";
-
-	
-
- 
-
-
-
-/**
- * [tJava_9 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_9_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_1", false);
-		start_Hash.put("tS3Delete_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_1";
-
-	
-		int tos_count_tS3Delete_1 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_1 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_1 = context.nd_s3_data_lake_path_sfdc +"/sfdc/account/latest/university_id="+context.university_code+"/account.csv.gz";
-		if(key_tS3Delete_1!=null && key_tS3Delete_1.trim().length()>0){
-			
-			conn_tS3Delete_1.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_1);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_1){
-		
-			System.err.println(e_tS3Delete_1.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_1 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_1";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_1++;
-
-/**
- * [tS3Delete_1 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_1";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_1", true);
-end_Hash.put("tS3Delete_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk22", 0, "ok");
-				}
-				tJava_10Process(globalMap);
-
-
-
-/**
- * [tS3Delete_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_10Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_10_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_10 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_10", false);
-		start_Hash.put("tJava_10", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_10";
-
-	
-		int tos_count_tJava_10 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_10 begin ] stop
+ * [tJava_6 begin ] stop
  */
 	
 	/**
-	 * [tJava_10 main ] start
+	 * [tJava_6 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_10";
+	currentComponent="tJava_6";
 
 	
 
  
 
 
-	tos_count_tJava_10++;
+	tos_count_tJava_6++;
 
 /**
- * [tJava_10 main ] stop
+ * [tJava_6 main ] stop
  */
 	
 	/**
-	 * [tJava_10 process_data_begin ] start
+	 * [tJava_6 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_10";
-
-	
-
- 
-
-
-
-/**
- * [tJava_10 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_10 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_10";
+	currentComponent="tJava_6";
 
 	
 
@@ -4234,35 +5470,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_10 process_data_end ] stop
+ * [tJava_6 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_10 end ] start
+	 * [tJava_6 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_10";
+	currentComponent="tJava_6";
 
 	
 
  
 
-ok_Hash.put("tJava_10", true);
-end_Hash.put("tJava_10", System.currentTimeMillis());
+
+
+/**
+ * [tJava_6 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_6 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_6";
+
+	
+
+ 
+
+ok_Hash.put("tJava_6", true);
+end_Hash.put("tJava_6", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk29", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk40", 0, "ok");
 				}
 				tSalesforceInput_12Process(globalMap);
 
 
 
 /**
- * [tJava_10 end ] stop
+ * [tJava_6 end ] stop
  */
 				}//end the resume
 
@@ -4287,14 +5543,14 @@ end_Hash.put("tJava_10", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_10 finally ] start
+	 * [tJava_6 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_10";
+	currentComponent="tJava_6";
 
 	
 
@@ -4303,7 +5559,7 @@ end_Hash.put("tJava_10", System.currentTimeMillis());
 
 
 /**
- * [tJava_10 finally ] stop
+ * [tJava_6 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -4314,7 +5570,7 @@ end_Hash.put("tJava_10", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_10_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_6_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -9124,9 +10380,9 @@ ok_Hash.put("tS3Copy_2", true);
 end_Hash.put("tS3Copy_2", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk23", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk21", 0, "ok");
 				}
-				tJava_11Process(globalMap);
+				tJava_8Process(globalMap);
 
 
 
@@ -9424,9 +10680,9 @@ ok_Hash.put("tS3Copy_3", true);
 end_Hash.put("tS3Copy_3", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk26", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk22", 0, "ok");
 				}
-				tJava_13Process(globalMap);
+				tJava_9Process(globalMap);
 
 
 
@@ -9724,9 +10980,9 @@ ok_Hash.put("tS3Copy_4", true);
 end_Hash.put("tS3Copy_4", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk39", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk23", 0, "ok");
 				}
-				tJava_6Process(globalMap);
+				tJava_10Process(globalMap);
 
 
 
@@ -10024,9 +11280,9 @@ ok_Hash.put("tS3Copy_5", true);
 end_Hash.put("tS3Copy_5", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk43", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk24", 0, "ok");
 				}
-				tJava_15Process(globalMap);
+				tJava_11Process(globalMap);
 
 
 
@@ -10324,9 +11580,9 @@ ok_Hash.put("tS3Copy_6", true);
 end_Hash.put("tS3Copy_6", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk50", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk25", 0, "ok");
 				}
-				tJava_18Process(globalMap);
+				tJava_12Process(globalMap);
 
 
 
@@ -10624,9 +11880,9 @@ ok_Hash.put("tS3Copy_7", true);
 end_Hash.put("tS3Copy_7", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk57", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk26", 0, "ok");
 				}
-				tJava_21Process(globalMap);
+				tJava_13Process(globalMap);
 
 
 
@@ -10924,9 +12180,9 @@ ok_Hash.put("tS3Copy_8", true);
 end_Hash.put("tS3Copy_8", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk60", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk27", 0, "ok");
 				}
-				tJava_23Process(globalMap);
+				tJava_14Process(globalMap);
 
 
 
@@ -11224,9 +12480,9 @@ ok_Hash.put("tS3Copy_9", true);
 end_Hash.put("tS3Copy_9", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk63", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk28", 0, "ok");
 				}
-				tJava_25Process(globalMap);
+				tJava_15Process(globalMap);
 
 
 
@@ -11524,9 +12780,9 @@ ok_Hash.put("tS3Copy_10", true);
 end_Hash.put("tS3Copy_10", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk78", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk29", 0, "ok");
 				}
-				tJava_30Process(globalMap);
+				tJava_16Process(globalMap);
 
 
 
@@ -11544,7 +12800,7 @@ end_Hash.put("tS3Copy_10", System.currentTimeMillis());
 									runStat.updateStatOnConnection("OnSubjobOk10", 0, "ok");
 								} 
 							
-							tS3Copy_13Process(globalMap); 
+							tS3Copy_11Process(globalMap); 
 						
 
 
@@ -11597,8 +12853,8 @@ end_Hash.put("tS3Copy_10", System.currentTimeMillis());
 	}
 	
 
-public void tS3Copy_13Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Copy_13_SUBPROCESS_STATE", 0);
+public void tS3Copy_11Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tS3Copy_11_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -11625,114 +12881,114 @@ public void tS3Copy_13Process(final java.util.Map<String, Object> globalMap) thr
 
 	
 	/**
-	 * [tS3Copy_13 begin ] start
+	 * [tS3Copy_11 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tS3Copy_13", false);
-		start_Hash.put("tS3Copy_13", System.currentTimeMillis());
+		ok_Hash.put("tS3Copy_11", false);
+		start_Hash.put("tS3Copy_11", System.currentTimeMillis());
 		
 	
-	currentComponent="tS3Copy_13";
+	currentComponent="tS3Copy_11";
 
 	
-		int tos_count_tS3Copy_13 = 0;
+		int tos_count_tS3Copy_11 = 0;
 		
 	
 	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Copy_13 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
+		com.amazonaws.services.s3.AmazonS3Client conn_tS3Copy_11 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
 		
 	try{
 		
 		
-		long partSizeInBytes_tS3Copy_13 = 100 * 1024 * 1024;
-		long maxBytes4SingleCopyCall_tS3Copy_13 = 5 * 1024 * 1024 * 1024;//5GB
-		com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Copy_13 = null;
+		long partSizeInBytes_tS3Copy_11 = 100 * 1024 * 1024;
+		long maxBytes4SingleCopyCall_tS3Copy_11 = 5 * 1024 * 1024 * 1024;//5GB
+		com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Copy_11 = null;
 		
 		
-		final String from_bucket_tS3Copy_13 = context.nd_s3_bucket_QA_sfdc;
-		final String from_key_tS3Copy_13 = context.nd_s3_data_lake_path_sfdc+"/sfdc/task/latest/university_id="+context.university_code+"/task.csv.gz";
-		final String to_bucket_tS3Copy_13 = context.nd_s3_bucket_QA_sfdc; 
-		final String to_key_tS3Copy_13 = context.nd_s3_data_lake_path_sfdc+"/sfdc/task/archive/university_id="+context.university_code+"/task_"+TalendDate.formatDate("yyyyMMddhhmm",TalendDate.getCurrentDate())+".csv.gz";
+		final String from_bucket_tS3Copy_11 = context.nd_s3_bucket_QA_sfdc;
+		final String from_key_tS3Copy_11 = context.nd_s3_data_lake_path_sfdc+"/sfdc/task/latest/university_id="+context.university_code+"/task.csv.gz";
+		final String to_bucket_tS3Copy_11 = context.nd_s3_bucket_QA_sfdc; 
+		final String to_key_tS3Copy_11 = context.nd_s3_data_lake_path_sfdc+"/sfdc/task/archive/university_id="+context.university_code+"/task_"+TalendDate.formatDate("yyyyMMddhhmm",TalendDate.getCurrentDate())+".csv.gz";
 		
 		//get the source metadata information
-		com.amazonaws.services.s3.model.GetObjectMetadataRequest metadataRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.GetObjectMetadataRequest(from_bucket_tS3Copy_13, from_key_tS3Copy_13);
-    com.amazonaws.services.s3.model.ObjectMetadata metadataResult_tS3Copy_13 = conn_tS3Copy_13.getObjectMetadata(metadataRequest_tS3Copy_13);
-    long objectSize_tS3Copy_13 = metadataResult_tS3Copy_13.getContentLength();
+		com.amazonaws.services.s3.model.GetObjectMetadataRequest metadataRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.GetObjectMetadataRequest(from_bucket_tS3Copy_11, from_key_tS3Copy_11);
+    com.amazonaws.services.s3.model.ObjectMetadata metadataResult_tS3Copy_11 = conn_tS3Copy_11.getObjectMetadata(metadataRequest_tS3Copy_11);
+    long objectSize_tS3Copy_11 = metadataResult_tS3Copy_11.getContentLength();
     
-    boolean multiUpload_tS3Copy_13 = objectSize_tS3Copy_13 > maxBytes4SingleCopyCall_tS3Copy_13;
+    boolean multiUpload_tS3Copy_11 = objectSize_tS3Copy_11 > maxBytes4SingleCopyCall_tS3Copy_11;
     
-    if(!multiUpload_tS3Copy_13) {
-    		com.amazonaws.services.s3.model.CopyObjectRequest putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CopyObjectRequest(from_bucket_tS3Copy_13, from_key_tS3Copy_13, to_bucket_tS3Copy_13, to_key_tS3Copy_13);
-    		if(objectMetadata_tS3Copy_13 != null) {
-    				putRequest_tS3Copy_13.setNewObjectMetadata(objectMetadata_tS3Copy_13);
+    if(!multiUpload_tS3Copy_11) {
+    		com.amazonaws.services.s3.model.CopyObjectRequest putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CopyObjectRequest(from_bucket_tS3Copy_11, from_key_tS3Copy_11, to_bucket_tS3Copy_11, to_key_tS3Copy_11);
+    		if(objectMetadata_tS3Copy_11 != null) {
+    				putRequest_tS3Copy_11.setNewObjectMetadata(objectMetadata_tS3Copy_11);
     		}
     		
     		
 
     		
-    		conn_tS3Copy_13.copyObject(putRequest_tS3Copy_13);
+    		conn_tS3Copy_11.copyObject(putRequest_tS3Copy_11);
 		} else {
 						
-						java.util.Map<String,String> userMetadata_tS3Copy_13 = metadataResult_tS3Copy_13.getUserMetadata();
-						if((userMetadata_tS3Copy_13!=null) && userMetadata_tS3Copy_13.get("x-amz-iv")!=null) {
+						java.util.Map<String,String> userMetadata_tS3Copy_11 = metadataResult_tS3Copy_11.getUserMetadata();
+						if((userMetadata_tS3Copy_11!=null) && userMetadata_tS3Copy_11.get("x-amz-iv")!=null) {
 								throw new RuntimeException("the metadata key : \"x-amz-iv\" exists in the current object metadata, its value is important for client encrypt with KMS, which can't be copied as s3 service limit it");
 						}
 						
-    				com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Copy_13 = null;
-    				if(objectMetadata_tS3Copy_13 != null) {
-    						putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, objectMetadata_tS3Copy_13);
+    				com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Copy_11 = null;
+    				if(objectMetadata_tS3Copy_11 != null) {
+    						putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, objectMetadata_tS3Copy_11);
     				} else {
     						//even pass the source object metadata, some metadata will change too like "x-amz-iv"
-    						putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, metadataResult_tS3Copy_13);
+    						putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, metadataResult_tS3Copy_11);
     				}
     				
     				
 
     				
-            com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResult_tS3Copy_13 = conn_tS3Copy_13.initiateMultipartUpload(putRequest_tS3Copy_13);
+            com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResult_tS3Copy_11 = conn_tS3Copy_11.initiateMultipartUpload(putRequest_tS3Copy_11);
             
-            long bytePosition_tS3Copy_13 = 0;
-            int partNum_tS3Copy_13 = 1;
+            long bytePosition_tS3Copy_11 = 0;
+            int partNum_tS3Copy_11 = 1;
             
-            java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Copy_13 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
+            java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Copy_11 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
             
       	try {
-            while (bytePosition_tS3Copy_13 < objectSize_tS3Copy_13) {
-                long lastByte_tS3Copy_13 = java.lang.Math.min(bytePosition_tS3Copy_13 + partSizeInBytes_tS3Copy_13 - 1, objectSize_tS3Copy_13 - 1);
+            while (bytePosition_tS3Copy_11 < objectSize_tS3Copy_11) {
+                long lastByte_tS3Copy_11 = java.lang.Math.min(bytePosition_tS3Copy_11 + partSizeInBytes_tS3Copy_11 - 1, objectSize_tS3Copy_11 - 1);
                 
-                com.amazonaws.services.s3.model.CopyPartRequest copyPartRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CopyPartRequest()
-                        .withSourceBucketName(from_bucket_tS3Copy_13)
-                        .withSourceKey(from_key_tS3Copy_13)
-                        .withDestinationBucketName(to_bucket_tS3Copy_13)
-                        .withDestinationKey(to_key_tS3Copy_13)
-                        .withUploadId(initResult_tS3Copy_13.getUploadId())
-                        .withFirstByte(bytePosition_tS3Copy_13)
-                        .withLastByte(lastByte_tS3Copy_13)
-                        .withPartNumber(partNum_tS3Copy_13++);
-                partTags_tS3Copy_13.add(conn_tS3Copy_13.copyPart(copyPartRequest_tS3Copy_13).getPartETag());
-                bytePosition_tS3Copy_13 += partSizeInBytes_tS3Copy_13;
+                com.amazonaws.services.s3.model.CopyPartRequest copyPartRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CopyPartRequest()
+                        .withSourceBucketName(from_bucket_tS3Copy_11)
+                        .withSourceKey(from_key_tS3Copy_11)
+                        .withDestinationBucketName(to_bucket_tS3Copy_11)
+                        .withDestinationKey(to_key_tS3Copy_11)
+                        .withUploadId(initResult_tS3Copy_11.getUploadId())
+                        .withFirstByte(bytePosition_tS3Copy_11)
+                        .withLastByte(lastByte_tS3Copy_11)
+                        .withPartNumber(partNum_tS3Copy_11++);
+                partTags_tS3Copy_11.add(conn_tS3Copy_11.copyPart(copyPartRequest_tS3Copy_11).getPartETag());
+                bytePosition_tS3Copy_11 += partSizeInBytes_tS3Copy_11;
             }
     
-            com.amazonaws.services.s3.model.CompleteMultipartUploadRequest completeRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(
-                                                                       	to_bucket_tS3Copy_13,
-                                                                        to_key_tS3Copy_13, 
-                                                                        initResult_tS3Copy_13.getUploadId(),
-                                                                        partTags_tS3Copy_13);
-            conn_tS3Copy_13.completeMultipartUpload(completeRequest_tS3Copy_13);
-    		} catch (java.lang.Exception uploadException_tS3Copy_13) {
-    				conn_tS3Copy_13.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, initResult_tS3Copy_13.getUploadId()));
-    				throw uploadException_tS3Copy_13;
+            com.amazonaws.services.s3.model.CompleteMultipartUploadRequest completeRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(
+                                                                       	to_bucket_tS3Copy_11,
+                                                                        to_key_tS3Copy_11, 
+                                                                        initResult_tS3Copy_11.getUploadId(),
+                                                                        partTags_tS3Copy_11);
+            conn_tS3Copy_11.completeMultipartUpload(completeRequest_tS3Copy_11);
+    		} catch (java.lang.Exception uploadException_tS3Copy_11) {
+    				conn_tS3Copy_11.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, initResult_tS3Copy_11.getUploadId()));
+    				throw uploadException_tS3Copy_11;
     		}
     }
     
 		
-	}catch(java.lang.Exception e_tS3Copy_13){
+	}catch(java.lang.Exception e_tS3Copy_11){
 		
-			System.err.println(e_tS3Copy_13.getMessage());
+			System.err.println(e_tS3Copy_11.getMessage());
 		
 	}
 	        
@@ -11742,59 +12998,39 @@ public void tS3Copy_13Process(final java.util.Map<String, Object> globalMap) thr
 
 
 /**
- * [tS3Copy_13 begin ] stop
+ * [tS3Copy_11 begin ] stop
  */
 	
 	/**
-	 * [tS3Copy_13 main ] start
+	 * [tS3Copy_11 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_13";
+	currentComponent="tS3Copy_11";
 
 	
 
  
 
 
-	tos_count_tS3Copy_13++;
+	tos_count_tS3Copy_11++;
 
 /**
- * [tS3Copy_13 main ] stop
+ * [tS3Copy_11 main ] stop
  */
 	
 	/**
-	 * [tS3Copy_13 process_data_begin ] start
+	 * [tS3Copy_11 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_13";
-
-	
-
- 
-
-
-
-/**
- * [tS3Copy_13 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Copy_13 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Copy_13";
+	currentComponent="tS3Copy_11";
 
 	
 
@@ -11803,41 +13039,61 @@ public void tS3Copy_13Process(final java.util.Map<String, Object> globalMap) thr
 
 
 /**
- * [tS3Copy_13 process_data_end ] stop
+ * [tS3Copy_11 process_data_begin ] stop
  */
 	
 	/**
-	 * [tS3Copy_13 end ] start
+	 * [tS3Copy_11 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_13";
+	currentComponent="tS3Copy_11";
 
 	
 
  
 
-ok_Hash.put("tS3Copy_13", true);
-end_Hash.put("tS3Copy_13", System.currentTimeMillis());
+
+
+/**
+ * [tS3Copy_11 process_data_end ] stop
+ */
+	
+	/**
+	 * [tS3Copy_11 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Copy_11";
+
+	
+
+ 
+
+ok_Hash.put("tS3Copy_11", true);
+end_Hash.put("tS3Copy_11", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk99", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk37", 0, "ok");
 				}
-				tJava_40Process(globalMap);
+				tJava_18Process(globalMap);
 
 
 
 /**
- * [tS3Copy_13 end ] stop
+ * [tS3Copy_11 end ] stop
  */
 				}//end the resume
 
 				
 				    			if(resumeEntryMethodName == null || globalResumeTicket){
-				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tS3Copy_13:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tS3Copy_11:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
 								}	    				    			
 					    	
 								if(execStat){    	
@@ -11866,14 +13122,14 @@ end_Hash.put("tS3Copy_13", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tS3Copy_13 finally ] start
+	 * [tS3Copy_11 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_13";
+	currentComponent="tS3Copy_11";
 
 	
 
@@ -11882,7 +13138,7 @@ end_Hash.put("tS3Copy_13", System.currentTimeMillis());
 
 
 /**
- * [tS3Copy_13 finally ] stop
+ * [tS3Copy_11 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -11893,7 +13149,7 @@ end_Hash.put("tS3Copy_13", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tS3Copy_13_SUBPROCESS_STATE", 1);
+		globalMap.put("tS3Copy_11_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -12124,9 +13380,9 @@ ok_Hash.put("tS3Copy_12", true);
 end_Hash.put("tS3Copy_12", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk96", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk38", 0, "ok");
 				}
-				tJava_38Process(globalMap);
+				tJava_19Process(globalMap);
 
 
 
@@ -12144,7 +13400,7 @@ end_Hash.put("tS3Copy_12", System.currentTimeMillis());
 									runStat.updateStatOnConnection("OnSubjobOk12", 0, "ok");
 								} 
 							
-							tS3Copy_11Process(globalMap); 
+							tS3Copy_13Process(globalMap); 
 						
 
 
@@ -12197,8 +13453,8 @@ end_Hash.put("tS3Copy_12", System.currentTimeMillis());
 	}
 	
 
-public void tS3Copy_11Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Copy_11_SUBPROCESS_STATE", 0);
+public void tS3Copy_13Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tS3Copy_13_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -12225,114 +13481,114 @@ public void tS3Copy_11Process(final java.util.Map<String, Object> globalMap) thr
 
 	
 	/**
-	 * [tS3Copy_11 begin ] start
+	 * [tS3Copy_13 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tS3Copy_11", false);
-		start_Hash.put("tS3Copy_11", System.currentTimeMillis());
+		ok_Hash.put("tS3Copy_13", false);
+		start_Hash.put("tS3Copy_13", System.currentTimeMillis());
 		
 	
-	currentComponent="tS3Copy_11";
+	currentComponent="tS3Copy_13";
 
 	
-		int tos_count_tS3Copy_11 = 0;
+		int tos_count_tS3Copy_13 = 0;
 		
 	
 	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Copy_11 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
+		com.amazonaws.services.s3.AmazonS3Client conn_tS3Copy_13 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
 		
 	try{
 		
 		
-		long partSizeInBytes_tS3Copy_11 = 100 * 1024 * 1024;
-		long maxBytes4SingleCopyCall_tS3Copy_11 = 5 * 1024 * 1024 * 1024;//5GB
-		com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Copy_11 = null;
+		long partSizeInBytes_tS3Copy_13 = 100 * 1024 * 1024;
+		long maxBytes4SingleCopyCall_tS3Copy_13 = 5 * 1024 * 1024 * 1024;//5GB
+		com.amazonaws.services.s3.model.ObjectMetadata objectMetadata_tS3Copy_13 = null;
 		
 		
-		final String from_bucket_tS3Copy_11 = context.nd_s3_bucket_QA_sfdc;
-		final String from_key_tS3Copy_11 = context.nd_s3_data_lake_path_sfdc+"/sfdc/userrole/latest/university_id="+context.university_code+"/userrole.csv.gz";
-		final String to_bucket_tS3Copy_11 = context.nd_s3_bucket_QA_sfdc; 
-		final String to_key_tS3Copy_11 = context.nd_s3_data_lake_path_sfdc+"/sfdc/userrole/archive/university_id="+context.university_code+"/userrole_"+TalendDate.formatDate("yyyyMMddhhmm",TalendDate.getCurrentDate())+".csv.gz";
+		final String from_bucket_tS3Copy_13 = context.nd_s3_bucket_QA_sfdc;
+		final String from_key_tS3Copy_13 = context.nd_s3_data_lake_path_sfdc+"/sfdc/userrole/latest/university_id="+context.university_code+"/userrole.csv.gz";
+		final String to_bucket_tS3Copy_13 = context.nd_s3_bucket_QA_sfdc; 
+		final String to_key_tS3Copy_13 = context.nd_s3_data_lake_path_sfdc+"/sfdc/userrole/archive/university_id="+context.university_code+"/userrole_"+TalendDate.formatDate("yyyyMMddhhmm",TalendDate.getCurrentDate())+".csv.gz";
 		
 		//get the source metadata information
-		com.amazonaws.services.s3.model.GetObjectMetadataRequest metadataRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.GetObjectMetadataRequest(from_bucket_tS3Copy_11, from_key_tS3Copy_11);
-    com.amazonaws.services.s3.model.ObjectMetadata metadataResult_tS3Copy_11 = conn_tS3Copy_11.getObjectMetadata(metadataRequest_tS3Copy_11);
-    long objectSize_tS3Copy_11 = metadataResult_tS3Copy_11.getContentLength();
+		com.amazonaws.services.s3.model.GetObjectMetadataRequest metadataRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.GetObjectMetadataRequest(from_bucket_tS3Copy_13, from_key_tS3Copy_13);
+    com.amazonaws.services.s3.model.ObjectMetadata metadataResult_tS3Copy_13 = conn_tS3Copy_13.getObjectMetadata(metadataRequest_tS3Copy_13);
+    long objectSize_tS3Copy_13 = metadataResult_tS3Copy_13.getContentLength();
     
-    boolean multiUpload_tS3Copy_11 = objectSize_tS3Copy_11 > maxBytes4SingleCopyCall_tS3Copy_11;
+    boolean multiUpload_tS3Copy_13 = objectSize_tS3Copy_13 > maxBytes4SingleCopyCall_tS3Copy_13;
     
-    if(!multiUpload_tS3Copy_11) {
-    		com.amazonaws.services.s3.model.CopyObjectRequest putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CopyObjectRequest(from_bucket_tS3Copy_11, from_key_tS3Copy_11, to_bucket_tS3Copy_11, to_key_tS3Copy_11);
-    		if(objectMetadata_tS3Copy_11 != null) {
-    				putRequest_tS3Copy_11.setNewObjectMetadata(objectMetadata_tS3Copy_11);
+    if(!multiUpload_tS3Copy_13) {
+    		com.amazonaws.services.s3.model.CopyObjectRequest putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CopyObjectRequest(from_bucket_tS3Copy_13, from_key_tS3Copy_13, to_bucket_tS3Copy_13, to_key_tS3Copy_13);
+    		if(objectMetadata_tS3Copy_13 != null) {
+    				putRequest_tS3Copy_13.setNewObjectMetadata(objectMetadata_tS3Copy_13);
     		}
     		
     		
 
     		
-    		conn_tS3Copy_11.copyObject(putRequest_tS3Copy_11);
+    		conn_tS3Copy_13.copyObject(putRequest_tS3Copy_13);
 		} else {
 						
-						java.util.Map<String,String> userMetadata_tS3Copy_11 = metadataResult_tS3Copy_11.getUserMetadata();
-						if((userMetadata_tS3Copy_11!=null) && userMetadata_tS3Copy_11.get("x-amz-iv")!=null) {
+						java.util.Map<String,String> userMetadata_tS3Copy_13 = metadataResult_tS3Copy_13.getUserMetadata();
+						if((userMetadata_tS3Copy_13!=null) && userMetadata_tS3Copy_13.get("x-amz-iv")!=null) {
 								throw new RuntimeException("the metadata key : \"x-amz-iv\" exists in the current object metadata, its value is important for client encrypt with KMS, which can't be copied as s3 service limit it");
 						}
 						
-    				com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Copy_11 = null;
-    				if(objectMetadata_tS3Copy_11 != null) {
-    						putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, objectMetadata_tS3Copy_11);
+    				com.amazonaws.services.s3.model.InitiateMultipartUploadRequest putRequest_tS3Copy_13 = null;
+    				if(objectMetadata_tS3Copy_13 != null) {
+    						putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, objectMetadata_tS3Copy_13);
     				} else {
     						//even pass the source object metadata, some metadata will change too like "x-amz-iv"
-    						putRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, metadataResult_tS3Copy_11);
+    						putRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.InitiateMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, metadataResult_tS3Copy_13);
     				}
     				
     				
 
     				
-            com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResult_tS3Copy_11 = conn_tS3Copy_11.initiateMultipartUpload(putRequest_tS3Copy_11);
+            com.amazonaws.services.s3.model.InitiateMultipartUploadResult initResult_tS3Copy_13 = conn_tS3Copy_13.initiateMultipartUpload(putRequest_tS3Copy_13);
             
-            long bytePosition_tS3Copy_11 = 0;
-            int partNum_tS3Copy_11 = 1;
+            long bytePosition_tS3Copy_13 = 0;
+            int partNum_tS3Copy_13 = 1;
             
-            java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Copy_11 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
+            java.util.List<com.amazonaws.services.s3.model.PartETag> partTags_tS3Copy_13 = new java.util.ArrayList<com.amazonaws.services.s3.model.PartETag>();
             
       	try {
-            while (bytePosition_tS3Copy_11 < objectSize_tS3Copy_11) {
-                long lastByte_tS3Copy_11 = java.lang.Math.min(bytePosition_tS3Copy_11 + partSizeInBytes_tS3Copy_11 - 1, objectSize_tS3Copy_11 - 1);
+            while (bytePosition_tS3Copy_13 < objectSize_tS3Copy_13) {
+                long lastByte_tS3Copy_13 = java.lang.Math.min(bytePosition_tS3Copy_13 + partSizeInBytes_tS3Copy_13 - 1, objectSize_tS3Copy_13 - 1);
                 
-                com.amazonaws.services.s3.model.CopyPartRequest copyPartRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CopyPartRequest()
-                        .withSourceBucketName(from_bucket_tS3Copy_11)
-                        .withSourceKey(from_key_tS3Copy_11)
-                        .withDestinationBucketName(to_bucket_tS3Copy_11)
-                        .withDestinationKey(to_key_tS3Copy_11)
-                        .withUploadId(initResult_tS3Copy_11.getUploadId())
-                        .withFirstByte(bytePosition_tS3Copy_11)
-                        .withLastByte(lastByte_tS3Copy_11)
-                        .withPartNumber(partNum_tS3Copy_11++);
-                partTags_tS3Copy_11.add(conn_tS3Copy_11.copyPart(copyPartRequest_tS3Copy_11).getPartETag());
-                bytePosition_tS3Copy_11 += partSizeInBytes_tS3Copy_11;
+                com.amazonaws.services.s3.model.CopyPartRequest copyPartRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CopyPartRequest()
+                        .withSourceBucketName(from_bucket_tS3Copy_13)
+                        .withSourceKey(from_key_tS3Copy_13)
+                        .withDestinationBucketName(to_bucket_tS3Copy_13)
+                        .withDestinationKey(to_key_tS3Copy_13)
+                        .withUploadId(initResult_tS3Copy_13.getUploadId())
+                        .withFirstByte(bytePosition_tS3Copy_13)
+                        .withLastByte(lastByte_tS3Copy_13)
+                        .withPartNumber(partNum_tS3Copy_13++);
+                partTags_tS3Copy_13.add(conn_tS3Copy_13.copyPart(copyPartRequest_tS3Copy_13).getPartETag());
+                bytePosition_tS3Copy_13 += partSizeInBytes_tS3Copy_13;
             }
     
-            com.amazonaws.services.s3.model.CompleteMultipartUploadRequest completeRequest_tS3Copy_11 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(
-                                                                       	to_bucket_tS3Copy_11,
-                                                                        to_key_tS3Copy_11, 
-                                                                        initResult_tS3Copy_11.getUploadId(),
-                                                                        partTags_tS3Copy_11);
-            conn_tS3Copy_11.completeMultipartUpload(completeRequest_tS3Copy_11);
-    		} catch (java.lang.Exception uploadException_tS3Copy_11) {
-    				conn_tS3Copy_11.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(to_bucket_tS3Copy_11, to_key_tS3Copy_11, initResult_tS3Copy_11.getUploadId()));
-    				throw uploadException_tS3Copy_11;
+            com.amazonaws.services.s3.model.CompleteMultipartUploadRequest completeRequest_tS3Copy_13 = new com.amazonaws.services.s3.model.CompleteMultipartUploadRequest(
+                                                                       	to_bucket_tS3Copy_13,
+                                                                        to_key_tS3Copy_13, 
+                                                                        initResult_tS3Copy_13.getUploadId(),
+                                                                        partTags_tS3Copy_13);
+            conn_tS3Copy_13.completeMultipartUpload(completeRequest_tS3Copy_13);
+    		} catch (java.lang.Exception uploadException_tS3Copy_13) {
+    				conn_tS3Copy_13.abortMultipartUpload(new com.amazonaws.services.s3.model.AbortMultipartUploadRequest(to_bucket_tS3Copy_13, to_key_tS3Copy_13, initResult_tS3Copy_13.getUploadId()));
+    				throw uploadException_tS3Copy_13;
     		}
     }
     
 		
-	}catch(java.lang.Exception e_tS3Copy_11){
+	}catch(java.lang.Exception e_tS3Copy_13){
 		
-			System.err.println(e_tS3Copy_11.getMessage());
+			System.err.println(e_tS3Copy_13.getMessage());
 		
 	}
 	        
@@ -12342,59 +13598,39 @@ public void tS3Copy_11Process(final java.util.Map<String, Object> globalMap) thr
 
 
 /**
- * [tS3Copy_11 begin ] stop
+ * [tS3Copy_13 begin ] stop
  */
 	
 	/**
-	 * [tS3Copy_11 main ] start
+	 * [tS3Copy_13 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_11";
+	currentComponent="tS3Copy_13";
 
 	
 
  
 
 
-	tos_count_tS3Copy_11++;
+	tos_count_tS3Copy_13++;
 
 /**
- * [tS3Copy_11 main ] stop
+ * [tS3Copy_13 main ] stop
  */
 	
 	/**
-	 * [tS3Copy_11 process_data_begin ] start
+	 * [tS3Copy_13 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_11";
-
-	
-
- 
-
-
-
-/**
- * [tS3Copy_11 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Copy_11 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Copy_11";
+	currentComponent="tS3Copy_13";
 
 	
 
@@ -12403,35 +13639,55 @@ public void tS3Copy_11Process(final java.util.Map<String, Object> globalMap) thr
 
 
 /**
- * [tS3Copy_11 process_data_end ] stop
+ * [tS3Copy_13 process_data_begin ] stop
  */
 	
 	/**
-	 * [tS3Copy_11 end ] start
+	 * [tS3Copy_13 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_11";
+	currentComponent="tS3Copy_13";
 
 	
 
  
 
-ok_Hash.put("tS3Copy_11", true);
-end_Hash.put("tS3Copy_11", System.currentTimeMillis());
+
+
+/**
+ * [tS3Copy_13 process_data_end ] stop
+ */
+	
+	/**
+	 * [tS3Copy_13 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tS3Copy_13";
+
+	
+
+ 
+
+ok_Hash.put("tS3Copy_13", true);
+end_Hash.put("tS3Copy_13", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk93", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk39", 0, "ok");
 				}
-				tJava_36Process(globalMap);
+				tJava_21Process(globalMap);
 
 
 
 /**
- * [tS3Copy_11 end ] stop
+ * [tS3Copy_13 end ] stop
  */
 				}//end the resume
 
@@ -12456,14 +13712,14 @@ end_Hash.put("tS3Copy_11", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tS3Copy_11 finally ] start
+	 * [tS3Copy_13 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tS3Copy_11";
+	currentComponent="tS3Copy_13";
 
 	
 
@@ -12472,7 +13728,7 @@ end_Hash.put("tS3Copy_11", System.currentTimeMillis());
 
 
 /**
- * [tS3Copy_11 finally ] stop
+ * [tS3Copy_13 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -12483,12 +13739,12 @@ end_Hash.put("tS3Copy_11", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tS3Copy_11_SUBPROCESS_STATE", 1);
+		globalMap.put("tS3Copy_13_SUBPROCESS_STATE", 1);
 	}
 	
 
-public void tJava_36Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_36_SUBPROCESS_STATE", 0);
+public void tJava_21Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_21_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -12515,495 +13771,65 @@ public void tJava_36Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_36 begin ] start
+	 * [tJava_21 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_36", false);
-		start_Hash.put("tJava_36", System.currentTimeMillis());
+		ok_Hash.put("tJava_21", false);
+		start_Hash.put("tJava_21", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_36";
+	currentComponent="tJava_21";
 
 	
-		int tos_count_tJava_36 = 0;
+		int tos_count_tJava_21 = 0;
 		
 
 
 System.out.println("Step 1: Running For UserRole Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_36 begin ] stop
- */
-	
-	/**
-	 * [tJava_36 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_36";
-
-	
-
- 
-
-
-	tos_count_tJava_36++;
-
-/**
- * [tJava_36 main ] stop
- */
-	
-	/**
-	 * [tJava_36 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_36";
-
-	
-
- 
-
-
-
-/**
- * [tJava_36 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_36 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_36";
-
-	
-
- 
-
-
-
-/**
- * [tJava_36 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_36 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_36";
-
-	
-
- 
-
-ok_Hash.put("tJava_36", true);
-end_Hash.put("tJava_36", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk94", 0, "ok");
-				}
-				tS3Delete_11Process(globalMap);
-
-
-
-/**
- * [tJava_36 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_36 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_36";
-
-	
-
- 
-
-
-
-/**
- * [tJava_36 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_36_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_11Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_11_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_11 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_11", false);
-		start_Hash.put("tS3Delete_11", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_11";
-
-	
-		int tos_count_tS3Delete_11 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_11 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_11 = context.nd_s3_data_lake_path_sfdc +"/sfdc/userrole/latest/university_id="+context.university_code+"/userrole.csv.gz";
-		if(key_tS3Delete_11!=null && key_tS3Delete_11.trim().length()>0){
-			
-			conn_tS3Delete_11.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_11);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_11){
-		
-			System.err.println(e_tS3Delete_11.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_11 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_11 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_11";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_11++;
-
-/**
- * [tS3Delete_11 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_11 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_11";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_11 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_11 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_11";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_11 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_11 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_11";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_11", true);
-end_Hash.put("tS3Delete_11", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk95", 0, "ok");
-				}
-				tJava_37Process(globalMap);
-
-
-
-/**
- * [tS3Delete_11 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_11 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_11";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_11 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_11_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_37Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_37_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_37 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_37", false);
-		start_Hash.put("tJava_37", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_37";
-
-	
-		int tos_count_tJava_37 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_37 begin ] stop
+ * [tJava_21 begin ] stop
  */
 	
 	/**
-	 * [tJava_37 main ] start
+	 * [tJava_21 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_37";
+	currentComponent="tJava_21";
 
 	
 
  
 
 
-	tos_count_tJava_37++;
+	tos_count_tJava_21++;
 
 /**
- * [tJava_37 main ] stop
+ * [tJava_21 main ] stop
  */
 	
 	/**
-	 * [tJava_37 process_data_begin ] start
+	 * [tJava_21 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_37";
-
-	
-
- 
-
-
-
-/**
- * [tJava_37 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_37 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_37";
+	currentComponent="tJava_21";
 
 	
 
@@ -13012,35 +13838,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_37 process_data_end ] stop
+ * [tJava_21 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_37 end ] start
+	 * [tJava_21 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_37";
+	currentComponent="tJava_21";
 
 	
 
  
 
-ok_Hash.put("tJava_37", true);
-end_Hash.put("tJava_37", System.currentTimeMillis());
+
+
+/**
+ * [tJava_21 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_21 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_21";
+
+	
+
+ 
+
+ok_Hash.put("tJava_21", true);
+end_Hash.put("tJava_21", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk105", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk57", 0, "ok");
 				}
 				tSalesforceInput_14Process(globalMap);
 
 
 
 /**
- * [tJava_37 end ] stop
+ * [tJava_21 end ] stop
  */
 				}//end the resume
 
@@ -13065,14 +13911,14 @@ end_Hash.put("tJava_37", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_37 finally ] start
+	 * [tJava_21 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_37";
+	currentComponent="tJava_21";
 
 	
 
@@ -13081,7 +13927,7 @@ end_Hash.put("tJava_37", System.currentTimeMillis());
 
 
 /**
- * [tJava_37 finally ] stop
+ * [tJava_21 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -13092,7 +13938,7 @@ end_Hash.put("tJava_37", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_37_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_21_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -15987,8 +16833,8 @@ end_Hash.put("tJava_35", System.currentTimeMillis());
 	}
 	
 
-public void tJava_38Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_38_SUBPROCESS_STATE", 0);
+public void tJava_19Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_19_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -16015,495 +16861,65 @@ public void tJava_38Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_38 begin ] start
+	 * [tJava_19 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_38", false);
-		start_Hash.put("tJava_38", System.currentTimeMillis());
+		ok_Hash.put("tJava_19", false);
+		start_Hash.put("tJava_19", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_38";
+	currentComponent="tJava_19";
 
 	
-		int tos_count_tJava_38 = 0;
+		int tos_count_tJava_19 = 0;
 		
 
 
 System.out.println("Step 1: Running For User Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_38 begin ] stop
- */
-	
-	/**
-	 * [tJava_38 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_38";
-
-	
-
- 
-
-
-	tos_count_tJava_38++;
-
-/**
- * [tJava_38 main ] stop
- */
-	
-	/**
-	 * [tJava_38 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_38";
-
-	
-
- 
-
-
-
-/**
- * [tJava_38 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_38 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_38";
-
-	
-
- 
-
-
-
-/**
- * [tJava_38 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_38 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_38";
-
-	
-
- 
-
-ok_Hash.put("tJava_38", true);
-end_Hash.put("tJava_38", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk97", 0, "ok");
-				}
-				tS3Delete_12Process(globalMap);
-
-
-
-/**
- * [tJava_38 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_38 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_38";
-
-	
-
- 
-
-
-
-/**
- * [tJava_38 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_38_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_12Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_12_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_12 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_12", false);
-		start_Hash.put("tS3Delete_12", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_12";
-
-	
-		int tos_count_tS3Delete_12 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_12 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_12 = context.nd_s3_data_lake_path_sfdc +"/sfdc/user/latest/university_id="+context.university_code+"/user.csv.gz";
-		if(key_tS3Delete_12!=null && key_tS3Delete_12.trim().length()>0){
-			
-			conn_tS3Delete_12.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_12);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_12){
-		
-			System.err.println(e_tS3Delete_12.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_12 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_12 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_12";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_12++;
-
-/**
- * [tS3Delete_12 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_12 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_12";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_12 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_12 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_12";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_12 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_12 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_12";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_12", true);
-end_Hash.put("tS3Delete_12", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk98", 0, "ok");
-				}
-				tJava_39Process(globalMap);
-
-
-
-/**
- * [tS3Delete_12 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_12 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_12";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_12 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_12_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_39Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_39_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_39 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_39", false);
-		start_Hash.put("tJava_39", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_39";
-
-	
-		int tos_count_tJava_39 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_39 begin ] stop
+ * [tJava_19 begin ] stop
  */
 	
 	/**
-	 * [tJava_39 main ] start
+	 * [tJava_19 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_39";
+	currentComponent="tJava_19";
 
 	
 
  
 
 
-	tos_count_tJava_39++;
+	tos_count_tJava_19++;
 
 /**
- * [tJava_39 main ] stop
+ * [tJava_19 main ] stop
  */
 	
 	/**
-	 * [tJava_39 process_data_begin ] start
+	 * [tJava_19 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_39";
-
-	
-
- 
-
-
-
-/**
- * [tJava_39 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_39 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_39";
+	currentComponent="tJava_19";
 
 	
 
@@ -16512,35 +16928,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_39 process_data_end ] stop
+ * [tJava_19 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_39 end ] start
+	 * [tJava_19 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_39";
+	currentComponent="tJava_19";
 
 	
 
  
 
-ok_Hash.put("tJava_39", true);
-end_Hash.put("tJava_39", System.currentTimeMillis());
+
+
+/**
+ * [tJava_19 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_19 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_19";
+
+	
+
+ 
+
+ok_Hash.put("tJava_19", true);
+end_Hash.put("tJava_19", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk104", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk56", 0, "ok");
 				}
 				tSalesforceInput_2Process(globalMap);
 
 
 
 /**
- * [tJava_39 end ] stop
+ * [tJava_19 end ] stop
  */
 				}//end the resume
 
@@ -16565,14 +17001,14 @@ end_Hash.put("tJava_39", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_39 finally ] start
+	 * [tJava_19 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_39";
+	currentComponent="tJava_19";
 
 	
 
@@ -16581,7 +17017,7 @@ end_Hash.put("tJava_39", System.currentTimeMillis());
 
 
 /**
- * [tJava_39 finally ] stop
+ * [tJava_19 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -16592,7 +17028,7 @@ end_Hash.put("tJava_39", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_39_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_19_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -25362,8 +25798,8 @@ end_Hash.put("tJava_34", System.currentTimeMillis());
 	}
 	
 
-public void tJava_40Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_40_SUBPROCESS_STATE", 0);
+public void tJava_18Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_18_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -25390,495 +25826,65 @@ public void tJava_40Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_40 begin ] start
+	 * [tJava_18 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_40", false);
-		start_Hash.put("tJava_40", System.currentTimeMillis());
+		ok_Hash.put("tJava_18", false);
+		start_Hash.put("tJava_18", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_40";
+	currentComponent="tJava_18";
 
 	
-		int tos_count_tJava_40 = 0;
+		int tos_count_tJava_18 = 0;
 		
 
 
 System.out.println("Step 1: Running For Task Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_40 begin ] stop
- */
-	
-	/**
-	 * [tJava_40 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_40";
-
-	
-
- 
-
-
-	tos_count_tJava_40++;
-
-/**
- * [tJava_40 main ] stop
- */
-	
-	/**
-	 * [tJava_40 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_40";
-
-	
-
- 
-
-
-
-/**
- * [tJava_40 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_40 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_40";
-
-	
-
- 
-
-
-
-/**
- * [tJava_40 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_40 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_40";
-
-	
-
- 
-
-ok_Hash.put("tJava_40", true);
-end_Hash.put("tJava_40", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk100", 0, "ok");
-				}
-				tS3Delete_13Process(globalMap);
-
-
-
-/**
- * [tJava_40 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_40 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_40";
-
-	
-
- 
-
-
-
-/**
- * [tJava_40 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_40_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_13Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_13_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_13 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_13", false);
-		start_Hash.put("tS3Delete_13", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_13";
-
-	
-		int tos_count_tS3Delete_13 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_13 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_13 = context.nd_s3_data_lake_path_sfdc +"/sfdc/task/latest/university_id="+context.university_code+"/task.csv.gz";
-		if(key_tS3Delete_13!=null && key_tS3Delete_13.trim().length()>0){
-			
-			conn_tS3Delete_13.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_13);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_13){
-		
-			System.err.println(e_tS3Delete_13.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_13 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_13 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_13";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_13++;
-
-/**
- * [tS3Delete_13 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_13 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_13";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_13 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_13 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_13";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_13 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_13 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_13";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_13", true);
-end_Hash.put("tS3Delete_13", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk101", 0, "ok");
-				}
-				tJava_41Process(globalMap);
-
-
-
-/**
- * [tS3Delete_13 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_13 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_13";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_13 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_13_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_41Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_41_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_41 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_41", false);
-		start_Hash.put("tJava_41", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_41";
-
-	
-		int tos_count_tJava_41 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_41 begin ] stop
+ * [tJava_18 begin ] stop
  */
 	
 	/**
-	 * [tJava_41 main ] start
+	 * [tJava_18 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_41";
+	currentComponent="tJava_18";
 
 	
 
  
 
 
-	tos_count_tJava_41++;
+	tos_count_tJava_18++;
 
 /**
- * [tJava_41 main ] stop
+ * [tJava_18 main ] stop
  */
 	
 	/**
-	 * [tJava_41 process_data_begin ] start
+	 * [tJava_18 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_41";
-
-	
-
- 
-
-
-
-/**
- * [tJava_41 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_41 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_41";
+	currentComponent="tJava_18";
 
 	
 
@@ -25887,35 +25893,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_41 process_data_end ] stop
+ * [tJava_18 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_41 end ] start
+	 * [tJava_18 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_41";
+	currentComponent="tJava_18";
 
 	
 
  
 
-ok_Hash.put("tJava_41", true);
-end_Hash.put("tJava_41", System.currentTimeMillis());
+
+
+/**
+ * [tJava_18 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_18 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_18";
+
+	
+
+ 
+
+ok_Hash.put("tJava_18", true);
+end_Hash.put("tJava_18", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk103", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk52", 0, "ok");
 				}
 				tSalesforceInput_11Process(globalMap);
 
 
 
 /**
- * [tJava_41 end ] stop
+ * [tJava_18 end ] stop
  */
 				}//end the resume
 
@@ -25940,14 +25966,14 @@ end_Hash.put("tJava_41", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_41 finally ] start
+	 * [tJava_18 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_41";
+	currentComponent="tJava_18";
 
 	
 
@@ -25956,7 +25982,7 @@ end_Hash.put("tJava_41", System.currentTimeMillis());
 
 
 /**
- * [tJava_41 finally ] stop
+ * [tJava_18 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -25967,7 +25993,7 @@ end_Hash.put("tJava_41", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_41_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_18_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -31320,8 +31346,8 @@ end_Hash.put("tJava_33", System.currentTimeMillis());
 	}
 	
 
-public void tJava_30Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_30_SUBPROCESS_STATE", 0);
+public void tJava_16Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_16_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -31348,495 +31374,65 @@ public void tJava_30Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_30 begin ] start
+	 * [tJava_16 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_30", false);
-		start_Hash.put("tJava_30", System.currentTimeMillis());
+		ok_Hash.put("tJava_16", false);
+		start_Hash.put("tJava_16", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_30";
+	currentComponent="tJava_16";
 
 	
-		int tos_count_tJava_30 = 0;
+		int tos_count_tJava_16 = 0;
 		
 
 
 System.out.println("Step 1: Running For Recordtype Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_30 begin ] stop
- */
-	
-	/**
-	 * [tJava_30 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_30";
-
-	
-
- 
-
-
-	tos_count_tJava_30++;
-
-/**
- * [tJava_30 main ] stop
- */
-	
-	/**
-	 * [tJava_30 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_30";
-
-	
-
- 
-
-
-
-/**
- * [tJava_30 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_30 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_30";
-
-	
-
- 
-
-
-
-/**
- * [tJava_30 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_30 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_30";
-
-	
-
- 
-
-ok_Hash.put("tJava_30", true);
-end_Hash.put("tJava_30", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk79", 0, "ok");
-				}
-				tS3Delete_10Process(globalMap);
-
-
-
-/**
- * [tJava_30 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_30 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_30";
-
-	
-
- 
-
-
-
-/**
- * [tJava_30 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_30_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_10Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_10_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_10 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_10", false);
-		start_Hash.put("tS3Delete_10", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_10";
-
-	
-		int tos_count_tS3Delete_10 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_10 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_10 = context.nd_s3_data_lake_path_sfdc +"/sfdc/recordtype/latest/university_id="+context.university_code+"/recordtype.csv.gz";
-		if(key_tS3Delete_10!=null && key_tS3Delete_10.trim().length()>0){
-			
-			conn_tS3Delete_10.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_10);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_10){
-		
-			System.err.println(e_tS3Delete_10.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_10 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_10 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_10";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_10++;
-
-/**
- * [tS3Delete_10 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_10 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_10";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_10 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_10 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_10";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_10 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_10 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_10";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_10", true);
-end_Hash.put("tS3Delete_10", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk80", 0, "ok");
-				}
-				tJava_31Process(globalMap);
-
-
-
-/**
- * [tS3Delete_10 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_10 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_10";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_10 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_10_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_31Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_31_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_31 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_31", false);
-		start_Hash.put("tJava_31", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_31";
-
-	
-		int tos_count_tJava_31 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_31 begin ] stop
+ * [tJava_16 begin ] stop
  */
 	
 	/**
-	 * [tJava_31 main ] start
+	 * [tJava_16 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_31";
+	currentComponent="tJava_16";
 
 	
 
  
 
 
-	tos_count_tJava_31++;
+	tos_count_tJava_16++;
 
 /**
- * [tJava_31 main ] stop
+ * [tJava_16 main ] stop
  */
 	
 	/**
-	 * [tJava_31 process_data_begin ] start
+	 * [tJava_16 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_31";
-
-	
-
- 
-
-
-
-/**
- * [tJava_31 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_31 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_31";
+	currentComponent="tJava_16";
 
 	
 
@@ -31845,35 +31441,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_31 process_data_end ] stop
+ * [tJava_16 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_31 end ] start
+	 * [tJava_16 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_31";
+	currentComponent="tJava_16";
 
 	
 
  
 
-ok_Hash.put("tJava_31", true);
-end_Hash.put("tJava_31", System.currentTimeMillis());
+
+
+/**
+ * [tJava_16 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_16 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_16";
+
+	
+
+ 
+
+ok_Hash.put("tJava_16", true);
+end_Hash.put("tJava_16", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk102", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk51", 0, "ok");
 				}
 				tSalesforceInput_10Process(globalMap);
 
 
 
 /**
- * [tJava_31 end ] stop
+ * [tJava_16 end ] stop
  */
 				}//end the resume
 
@@ -31898,14 +31514,14 @@ end_Hash.put("tJava_31", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_31 finally ] start
+	 * [tJava_16 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_31";
+	currentComponent="tJava_16";
 
 	
 
@@ -31914,7 +31530,7 @@ end_Hash.put("tJava_31", System.currentTimeMillis());
 
 
 /**
- * [tJava_31 finally ] stop
+ * [tJava_16 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -31925,7 +31541,7 @@ end_Hash.put("tJava_31", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_31_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_16_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -34721,8 +34337,8 @@ end_Hash.put("tJava_32", System.currentTimeMillis());
 	}
 	
 
-public void tJava_25Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_25_SUBPROCESS_STATE", 0);
+public void tJava_15Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_15_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -34749,495 +34365,65 @@ public void tJava_25Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_25 begin ] start
+	 * [tJava_15 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_25", false);
-		start_Hash.put("tJava_25", System.currentTimeMillis());
+		ok_Hash.put("tJava_15", false);
+		start_Hash.put("tJava_15", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_25";
+	currentComponent="tJava_15";
 
 	
-		int tos_count_tJava_25 = 0;
+		int tos_count_tJava_15 = 0;
 		
 
 
 System.out.println("Step 1: Running For Noodlecrm_program_assigment Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_25 begin ] stop
- */
-	
-	/**
-	 * [tJava_25 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_25";
-
-	
-
- 
-
-
-	tos_count_tJava_25++;
-
-/**
- * [tJava_25 main ] stop
- */
-	
-	/**
-	 * [tJava_25 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_25";
-
-	
-
- 
-
-
-
-/**
- * [tJava_25 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_25 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_25";
-
-	
-
- 
-
-
-
-/**
- * [tJava_25 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_25 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_25";
-
-	
-
- 
-
-ok_Hash.put("tJava_25", true);
-end_Hash.put("tJava_25", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk64", 0, "ok");
-				}
-				tS3Delete_9Process(globalMap);
-
-
-
-/**
- * [tJava_25 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_25 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_25";
-
-	
-
- 
-
-
-
-/**
- * [tJava_25 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_25_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_9Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_9_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_9 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_9", false);
-		start_Hash.put("tS3Delete_9", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_9";
-
-	
-		int tos_count_tS3Delete_9 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_9 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_9 = context.nd_s3_data_lake_path_sfdc +"/sfdc/noodlecrm_program_assigment/latest/university_id="+context.university_code+"/noodlecrm_program_assigment.csv.gz";
-		if(key_tS3Delete_9!=null && key_tS3Delete_9.trim().length()>0){
-			
-			conn_tS3Delete_9.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_9);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_9){
-		
-			System.err.println(e_tS3Delete_9.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_9 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_9 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_9";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_9++;
-
-/**
- * [tS3Delete_9 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_9 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_9";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_9 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_9 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_9";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_9 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_9 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_9";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_9", true);
-end_Hash.put("tS3Delete_9", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk65", 0, "ok");
-				}
-				tJava_26Process(globalMap);
-
-
-
-/**
- * [tS3Delete_9 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_9 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_9";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_9 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_9_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_26Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_26_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_26 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_26", false);
-		start_Hash.put("tJava_26", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_26";
-
-	
-		int tos_count_tJava_26 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_26 begin ] stop
+ * [tJava_15 begin ] stop
  */
 	
 	/**
-	 * [tJava_26 main ] start
+	 * [tJava_15 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_26";
+	currentComponent="tJava_15";
 
 	
 
  
 
 
-	tos_count_tJava_26++;
+	tos_count_tJava_15++;
 
 /**
- * [tJava_26 main ] stop
+ * [tJava_15 main ] stop
  */
 	
 	/**
-	 * [tJava_26 process_data_begin ] start
+	 * [tJava_15 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_26";
-
-	
-
- 
-
-
-
-/**
- * [tJava_26 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_26 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_26";
+	currentComponent="tJava_15";
 
 	
 
@@ -35246,35 +34432,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_26 process_data_end ] stop
+ * [tJava_15 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_26 end ] start
+	 * [tJava_15 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_26";
+	currentComponent="tJava_15";
 
 	
 
  
 
-ok_Hash.put("tJava_26", true);
-end_Hash.put("tJava_26", System.currentTimeMillis());
+
+
+/**
+ * [tJava_15 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_15 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_15";
+
+	
+
+ 
+
+ok_Hash.put("tJava_15", true);
+end_Hash.put("tJava_15", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk68", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk50", 0, "ok");
 				}
 				tSalesforceInput_9Process(globalMap);
 
 
 
 /**
- * [tJava_26 end ] stop
+ * [tJava_15 end ] stop
  */
 				}//end the resume
 
@@ -35299,14 +34505,14 @@ end_Hash.put("tJava_26", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_26 finally ] start
+	 * [tJava_15 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_26";
+	currentComponent="tJava_15";
 
 	
 
@@ -35315,7 +34521,7 @@ end_Hash.put("tJava_26", System.currentTimeMillis());
 
 
 /**
- * [tJava_26 finally ] stop
+ * [tJava_15 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -35326,7 +34532,7 @@ end_Hash.put("tJava_26", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_26_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_15_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -38357,8 +37563,8 @@ end_Hash.put("tJava_29", System.currentTimeMillis());
 	}
 	
 
-public void tJava_23Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_23_SUBPROCESS_STATE", 0);
+public void tJava_14Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_14_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -38385,495 +37591,65 @@ public void tJava_23Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_23 begin ] start
+	 * [tJava_14 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_23", false);
-		start_Hash.put("tJava_23", System.currentTimeMillis());
+		ok_Hash.put("tJava_14", false);
+		start_Hash.put("tJava_14", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_23";
+	currentComponent="tJava_14";
 
 	
-		int tos_count_tJava_23 = 0;
+		int tos_count_tJava_14 = 0;
 		
 
 
 System.out.println("Step 1: Running For Noodlecrm_inquiry Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_23 begin ] stop
- */
-	
-	/**
-	 * [tJava_23 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_23";
-
-	
-
- 
-
-
-	tos_count_tJava_23++;
-
-/**
- * [tJava_23 main ] stop
- */
-	
-	/**
-	 * [tJava_23 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_23";
-
-	
-
- 
-
-
-
-/**
- * [tJava_23 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_23 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_23";
-
-	
-
- 
-
-
-
-/**
- * [tJava_23 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_23 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_23";
-
-	
-
- 
-
-ok_Hash.put("tJava_23", true);
-end_Hash.put("tJava_23", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk61", 0, "ok");
-				}
-				tS3Delete_8Process(globalMap);
-
-
-
-/**
- * [tJava_23 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_23 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_23";
-
-	
-
- 
-
-
-
-/**
- * [tJava_23 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_23_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_8Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_8_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_8 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_8", false);
-		start_Hash.put("tS3Delete_8", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_8";
-
-	
-		int tos_count_tS3Delete_8 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_8 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_8 = context.nd_s3_data_lake_path_sfdc +"/sfdc/noodlecrm_inquiry/latest/university_id="+context.university_code+"/noodlecrm_inquiry.csv.gz";
-		if(key_tS3Delete_8!=null && key_tS3Delete_8.trim().length()>0){
-			
-			conn_tS3Delete_8.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_8);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_8){
-		
-			System.err.println(e_tS3Delete_8.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_8 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_8 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_8";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_8++;
-
-/**
- * [tS3Delete_8 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_8 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_8";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_8 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_8 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_8";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_8 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_8 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_8";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_8", true);
-end_Hash.put("tS3Delete_8", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk62", 0, "ok");
-				}
-				tJava_24Process(globalMap);
-
-
-
-/**
- * [tS3Delete_8 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_8 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_8";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_8 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_8_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_24Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_24_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_24 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_24", false);
-		start_Hash.put("tJava_24", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_24";
-
-	
-		int tos_count_tJava_24 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_24 begin ] stop
+ * [tJava_14 begin ] stop
  */
 	
 	/**
-	 * [tJava_24 main ] start
+	 * [tJava_14 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_24";
+	currentComponent="tJava_14";
 
 	
 
  
 
 
-	tos_count_tJava_24++;
+	tos_count_tJava_14++;
 
 /**
- * [tJava_24 main ] stop
+ * [tJava_14 main ] stop
  */
 	
 	/**
-	 * [tJava_24 process_data_begin ] start
+	 * [tJava_14 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_24";
-
-	
-
- 
-
-
-
-/**
- * [tJava_24 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_24 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_24";
+	currentComponent="tJava_14";
 
 	
 
@@ -38882,35 +37658,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_24 process_data_end ] stop
+ * [tJava_14 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_24 end ] start
+	 * [tJava_14 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_24";
+	currentComponent="tJava_14";
 
 	
 
  
 
-ok_Hash.put("tJava_24", true);
-end_Hash.put("tJava_24", System.currentTimeMillis());
+
+
+/**
+ * [tJava_14 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_14 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_14";
+
+	
+
+ 
+
+ok_Hash.put("tJava_14", true);
+end_Hash.put("tJava_14", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk67", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk58", 0, "ok");
 				}
 				tSalesforceInput_7Process(globalMap);
 
 
 
 /**
- * [tJava_24 end ] stop
+ * [tJava_14 end ] stop
  */
 				}//end the resume
 
@@ -38935,14 +37731,14 @@ end_Hash.put("tJava_24", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_24 finally ] start
+	 * [tJava_14 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_24";
+	currentComponent="tJava_14";
 
 	
 
@@ -38951,7 +37747,7 @@ end_Hash.put("tJava_24", System.currentTimeMillis());
 
 
 /**
- * [tJava_24 finally ] stop
+ * [tJava_14 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -38962,7 +37758,7 @@ end_Hash.put("tJava_24", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_24_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_14_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -42796,8 +41592,8 @@ end_Hash.put("tJava_28", System.currentTimeMillis());
 	}
 	
 
-public void tJava_21Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_21_SUBPROCESS_STATE", 0);
+public void tJava_13Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_13_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -42824,495 +41620,65 @@ public void tJava_21Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_21 begin ] start
+	 * [tJava_13 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_21", false);
-		start_Hash.put("tJava_21", System.currentTimeMillis());
+		ok_Hash.put("tJava_13", false);
+		start_Hash.put("tJava_13", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_21";
+	currentComponent="tJava_13";
 
 	
-		int tos_count_tJava_21 = 0;
+		int tos_count_tJava_13 = 0;
 		
 
 
 System.out.println("Step 1: Running For Noodlecrm_application Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_21 begin ] stop
- */
-	
-	/**
-	 * [tJava_21 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_21";
-
-	
-
- 
-
-
-	tos_count_tJava_21++;
-
-/**
- * [tJava_21 main ] stop
- */
-	
-	/**
-	 * [tJava_21 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_21";
-
-	
-
- 
-
-
-
-/**
- * [tJava_21 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_21 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_21";
-
-	
-
- 
-
-
-
-/**
- * [tJava_21 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_21 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_21";
-
-	
-
- 
-
-ok_Hash.put("tJava_21", true);
-end_Hash.put("tJava_21", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk58", 0, "ok");
-				}
-				tS3Delete_7Process(globalMap);
-
-
-
-/**
- * [tJava_21 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_21 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_21";
-
-	
-
- 
-
-
-
-/**
- * [tJava_21 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_21_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_7Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_7_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_7 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_7", false);
-		start_Hash.put("tS3Delete_7", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_7";
-
-	
-		int tos_count_tS3Delete_7 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_7 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_7 = context.nd_s3_data_lake_path_sfdc +"/sfdc/noodlecrm_app/latest/university_id="+context.university_code+"/noodlecrm_app.csv.gz";
-		if(key_tS3Delete_7!=null && key_tS3Delete_7.trim().length()>0){
-			
-			conn_tS3Delete_7.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_7);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_7){
-		
-			System.err.println(e_tS3Delete_7.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_7 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_7 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_7";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_7++;
-
-/**
- * [tS3Delete_7 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_7 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_7";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_7 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_7 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_7";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_7 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_7 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_7";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_7", true);
-end_Hash.put("tS3Delete_7", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk59", 0, "ok");
-				}
-				tJava_22Process(globalMap);
-
-
-
-/**
- * [tS3Delete_7 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_7 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_7";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_7 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_7_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_22Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_22_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_22 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_22", false);
-		start_Hash.put("tJava_22", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_22";
-
-	
-		int tos_count_tJava_22 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_22 begin ] stop
+ * [tJava_13 begin ] stop
  */
 	
 	/**
-	 * [tJava_22 main ] start
+	 * [tJava_13 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_22";
+	currentComponent="tJava_13";
 
 	
 
  
 
 
-	tos_count_tJava_22++;
+	tos_count_tJava_13++;
 
 /**
- * [tJava_22 main ] stop
+ * [tJava_13 main ] stop
  */
 	
 	/**
-	 * [tJava_22 process_data_begin ] start
+	 * [tJava_13 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_22";
-
-	
-
- 
-
-
-
-/**
- * [tJava_22 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_22 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_22";
+	currentComponent="tJava_13";
 
 	
 
@@ -43321,35 +41687,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_22 process_data_end ] stop
+ * [tJava_13 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_22 end ] start
+	 * [tJava_13 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_22";
+	currentComponent="tJava_13";
 
 	
 
  
 
-ok_Hash.put("tJava_22", true);
-end_Hash.put("tJava_22", System.currentTimeMillis());
+
+
+/**
+ * [tJava_13 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_13 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_13";
+
+	
+
+ 
+
+ok_Hash.put("tJava_13", true);
+end_Hash.put("tJava_13", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk66", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk46", 0, "ok");
 				}
 				tSalesforceInput_8Process(globalMap);
 
 
 
 /**
- * [tJava_22 end ] stop
+ * [tJava_13 end ] stop
  */
 				}//end the resume
 
@@ -43374,14 +41760,14 @@ end_Hash.put("tJava_22", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_22 finally ] start
+	 * [tJava_13 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_22";
+	currentComponent="tJava_13";
 
 	
 
@@ -43390,7 +41776,7 @@ end_Hash.put("tJava_22", System.currentTimeMillis());
 
 
 /**
- * [tJava_22 finally ] stop
+ * [tJava_13 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -43401,7 +41787,7 @@ end_Hash.put("tJava_22", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_22_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_13_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -47195,8 +45581,8 @@ end_Hash.put("tJava_27", System.currentTimeMillis());
 	}
 	
 
-public void tJava_18Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_18_SUBPROCESS_STATE", 0);
+public void tJava_12Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_12_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -47223,495 +45609,65 @@ public void tJava_18Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_18 begin ] start
+	 * [tJava_12 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_18", false);
-		start_Hash.put("tJava_18", System.currentTimeMillis());
+		ok_Hash.put("tJava_12", false);
+		start_Hash.put("tJava_12", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_18";
+	currentComponent="tJava_12";
 
 	
-		int tos_count_tJava_18 = 0;
+		int tos_count_tJava_12 = 0;
 		
 
 
 System.out.println("Step 1: Running For Hed_term Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_18 begin ] stop
- */
-	
-	/**
-	 * [tJava_18 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_18";
-
-	
-
- 
-
-
-	tos_count_tJava_18++;
-
-/**
- * [tJava_18 main ] stop
- */
-	
-	/**
-	 * [tJava_18 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_18";
-
-	
-
- 
-
-
-
-/**
- * [tJava_18 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_18 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_18";
-
-	
-
- 
-
-
-
-/**
- * [tJava_18 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_18 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_18";
-
-	
-
- 
-
-ok_Hash.put("tJava_18", true);
-end_Hash.put("tJava_18", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk51", 0, "ok");
-				}
-				tS3Delete_6Process(globalMap);
-
-
-
-/**
- * [tJava_18 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_18 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_18";
-
-	
-
- 
-
-
-
-/**
- * [tJava_18 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_18_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_6Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_6_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_6 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_6", false);
-		start_Hash.put("tS3Delete_6", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_6";
-
-	
-		int tos_count_tS3Delete_6 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_6 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_6 = context.nd_s3_data_lake_path_sfdc +"/sfdc/hed_term/latest/university_id="+context.university_code+"/hed_term.csv.gz";
-		if(key_tS3Delete_6!=null && key_tS3Delete_6.trim().length()>0){
-			
-			conn_tS3Delete_6.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_6);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_6){
-		
-			System.err.println(e_tS3Delete_6.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_6 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_6 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_6";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_6++;
-
-/**
- * [tS3Delete_6 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_6 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_6";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_6 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_6 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_6";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_6 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_6 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_6";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_6", true);
-end_Hash.put("tS3Delete_6", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk52", 0, "ok");
-				}
-				tJava_19Process(globalMap);
-
-
-
-/**
- * [tS3Delete_6 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_6 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_6";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_6 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_6_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_19Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_19_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_19 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_19", false);
-		start_Hash.put("tJava_19", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_19";
-
-	
-		int tos_count_tJava_19 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_19 begin ] stop
+ * [tJava_12 begin ] stop
  */
 	
 	/**
-	 * [tJava_19 main ] start
+	 * [tJava_12 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_19";
+	currentComponent="tJava_12";
 
 	
 
  
 
 
-	tos_count_tJava_19++;
+	tos_count_tJava_12++;
 
 /**
- * [tJava_19 main ] stop
+ * [tJava_12 main ] stop
  */
 	
 	/**
-	 * [tJava_19 process_data_begin ] start
+	 * [tJava_12 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_19";
-
-	
-
- 
-
-
-
-/**
- * [tJava_19 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_19 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_19";
+	currentComponent="tJava_12";
 
 	
 
@@ -47720,35 +45676,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_19 process_data_end ] stop
+ * [tJava_12 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_19 end ] start
+	 * [tJava_12 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_19";
+	currentComponent="tJava_12";
 
 	
 
  
 
-ok_Hash.put("tJava_19", true);
-end_Hash.put("tJava_19", System.currentTimeMillis());
+
+
+/**
+ * [tJava_12 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_12 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_12";
+
+	
+
+ 
+
+ok_Hash.put("tJava_12", true);
+end_Hash.put("tJava_12", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk56", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk45", 0, "ok");
 				}
 				tSalesforceInput_6Process(globalMap);
 
 
 
 /**
- * [tJava_19 end ] stop
+ * [tJava_12 end ] stop
  */
 				}//end the resume
 
@@ -47773,14 +45749,14 @@ end_Hash.put("tJava_19", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_19 finally ] start
+	 * [tJava_12 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_19";
+	currentComponent="tJava_12";
 
 	
 
@@ -47789,7 +45765,7 @@ end_Hash.put("tJava_19", System.currentTimeMillis());
 
 
 /**
- * [tJava_19 finally ] stop
+ * [tJava_12 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -47800,7 +45776,7 @@ end_Hash.put("tJava_19", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_19_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_12_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -50800,8 +48776,8 @@ end_Hash.put("tJava_20", System.currentTimeMillis());
 	}
 	
 
-public void tJava_15Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_15_SUBPROCESS_STATE", 0);
+public void tJava_11Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_11_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -50828,495 +48804,65 @@ public void tJava_15Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_15 begin ] start
+	 * [tJava_11 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_15", false);
-		start_Hash.put("tJava_15", System.currentTimeMillis());
+		ok_Hash.put("tJava_11", false);
+		start_Hash.put("tJava_11", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_15";
+	currentComponent="tJava_11";
 
 	
-		int tos_count_tJava_15 = 0;
+		int tos_count_tJava_11 = 0;
 		
 
 
 System.out.println("Step 1: Running For Event Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_15 begin ] stop
- */
-	
-	/**
-	 * [tJava_15 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_15";
-
-	
-
- 
-
-
-	tos_count_tJava_15++;
-
-/**
- * [tJava_15 main ] stop
- */
-	
-	/**
-	 * [tJava_15 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_15";
-
-	
-
- 
-
-
-
-/**
- * [tJava_15 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_15 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_15";
-
-	
-
- 
-
-
-
-/**
- * [tJava_15 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_15 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_15";
-
-	
-
- 
-
-ok_Hash.put("tJava_15", true);
-end_Hash.put("tJava_15", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk44", 0, "ok");
-				}
-				tS3Delete_5Process(globalMap);
-
-
-
-/**
- * [tJava_15 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_15 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_15";
-
-	
-
- 
-
-
-
-/**
- * [tJava_15 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_15_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_5Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_5_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_5 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_5", false);
-		start_Hash.put("tS3Delete_5", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_5";
-
-	
-		int tos_count_tS3Delete_5 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_5 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_5 = context.nd_s3_data_lake_path_sfdc +"/sfdc/event/latest/university_id="+context.university_code+"/event.csv.gz";
-		if(key_tS3Delete_5!=null && key_tS3Delete_5.trim().length()>0){
-			
-			conn_tS3Delete_5.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_5);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_5){
-		
-			System.err.println(e_tS3Delete_5.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_5 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_5 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_5";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_5++;
-
-/**
- * [tS3Delete_5 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_5 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_5";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_5 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_5 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_5";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_5 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_5 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_5";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_5", true);
-end_Hash.put("tS3Delete_5", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk45", 0, "ok");
-				}
-				tJava_16Process(globalMap);
-
-
-
-/**
- * [tS3Delete_5 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_5 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_5";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_5 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_5_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_16Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_16_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_16 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_16", false);
-		start_Hash.put("tJava_16", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_16";
-
-	
-		int tos_count_tJava_16 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_16 begin ] stop
+ * [tJava_11 begin ] stop
  */
 	
 	/**
-	 * [tJava_16 main ] start
+	 * [tJava_11 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_16";
+	currentComponent="tJava_11";
 
 	
 
  
 
 
-	tos_count_tJava_16++;
+	tos_count_tJava_11++;
 
 /**
- * [tJava_16 main ] stop
+ * [tJava_11 main ] stop
  */
 	
 	/**
-	 * [tJava_16 process_data_begin ] start
+	 * [tJava_11 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_16";
-
-	
-
- 
-
-
-
-/**
- * [tJava_16 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_16 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_16";
+	currentComponent="tJava_11";
 
 	
 
@@ -51325,35 +48871,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_16 process_data_end ] stop
+ * [tJava_11 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_16 end ] start
+	 * [tJava_11 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_16";
+	currentComponent="tJava_11";
 
 	
 
  
 
-ok_Hash.put("tJava_16", true);
-end_Hash.put("tJava_16", System.currentTimeMillis());
+
+
+/**
+ * [tJava_11 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_11 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_11";
+
+	
+
+ 
+
+ok_Hash.put("tJava_11", true);
+end_Hash.put("tJava_11", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk46", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk44", 0, "ok");
 				}
 				tSalesforceInput_5Process(globalMap);
 
 
 
 /**
- * [tJava_16 end ] stop
+ * [tJava_11 end ] stop
  */
 				}//end the resume
 
@@ -51378,14 +48944,14 @@ end_Hash.put("tJava_16", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_16 finally ] start
+	 * [tJava_11 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_16";
+	currentComponent="tJava_11";
 
 	
 
@@ -51394,7 +48960,7 @@ end_Hash.put("tJava_16", System.currentTimeMillis());
 
 
 /**
- * [tJava_16 finally ] stop
+ * [tJava_11 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -51405,7 +48971,7 @@ end_Hash.put("tJava_16", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_16_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_11_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -57220,8 +54786,8 @@ end_Hash.put("tJava_17", System.currentTimeMillis());
 	}
 	
 
-public void tJava_6Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_6_SUBPROCESS_STATE", 0);
+public void tJava_10Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_10_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -57248,495 +54814,65 @@ public void tJava_6Process(final java.util.Map<String, Object> globalMap) throws
 
 	
 	/**
-	 * [tJava_6 begin ] start
+	 * [tJava_10 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_6", false);
-		start_Hash.put("tJava_6", System.currentTimeMillis());
+		ok_Hash.put("tJava_10", false);
+		start_Hash.put("tJava_10", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_6";
+	currentComponent="tJava_10";
 
 	
-		int tos_count_tJava_6 = 0;
+		int tos_count_tJava_10 = 0;
 		
 
 
 System.out.println("Step 1: Running For Case Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_6 begin ] stop
- */
-	
-	/**
-	 * [tJava_6 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_6";
-
-	
-
- 
-
-
-	tos_count_tJava_6++;
-
-/**
- * [tJava_6 main ] stop
- */
-	
-	/**
-	 * [tJava_6 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_6";
-
-	
-
- 
-
-
-
-/**
- * [tJava_6 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_6 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_6";
-
-	
-
- 
-
-
-
-/**
- * [tJava_6 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_6 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_6";
-
-	
-
- 
-
-ok_Hash.put("tJava_6", true);
-end_Hash.put("tJava_6", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk40", 0, "ok");
-				}
-				tS3Delete_4Process(globalMap);
-
-
-
-/**
- * [tJava_6 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_6 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_6";
-
-	
-
- 
-
-
-
-/**
- * [tJava_6 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_6_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_4Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_4_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_4 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_4", false);
-		start_Hash.put("tS3Delete_4", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_4";
-
-	
-		int tos_count_tS3Delete_4 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_4 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_4 = context.nd_s3_data_lake_path_sfdc +"/sfdc/case/latest/university_id="+context.university_code+"/case.csv.gz";
-		if(key_tS3Delete_4!=null && key_tS3Delete_4.trim().length()>0){
-			
-			conn_tS3Delete_4.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_4);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_4){
-		
-			System.err.println(e_tS3Delete_4.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_4 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_4 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_4";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_4++;
-
-/**
- * [tS3Delete_4 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_4 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_4";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_4 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_4 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_4";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_4 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_4 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_4";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_4", true);
-end_Hash.put("tS3Delete_4", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk41", 0, "ok");
-				}
-				tJava_8Process(globalMap);
-
-
-
-/**
- * [tS3Delete_4 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_4 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_4";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_4 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_4_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_8Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_8_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_8 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_8", false);
-		start_Hash.put("tJava_8", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_8";
-
-	
-		int tos_count_tJava_8 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_8 begin ] stop
+ * [tJava_10 begin ] stop
  */
 	
 	/**
-	 * [tJava_8 main ] start
+	 * [tJava_10 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_8";
+	currentComponent="tJava_10";
 
 	
 
  
 
 
-	tos_count_tJava_8++;
+	tos_count_tJava_10++;
 
 /**
- * [tJava_8 main ] stop
+ * [tJava_10 main ] stop
  */
 	
 	/**
-	 * [tJava_8 process_data_begin ] start
+	 * [tJava_10 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_8";
-
-	
-
- 
-
-
-
-/**
- * [tJava_8 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_8 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_8";
+	currentComponent="tJava_10";
 
 	
 
@@ -57745,35 +54881,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_8 process_data_end ] stop
+ * [tJava_10 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_8 end ] start
+	 * [tJava_10 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_8";
+	currentComponent="tJava_10";
 
 	
 
  
 
-ok_Hash.put("tJava_8", true);
-end_Hash.put("tJava_8", System.currentTimeMillis());
+
+
+/**
+ * [tJava_10 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_10 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_10";
+
+	
+
+ 
+
+ok_Hash.put("tJava_10", true);
+end_Hash.put("tJava_10", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk42", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk43", 0, "ok");
 				}
 				tSalesforceInput_3Process(globalMap);
 
 
 
 /**
- * [tJava_8 end ] stop
+ * [tJava_10 end ] stop
  */
 				}//end the resume
 
@@ -57798,14 +54954,14 @@ end_Hash.put("tJava_8", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_8 finally ] start
+	 * [tJava_10 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_8";
+	currentComponent="tJava_10";
 
 	
 
@@ -57814,7 +54970,7 @@ end_Hash.put("tJava_8", System.currentTimeMillis());
 
 
 /**
- * [tJava_8 finally ] stop
+ * [tJava_10 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -57825,7 +54981,7 @@ end_Hash.put("tJava_8", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_8_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_10_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -62888,8 +60044,8 @@ end_Hash.put("tJava_7", System.currentTimeMillis());
 	}
 	
 
-public void tJava_13Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_13_SUBPROCESS_STATE", 0);
+public void tJava_9Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_9_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -62916,495 +60072,65 @@ public void tJava_13Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_13 begin ] start
+	 * [tJava_9 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_13", false);
-		start_Hash.put("tJava_13", System.currentTimeMillis());
+		ok_Hash.put("tJava_9", false);
+		start_Hash.put("tJava_9", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_13";
+	currentComponent="tJava_9";
 
 	
-		int tos_count_tJava_13 = 0;
+		int tos_count_tJava_9 = 0;
 		
 
 
 System.out.println("Step 1: Running For Opportunity Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_13 begin ] stop
- */
-	
-	/**
-	 * [tJava_13 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_13";
-
-	
-
- 
-
-
-	tos_count_tJava_13++;
-
-/**
- * [tJava_13 main ] stop
- */
-	
-	/**
-	 * [tJava_13 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_13";
-
-	
-
- 
-
-
-
-/**
- * [tJava_13 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_13 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_13";
-
-	
-
- 
-
-
-
-/**
- * [tJava_13 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_13 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_13";
-
-	
-
- 
-
-ok_Hash.put("tJava_13", true);
-end_Hash.put("tJava_13", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk27", 0, "ok");
-				}
-				tS3Delete_3Process(globalMap);
-
-
-
-/**
- * [tJava_13 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_13 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_13";
-
-	
-
- 
-
-
-
-/**
- * [tJava_13 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_13_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_3_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_3 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_3", false);
-		start_Hash.put("tS3Delete_3", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_3";
-
-	
-		int tos_count_tS3Delete_3 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_3 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_3 = context.nd_s3_data_lake_path_sfdc +"/sfdc/opportunity/latest/university_id="+context.university_code+"/opportunity.csv.gz";
-		if(key_tS3Delete_3!=null && key_tS3Delete_3.trim().length()>0){
-			
-			conn_tS3Delete_3.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_3);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_3){
-		
-			System.err.println(e_tS3Delete_3.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_3 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_3 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_3";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_3++;
-
-/**
- * [tS3Delete_3 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_3 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_3";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_3 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_3 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_3";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_3 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_3 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_3";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_3", true);
-end_Hash.put("tS3Delete_3", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk28", 0, "ok");
-				}
-				tJava_14Process(globalMap);
-
-
-
-/**
- * [tS3Delete_3 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_3 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_3";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_3 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_3_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_14Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_14_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_14 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_14", false);
-		start_Hash.put("tJava_14", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_14";
-
-	
-		int tos_count_tJava_14 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_14 begin ] stop
+ * [tJava_9 begin ] stop
  */
 	
 	/**
-	 * [tJava_14 main ] start
+	 * [tJava_9 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_14";
+	currentComponent="tJava_9";
 
 	
 
  
 
 
-	tos_count_tJava_14++;
+	tos_count_tJava_9++;
 
 /**
- * [tJava_14 main ] stop
+ * [tJava_9 main ] stop
  */
 	
 	/**
-	 * [tJava_14 process_data_begin ] start
+	 * [tJava_9 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_14";
-
-	
-
- 
-
-
-
-/**
- * [tJava_14 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_14 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_14";
+	currentComponent="tJava_9";
 
 	
 
@@ -63413,35 +60139,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_14 process_data_end ] stop
+ * [tJava_9 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_14 end ] start
+	 * [tJava_9 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_14";
+	currentComponent="tJava_9";
 
 	
 
  
 
-ok_Hash.put("tJava_14", true);
-end_Hash.put("tJava_14", System.currentTimeMillis());
+
+
+/**
+ * [tJava_9 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_9 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_9";
+
+	
+
+ 
+
+ok_Hash.put("tJava_9", true);
+end_Hash.put("tJava_9", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk38", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk42", 0, "ok");
 				}
 				tSalesforceInput_15Process(globalMap);
 
 
 
 /**
- * [tJava_14 end ] stop
+ * [tJava_9 end ] stop
  */
 				}//end the resume
 
@@ -63466,14 +60212,14 @@ end_Hash.put("tJava_14", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_14 finally ] start
+	 * [tJava_9 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_14";
+	currentComponent="tJava_9";
 
 	
 
@@ -63482,7 +60228,7 @@ end_Hash.put("tJava_14", System.currentTimeMillis());
 
 
 /**
- * [tJava_14 finally ] stop
+ * [tJava_9 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -63493,7 +60239,7 @@ end_Hash.put("tJava_14", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_14_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_9_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -76555,8 +73301,8 @@ end_Hash.put("tDie_3", System.currentTimeMillis());
 	}
 	
 
-public void tJava_11Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_11_SUBPROCESS_STATE", 0);
+public void tJava_8Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_8_SUBPROCESS_STATE", 0);
 
  final boolean execStat = this.execStat;
 	
@@ -76583,495 +73329,65 @@ public void tJava_11Process(final java.util.Map<String, Object> globalMap) throw
 
 	
 	/**
-	 * [tJava_11 begin ] start
+	 * [tJava_8 begin ] start
 	 */
 
 	
 
 	
 		
-		ok_Hash.put("tJava_11", false);
-		start_Hash.put("tJava_11", System.currentTimeMillis());
+		ok_Hash.put("tJava_8", false);
+		start_Hash.put("tJava_8", System.currentTimeMillis());
 		
 	
-	currentComponent="tJava_11";
+	currentComponent="tJava_8";
 
 	
-		int tos_count_tJava_11 = 0;
+		int tos_count_tJava_8 = 0;
 		
 
 
 System.out.println("Step 1: Running For Contact Object");
 System.out.println("Step 2: Copied Previous Run File To Archive");
- 
-
-
-
-/**
- * [tJava_11 begin ] stop
- */
-	
-	/**
-	 * [tJava_11 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_11";
-
-	
-
- 
-
-
-	tos_count_tJava_11++;
-
-/**
- * [tJava_11 main ] stop
- */
-	
-	/**
-	 * [tJava_11 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_11";
-
-	
-
- 
-
-
-
-/**
- * [tJava_11 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_11 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_11";
-
-	
-
- 
-
-
-
-/**
- * [tJava_11 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_11 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_11";
-
-	
-
- 
-
-ok_Hash.put("tJava_11", true);
-end_Hash.put("tJava_11", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk24", 0, "ok");
-				}
-				tS3Delete_2Process(globalMap);
-
-
-
-/**
- * [tJava_11 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_11 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_11";
-
-	
-
- 
-
-
-
-/**
- * [tJava_11 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_11_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Delete_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Delete_2_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Delete_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Delete_2", false);
-		start_Hash.put("tS3Delete_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Delete_2";
-
-	
-		int tos_count_tS3Delete_2 = 0;
-		
-	
-	
-		com.amazonaws.services.s3.AmazonS3Client conn_tS3Delete_2 = (com.amazonaws.services.s3.AmazonS3Client)globalMap.get("conn_tS3Connection_1");
-		
-	try{
-		String key_tS3Delete_2 = context.nd_s3_data_lake_path_sfdc +"/sfdc/contact/latest/university_id="+context.university_code+"/contact.csv.gz";
-		if(key_tS3Delete_2!=null && key_tS3Delete_2.trim().length()>0){
-			
-			conn_tS3Delete_2.deleteObject(context.nd_s3_bucket_QA_sfdc, key_tS3Delete_2);
-			
-		}else{
-			throw(new RuntimeException("Please set key!"));
-		}
-	}catch(java.lang.Exception e_tS3Delete_2){
-		
-			System.err.println(e_tS3Delete_2.getMessage());
-		
-	}
-	
- 
-
-
-
-/**
- * [tS3Delete_2 begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_2";
-
-	
-
- 
-
-
-	tos_count_tS3Delete_2++;
-
-/**
- * [tS3Delete_2 main ] stop
- */
-	
-	/**
-	 * [tS3Delete_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_2";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Delete_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_2";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Delete_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_2";
-
-	
-
- 
-
-ok_Hash.put("tS3Delete_2", true);
-end_Hash.put("tS3Delete_2", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk25", 0, "ok");
-				}
-				tJava_12Process(globalMap);
-
-
-
-/**
- * [tS3Delete_2 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Delete_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Delete_2";
-
-	
-
- 
-
-
-
-/**
- * [tS3Delete_2 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Delete_2_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_12Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_12_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_12 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_12", false);
-		start_Hash.put("tJava_12", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_12";
-
-	
-		int tos_count_tJava_12 = 0;
-		
-
-
-System.out.println("Step 3: Deleted Previous Run File From Latest Folder");
 System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
  
 
 
 
 /**
- * [tJava_12 begin ] stop
+ * [tJava_8 begin ] stop
  */
 	
 	/**
-	 * [tJava_12 main ] start
+	 * [tJava_8 main ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_12";
+	currentComponent="tJava_8";
 
 	
 
  
 
 
-	tos_count_tJava_12++;
+	tos_count_tJava_8++;
 
 /**
- * [tJava_12 main ] stop
+ * [tJava_8 main ] stop
  */
 	
 	/**
-	 * [tJava_12 process_data_begin ] start
+	 * [tJava_8 process_data_begin ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_12";
-
-	
-
- 
-
-
-
-/**
- * [tJava_12 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_12 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_12";
+	currentComponent="tJava_8";
 
 	
 
@@ -77080,35 +73396,55 @@ System.out.println("Step 4: Started Getting Data From SFDC To Latest Folder");
 
 
 /**
- * [tJava_12 process_data_end ] stop
+ * [tJava_8 process_data_begin ] stop
  */
 	
 	/**
-	 * [tJava_12 end ] start
+	 * [tJava_8 process_data_end ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_12";
+	currentComponent="tJava_8";
 
 	
 
  
 
-ok_Hash.put("tJava_12", true);
-end_Hash.put("tJava_12", System.currentTimeMillis());
+
+
+/**
+ * [tJava_8 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_8 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_8";
+
+	
+
+ 
+
+ok_Hash.put("tJava_8", true);
+end_Hash.put("tJava_8", System.currentTimeMillis());
 
 				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk37", 0, "ok");
+   	 				runStat.updateStatOnConnection("OnComponentOk41", 0, "ok");
 				}
 				tSalesforceInput_1Process(globalMap);
 
 
 
 /**
- * [tJava_12 end ] stop
+ * [tJava_8 end ] stop
  */
 				}//end the resume
 
@@ -77133,14 +73469,14 @@ end_Hash.put("tJava_12", System.currentTimeMillis());
 					
 	
 	/**
-	 * [tJava_12 finally ] start
+	 * [tJava_8 finally ] start
 	 */
 
 	
 
 	
 	
-	currentComponent="tJava_12";
+	currentComponent="tJava_8";
 
 	
 
@@ -77149,7 +73485,7 @@ end_Hash.put("tJava_12", System.currentTimeMillis());
 
 
 /**
- * [tJava_12 finally ] stop
+ * [tJava_8 finally ] stop
  */
 				}catch(java.lang.Exception e){	
 					//ignore
@@ -77160,7 +73496,7 @@ end_Hash.put("tJava_12", System.currentTimeMillis());
 			}
 		
 
-		globalMap.put("tJava_12_SUBPROCESS_STATE", 1);
+		globalMap.put("tJava_8_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -87184,2075 +83520,6 @@ end_Hash.put("tDie_2", System.currentTimeMillis());
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 1);
 	}
 	
-
-
-public static class row17Struct implements routines.system.IPersistableRow<row17Struct> {
-    final static byte[] commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_nyu = new byte[0];
-    static byte[] commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[0];
-
-	
-			    public java.util.Date moment;
-
-				public java.util.Date getMoment () {
-					return this.moment;
-				}
-				
-			    public String pid;
-
-				public String getPid () {
-					return this.pid;
-				}
-				
-			    public String root_pid;
-
-				public String getRoot_pid () {
-					return this.root_pid;
-				}
-				
-			    public String father_pid;
-
-				public String getFather_pid () {
-					return this.father_pid;
-				}
-				
-			    public String project;
-
-				public String getProject () {
-					return this.project;
-				}
-				
-			    public String job;
-
-				public String getJob () {
-					return this.job;
-				}
-				
-			    public String context;
-
-				public String getContext () {
-					return this.context;
-				}
-				
-			    public Integer priority;
-
-				public Integer getPriority () {
-					return this.priority;
-				}
-				
-			    public String type;
-
-				public String getType () {
-					return this.type;
-				}
-				
-			    public String origin;
-
-				public String getOrigin () {
-					return this.origin;
-				}
-				
-			    public String message;
-
-				public String getMessage () {
-					return this.message;
-				}
-				
-			    public Integer code;
-
-				public Integer getCode () {
-					return this.code;
-				}
-				
-
-
-
-	private java.util.Date readDate(ObjectInputStream dis) throws IOException{
-		java.util.Date dateReturn = null;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			dateReturn = null;
-		} else {
-	    	dateReturn = new Date(dis.readLong());
-		}
-		return dateReturn;
-	}
-
-    private void writeDate(java.util.Date date1, ObjectOutputStream dos) throws IOException{
-		if(date1 == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeLong(date1.getTime());
-    	}
-    }
-
-	private String readString(ObjectInputStream dis) throws IOException{
-		String strReturn = null;
-		int length = 0;
-        length = dis.readInt();
-		if (length == -1) {
-			strReturn = null;
-		} else {
-			if(length > commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu.length) {
-				if(length < 1024 && commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu.length == 0) {
-   					commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[1024];
-				} else {
-   					commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu = new byte[2 * length];
-   				}
-			}
-			dis.readFully(commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu, 0, length);
-			strReturn = new String(commonByteArray_T_NP_31_sfdc_s3_sync_job_nyu, 0, length, utf8Charset);
-		}
-		return strReturn;
-	}
-
-    private void writeString(String str, ObjectOutputStream dos) throws IOException{
-		if(str == null) {
-            dos.writeInt(-1);
-		} else {
-            byte[] byteArray = str.getBytes(utf8Charset);
-	    	dos.writeInt(byteArray.length);
-			dos.write(byteArray);
-    	}
-    }
-	private Integer readInteger(ObjectInputStream dis) throws IOException{
-		Integer intReturn;
-        int length = 0;
-        length = dis.readByte();
-		if (length == -1) {
-			intReturn = null;
-		} else {
-	    	intReturn = dis.readInt();
-		}
-		return intReturn;
-	}
-
-	private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException{
-		if(intNum == null) {
-            dos.writeByte(-1);
-		} else {
-			dos.writeByte(0);
-	    	dos.writeInt(intNum);
-    	}
-	}
-
-    public void readData(ObjectInputStream dis) {
-
-		synchronized(commonByteArrayLock_T_NP_31_sfdc_s3_sync_job_nyu) {
-
-        	try {
-
-        		int length = 0;
-		
-					this.moment = readDate(dis);
-					
-					this.pid = readString(dis);
-					
-					this.root_pid = readString(dis);
-					
-					this.father_pid = readString(dis);
-					
-					this.project = readString(dis);
-					
-					this.job = readString(dis);
-					
-					this.context = readString(dis);
-					
-						this.priority = readInteger(dis);
-					
-					this.type = readString(dis);
-					
-					this.origin = readString(dis);
-					
-					this.message = readString(dis);
-					
-						this.code = readInteger(dis);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-
-		
-
-        }
-
-		
-
-      }
-
-
-    }
-
-    public void writeData(ObjectOutputStream dos) {
-        try {
-
-		
-					// java.util.Date
-				
-						writeDate(this.moment,dos);
-					
-					// String
-				
-						writeString(this.pid,dos);
-					
-					// String
-				
-						writeString(this.root_pid,dos);
-					
-					// String
-				
-						writeString(this.father_pid,dos);
-					
-					// String
-				
-						writeString(this.project,dos);
-					
-					// String
-				
-						writeString(this.job,dos);
-					
-					// String
-				
-						writeString(this.context,dos);
-					
-					// Integer
-				
-						writeInteger(this.priority,dos);
-					
-					// String
-				
-						writeString(this.type,dos);
-					
-					// String
-				
-						writeString(this.origin,dos);
-					
-					// String
-				
-						writeString(this.message,dos);
-					
-					// Integer
-				
-						writeInteger(this.code,dos);
-					
-        	} catch (IOException e) {
-	            throw new RuntimeException(e);
-        }
-
-
-    }
-
-
-    public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString());
-		sb.append("[");
-		sb.append("moment="+String.valueOf(moment));
-		sb.append(",pid="+pid);
-		sb.append(",root_pid="+root_pid);
-		sb.append(",father_pid="+father_pid);
-		sb.append(",project="+project);
-		sb.append(",job="+job);
-		sb.append(",context="+context);
-		sb.append(",priority="+String.valueOf(priority));
-		sb.append(",type="+type);
-		sb.append(",origin="+origin);
-		sb.append(",message="+message);
-		sb.append(",code="+String.valueOf(code));
-	    sb.append("]");
-
-	    return sb.toString();
-    }
-
-    /**
-     * Compare keys
-     */
-    public int compareTo(row17Struct other) {
-
-		int returnValue = -1;
-		
-	    return returnValue;
-    }
-
-
-    private int checkNullsAndCompare(Object object1, Object object2) {
-        int returnValue = 0;
-		if (object1 instanceof Comparable && object2 instanceof Comparable) {
-            returnValue = ((Comparable) object1).compareTo(object2);
-        } else if (object1 != null && object2 != null) {
-            returnValue = compareStrings(object1.toString(), object2.toString());
-        } else if (object1 == null && object2 != null) {
-            returnValue = 1;
-        } else if (object1 != null && object2 == null) {
-            returnValue = -1;
-        } else {
-            returnValue = 0;
-        }
-
-        return returnValue;
-    }
-
-    private int compareStrings(String string1, String string2) {
-        return string1.compareTo(string2);
-    }
-
-
-}
-public void tLogCatcher_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		row17Struct row17 = new row17Struct();
-
-
-
-
-	
-	/**
-	 * [tJavaRow_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJavaRow_2", false);
-		start_Hash.put("tJavaRow_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tJavaRow_2";
-
-	
-					if(execStat) {
-						runStat.updateStatOnConnection(resourceMap,iterateId,0,0,"row17");
-					}
-				
-		int tos_count_tJavaRow_2 = 0;
-		
-
-int nb_line_tJavaRow_2 = 0;
-
- 
-
-
-
-/**
- * [tJavaRow_2 begin ] stop
- */
-
-
-
-	
-	/**
-	 * [tLogCatcher_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tLogCatcher_1", false);
-		start_Hash.put("tLogCatcher_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tLogCatcher_1";
-
-	
-		int tos_count_tLogCatcher_1 = 0;
-		
-
-try {
-	for (LogCatcherUtils.LogCatcherMessage lcm : tLogCatcher_1.getMessages()) {
-		row17.type = lcm.getType();
-		row17.origin = (lcm.getOrigin()==null || lcm.getOrigin().length()<1 ? null : lcm.getOrigin());
-		row17.priority = lcm.getPriority();
-		row17.message = lcm.getMessage();
-		row17.code = lcm.getCode();
-		
-		row17.moment = java.util.Calendar.getInstance().getTime();
-	
-    	row17.pid = pid;
-		row17.root_pid = rootPid;
-		row17.father_pid = fatherPid;
-	
-    	row17.project = projectName;
-    	row17.job = jobName;
-    	row17.context = contextStr;
-    		
- 
-
-
-
-/**
- * [tLogCatcher_1 begin ] stop
- */
-	
-	/**
-	 * [tLogCatcher_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogCatcher_1";
-
-	
-
- 
-
-
-	tos_count_tLogCatcher_1++;
-
-/**
- * [tLogCatcher_1 main ] stop
- */
-	
-	/**
-	 * [tLogCatcher_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogCatcher_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogCatcher_1 process_data_begin ] stop
- */
-
-	
-	/**
-	 * [tJavaRow_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJavaRow_2";
-
-	
-					if(execStat){
-						runStat.updateStatOnConnection(iterateId,1,1,"row17");
-					}
-					
-
-    String msg=null;
-String ChildJobStatus = (String) ((java.util.Map) globalMap.get("sharedMap")).get("Failure?");
-String ParentJobStatus = (String) globalMap.get("parent_status");
-
-if (ChildJobStatus.equals("True")) {
-	msg = (String)((java.util.Map) globalMap.get("sharedMap")).get("ExceptionMsg"); 
-	}
-else if (ParentJobStatus.equals("running")) {
-	msg = "Origin: " + row17.origin + ", Error: " + row17.message;
-	}
-
-System.out.println("The following job has failed: " + projectName + "." + jobName + ".\nPlease check the application log for more detailed information on the cause.\nException caught: \"" + msg + "\"");
-globalMap.put("error_msg", msg);
-globalMap.put("error_code", row17.code);
-    nb_line_tJavaRow_2++;   
-
- 
-
-
-	tos_count_tJavaRow_2++;
-
-/**
- * [tJavaRow_2 main ] stop
- */
-	
-	/**
-	 * [tJavaRow_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJavaRow_2";
-
-	
-
- 
-
-
-
-/**
- * [tJavaRow_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJavaRow_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJavaRow_2";
-
-	
-
- 
-
-
-
-/**
- * [tJavaRow_2 process_data_end ] stop
- */
-
-
-
-	
-	/**
-	 * [tLogCatcher_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogCatcher_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogCatcher_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tLogCatcher_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogCatcher_1";
-
-	
-	}
-} catch (Exception e_tLogCatcher_1) {
-	logIgnoredError(String.format("tLogCatcher_1 - tLogCatcher failed to process log message(s) due to internal error: %s", e_tLogCatcher_1), e_tLogCatcher_1);
-}
-
- 
-
-ok_Hash.put("tLogCatcher_1", true);
-end_Hash.put("tLogCatcher_1", System.currentTimeMillis());
-
-
-
-
-/**
- * [tLogCatcher_1 end ] stop
- */
-
-	
-	/**
-	 * [tJavaRow_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJavaRow_2";
-
-	
-
-globalMap.put("tJavaRow_2_NB_LINE",nb_line_tJavaRow_2);
-				if(execStat){
-			  		runStat.updateStat(resourceMap,iterateId,2,0,"row17");
-			  	}
-			  	
- 
-
-ok_Hash.put("tJavaRow_2", true);
-end_Hash.put("tJavaRow_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tJavaRow_2 end ] stop
- */
-
-
-
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tLogCatcher_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tLogCatcher_1";
-
-	
-
- 
-
-
-
-/**
- * [tLogCatcher_1 finally ] stop
- */
-
-	
-	/**
-	 * [tJavaRow_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJavaRow_2";
-
-	
-
- 
-
-
-
-/**
- * [tJavaRow_2 finally ] stop
- */
-
-
-
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tPrejob_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tPrejob_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tPrejob_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tPrejob_1", false);
-		start_Hash.put("tPrejob_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tPrejob_1";
-
-	
-		int tos_count_tPrejob_1 = 0;
-		
-
- 
-
-
-
-/**
- * [tPrejob_1 begin ] stop
- */
-	
-	/**
-	 * [tPrejob_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPrejob_1";
-
-	
-
- 
-
-
-	tos_count_tPrejob_1++;
-
-/**
- * [tPrejob_1 main ] stop
- */
-	
-	/**
-	 * [tPrejob_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPrejob_1";
-
-	
-
- 
-
-
-
-/**
- * [tPrejob_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tPrejob_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPrejob_1";
-
-	
-
- 
-
-
-
-/**
- * [tPrejob_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tPrejob_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPrejob_1";
-
-	
-
- 
-
-ok_Hash.put("tPrejob_1", true);
-end_Hash.put("tPrejob_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk2", 0, "ok");
-				}
-				tChronometerStart_1Process(globalMap);
-
-
-
-/**
- * [tPrejob_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tPrejob_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tPrejob_1";
-
-	
-
- 
-
-
-
-/**
- * [tPrejob_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tPrejob_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tChronometerStart_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tChronometerStart_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tChronometerStart_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tChronometerStart_1", false);
-		start_Hash.put("tChronometerStart_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tChronometerStart_1";
-
-	
-		int tos_count_tChronometerStart_1 = 0;
-		
-
-	
-	
-	Long currentTimetChronometerStart_1 = System.currentTimeMillis();
-	
-	globalMap.put("tChronometerStart_1",currentTimetChronometerStart_1);
-	globalMap.put("tChronometerStart_1_STARTTIME", currentTimetChronometerStart_1);
- 
-
-
-
-/**
- * [tChronometerStart_1 begin ] stop
- */
-	
-	/**
-	 * [tChronometerStart_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tChronometerStart_1";
-
-	
-
- 
-
-
-	tos_count_tChronometerStart_1++;
-
-/**
- * [tChronometerStart_1 main ] stop
- */
-	
-	/**
-	 * [tChronometerStart_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tChronometerStart_1";
-
-	
-
- 
-
-
-
-/**
- * [tChronometerStart_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tChronometerStart_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tChronometerStart_1";
-
-	
-
- 
-
-
-
-/**
- * [tChronometerStart_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tChronometerStart_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tChronometerStart_1";
-
-	
-
- 
-
-ok_Hash.put("tChronometerStart_1", true);
-end_Hash.put("tChronometerStart_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk3", 0, "ok");
-				}
-				tJava_1Process(globalMap);
-
-
-
-/**
- * [tChronometerStart_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tChronometerStart_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tChronometerStart_1";
-
-	
-
- 
-
-
-
-/**
- * [tChronometerStart_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tChronometerStart_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_1", false);
-		start_Hash.put("tJava_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_1";
-
-	
-		int tos_count_tJava_1 = 0;
-		
-
-
-Date start_datetime = new Date((Long)globalMap.get("tChronometerStart_1_STARTTIME"));
-String start_time = TalendDate.formatDate("EEE, MMM dd HH:mm:ss.SSS z yyyy",start_datetime);
-System.out.println("\n*** " + jobName + " ***");
-System.out.println("Start Time: "+start_time);
-System.out.println("Environment: " + contextStr);
-//context.email_subject_stem = "SalesForce LCV Object Refresh";
-
-globalMap.put("datetime", TalendDate.formatDate("yyyyMMddHHmm", new Date()));
-globalMap.put("compare_result", "true");
-
-ConcurrentHashMap<String, String> CHM = new ConcurrentHashMap<String, String>();
-CHM.put("Failure?", "False");
-globalMap.put("sharedMap", CHM);
-globalMap.put("parent_status", "running");
-
-
-
-
-
- 
-
-
-
-/**
- * [tJava_1 begin ] stop
- */
-	
-	/**
-	 * [tJava_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_1";
-
-	
-
- 
-
-
-	tos_count_tJava_1++;
-
-/**
- * [tJava_1 main ] stop
- */
-	
-	/**
-	 * [tJava_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_1";
-
-	
-
- 
-
-
-
-/**
- * [tJava_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_1";
-
-	
-
- 
-
-
-
-/**
- * [tJava_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_1";
-
-	
-
- 
-
-ok_Hash.put("tJava_1", true);
-end_Hash.put("tJava_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk1", 0, "ok");
-				}
-				tS3Connection_1Process(globalMap);
-
-
-
-/**
- * [tJava_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_1";
-
-	
-
- 
-
-
-
-/**
- * [tJava_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tS3Connection_1_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tS3Connection_1 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tS3Connection_1", false);
-		start_Hash.put("tS3Connection_1", System.currentTimeMillis());
-		
-	
-	currentComponent="tS3Connection_1";
-
-	
-		int tos_count_tS3Connection_1 = 0;
-		
-	
-	
-	    
-		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
-		
-		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
-		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
-		
-				com.amazonaws.services.s3.AmazonS3 conn_tS3Connection_1 = com.amazonaws.services.s3.AmazonS3ClientBuilder.standard()
-					
-		            
-		            	
-				        .withRegion("us-east-1") // The first region to try your request against
-                        .withForceGlobalBucketAccessEnabled(true) // If a bucket is in a different region, try again in the correct region
-		            
-		            
-
-                    .withCredentials(credentialsProvider_tS3Connection_1)
-                    .withClientConfiguration(cc_tS3Connection_1)
-                    .build();
-			
-	
-		try{
-			conn_tS3Connection_1.getBucketLoggingConfiguration("Check-Connection-Only");
-	}catch(com.amazonaws.AmazonServiceException ase_tS3Connection_1){
-			if(ase_tS3Connection_1.getErrorCode().equals("NoSuchBucket")){
-			//ignore
-			}else{
-					throw ase_tS3Connection_1;
-			}
-	}
-	
-	
-	
-	globalMap.put("conn_" + "tS3Connection_1",conn_tS3Connection_1);
-	
-
- 
-
-
-
-/**
- * [tS3Connection_1 begin ] stop
- */
-	
-	/**
-	 * [tS3Connection_1 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Connection_1";
-
-	
-
- 
-
-
-	tos_count_tS3Connection_1++;
-
-/**
- * [tS3Connection_1 main ] stop
- */
-	
-	/**
-	 * [tS3Connection_1 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Connection_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Connection_1 process_data_begin ] stop
- */
-	
-	/**
-	 * [tS3Connection_1 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Connection_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Connection_1 process_data_end ] stop
- */
-	
-	/**
-	 * [tS3Connection_1 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Connection_1";
-
-	
-
- 
-
-ok_Hash.put("tS3Connection_1", true);
-end_Hash.put("tS3Connection_1", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk19", 0, "ok");
-				}
-				tJava_42Process(globalMap);
-
-
-
-/**
- * [tS3Connection_1 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tS3Connection_1 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tS3Connection_1";
-
-	
-
- 
-
-
-
-/**
- * [tS3Connection_1 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tS3Connection_1_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tJava_42Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tJava_42_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-		
-
-
-	
-	/**
-	 * [tJava_42 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tJava_42", false);
-		start_Hash.put("tJava_42", System.currentTimeMillis());
-		
-	
-	currentComponent="tJava_42";
-
-	
-		int tos_count_tJava_42 = 0;
-		
-
-
-context.sfdc_keystore_password = System.getenv("TALEND_SFDC_JKS_PASSWORD");
-//System.out.println(context.sfdc_keystore_password );
- 
-
-
-
-/**
- * [tJava_42 begin ] stop
- */
-	
-	/**
-	 * [tJava_42 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_42";
-
-	
-
- 
-
-
-	tos_count_tJava_42++;
-
-/**
- * [tJava_42 main ] stop
- */
-	
-	/**
-	 * [tJava_42 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_42";
-
-	
-
- 
-
-
-
-/**
- * [tJava_42 process_data_begin ] stop
- */
-	
-	/**
-	 * [tJava_42 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_42";
-
-	
-
- 
-
-
-
-/**
- * [tJava_42 process_data_end ] stop
- */
-	
-	/**
-	 * [tJava_42 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_42";
-
-	
-
- 
-
-ok_Hash.put("tJava_42", true);
-end_Hash.put("tJava_42", System.currentTimeMillis());
-
-				if(execStat){   
-   	 				runStat.updateStatOnConnection("OnComponentOk121", 0, "ok");
-				}
-				tSalesforceConnection_2Process(globalMap);
-
-
-
-/**
- * [tJava_42 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tJava_42 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tJava_42";
-
-	
-
- 
-
-
-
-/**
- * [tJava_42 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tJava_42_SUBPROCESS_STATE", 1);
-	}
-	
-
-public void tSalesforceConnection_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-	globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 0);
-
- final boolean execStat = this.execStat;
-	
-		String iterateId = "";
-	
-	
-	String currentComponent = "";
-	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-	try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { //start the resume
-				globalResumeTicket = true;
-
-
-
-
-
-	
-	/**
-	 * [tSalesforceConnection_2 begin ] start
-	 */
-
-	
-
-	
-		
-		ok_Hash.put("tSalesforceConnection_2", false);
-		start_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
-		
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-		int tos_count_tSalesforceConnection_2 = 0;
-		
-
-
-org.talend.components.api.component.ComponentDefinition def_tSalesforceConnection_2 =
-        new org.talend.components.salesforce.tsalesforceconnection.TSalesforceConnectionDefinition();
-
-org.talend.components.salesforce.SalesforceConnectionProperties props_tSalesforceConnection_2 =
-        (org.talend.components.salesforce.SalesforceConnectionProperties) def_tSalesforceConnection_2.createRuntimeProperties();
- 		                    props_tSalesforceConnection_2.setValue("endpoint",
- 		                    "https://login.salesforce.com/services/oauth2");
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("loginType",
- 		                        org.talend.components.salesforce.SalesforceConnectionProperties.LoginType.OAuth);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("bulkConnection",
- 		                    true);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("needCompression",
- 		                    false);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("timeout",
- 		                    60000);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("httpTraceMessage",
- 		                    false);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("clientId",
- 		                    "");
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("oauth2FlowType",
- 		                        org.talend.components.common.oauth.OAuth2FlowType.JWT_Flow);
- 		                    
- 		                    props_tSalesforceConnection_2.setValue("apiVersion",
- 		                    "47.0");
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("issuer",
- 		                    context.sfdc_issuer_token);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("subject",
- 		                    context.sfdc_subject_user);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("expirationTime",
- 		                    600);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStore",
- 		                    context.sfdc_keystore_path);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("keyStorePassword",
- 		                    context.sfdc_keystore_password);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("certificateAlias",
- 		                    context.sfdc_certificate_alias);
- 		                    
- 		                    props_tSalesforceConnection_2.oauth2JwtFlow.setValue("audience",
- 		                    context.sfdc_audience_url);
- 		                    
- 		                    props_tSalesforceConnection_2.userPassword.setValue("useAuth",
- 		                    false);
- 		                    
- 		                    props_tSalesforceConnection_2.proxy.setValue("useProxy",
- 		                    false);
- 		                    
- 		                    props_tSalesforceConnection_2.proxy.userPassword.setValue("useAuth",
- 		                    false);
- 		                    
- 		                    props_tSalesforceConnection_2.referencedComponent.setValue("referenceDefinitionName",
- 		                    "tSalesforceConnection");
- 		                    
-    if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceConnection_2.referencedComponent.referenceType.getValue()) {
-        final String referencedComponentInstanceId_tSalesforceConnection_2 = props_tSalesforceConnection_2.referencedComponent.componentInstanceId.getStringValue();
-        if (referencedComponentInstanceId_tSalesforceConnection_2 != null) {
-            org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceConnection_2 = (org.talend.daikon.properties.Properties) globalMap.get(
-                referencedComponentInstanceId_tSalesforceConnection_2 + "_COMPONENT_RUNTIME_PROPERTIES");
-            props_tSalesforceConnection_2.referencedComponent.setReference(referencedComponentProperties_tSalesforceConnection_2);
-        }
-    }
-globalMap.put("tSalesforceConnection_2_COMPONENT_RUNTIME_PROPERTIES", props_tSalesforceConnection_2);
-globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.3");
-globalMap.put("TALEND_COMPONENTS_VERSION", "0.28.2");
-java.net.URL mappings_url_tSalesforceConnection_2= this.getClass().getResource("/xmlMappings");
-globalMap.put("tSalesforceConnection_2_MAPPINGS_URL", mappings_url_tSalesforceConnection_2);
-
-org.talend.components.api.container.RuntimeContainer container_tSalesforceConnection_2 = new org.talend.components.api.container.RuntimeContainer() {
-    public Object getComponentData(String componentId, String key) {
-        return globalMap.get(componentId + "_" + key);
-    }
-
-    public void setComponentData(String componentId, String key, Object data) {
-        globalMap.put(componentId + "_" + key, data);
-    }
-
-    public String getCurrentComponentId() {
-        return "tSalesforceConnection_2";
-    }
-
-    public Object getGlobalData(String key) {
-    	return globalMap.get(key);
-    }
-};
-
-int nb_line_tSalesforceConnection_2 = 0;
-
-org.talend.components.api.component.ConnectorTopology topology_tSalesforceConnection_2 = null;
-topology_tSalesforceConnection_2 = org.talend.components.api.component.ConnectorTopology.NONE;
-
-org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceConnection_2 = def_tSalesforceConnection_2.getRuntimeInfo(
-    org.talend.components.api.component.runtime.ExecutionEngine.DI, props_tSalesforceConnection_2, topology_tSalesforceConnection_2);
-java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceConnection_2 = def_tSalesforceConnection_2.getSupportedConnectorTopologies();
-
-org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.RuntimableRuntime)(Class.forName(runtime_info_tSalesforceConnection_2.getRuntimeClassName()).newInstance());
-org.talend.daikon.properties.ValidationResult initVr_tSalesforceConnection_2 = componentRuntime_tSalesforceConnection_2.initialize(container_tSalesforceConnection_2, props_tSalesforceConnection_2);
-
-if (initVr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
-    throw new RuntimeException(initVr_tSalesforceConnection_2.getMessage());
-}
-
-if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
-	org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.ComponentDriverInitialization)componentRuntime_tSalesforceConnection_2;
-	compDriverInitialization_tSalesforceConnection_2.runAtDriver(container_tSalesforceConnection_2);
-}
-
-org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceConnection_2 = null;
-if(componentRuntime_tSalesforceConnection_2 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
-	sourceOrSink_tSalesforceConnection_2 = (org.talend.components.api.component.runtime.SourceOrSink)componentRuntime_tSalesforceConnection_2;
-	org.talend.daikon.properties.ValidationResult vr_tSalesforceConnection_2 = sourceOrSink_tSalesforceConnection_2.validate(container_tSalesforceConnection_2);
-	if (vr_tSalesforceConnection_2.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR ) {
-    	throw new RuntimeException(vr_tSalesforceConnection_2.getMessage());
-	}
-}
-
- 
-
-
-
-/**
- * [tSalesforceConnection_2 begin ] stop
- */
-	
-	/**
-	 * [tSalesforceConnection_2 main ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-
-
- 
-
-
-	tos_count_tSalesforceConnection_2++;
-
-/**
- * [tSalesforceConnection_2 main ] stop
- */
-	
-	/**
-	 * [tSalesforceConnection_2 process_data_begin ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-
-
- 
-
-
-
-/**
- * [tSalesforceConnection_2 process_data_begin ] stop
- */
-	
-	/**
-	 * [tSalesforceConnection_2 process_data_end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-
-
- 
-
-
-
-/**
- * [tSalesforceConnection_2 process_data_end ] stop
- */
-	
-	/**
-	 * [tSalesforceConnection_2 end ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-// end of generic
-
- 
-
-ok_Hash.put("tSalesforceConnection_2", true);
-end_Hash.put("tSalesforceConnection_2", System.currentTimeMillis());
-
-
-
-
-/**
- * [tSalesforceConnection_2 end ] stop
- */
-				}//end the resume
-
-				
-
-
-
-	
-			}catch(java.lang.Exception e){	
-				
-				TalendException te = new TalendException(e, currentComponent, globalMap);
-				
-				throw te;
-			}catch(java.lang.Error error){	
-				
-					runStat.stopThreadStat();
-				
-				throw error;
-			}finally{
-				
-				try{
-					
-	
-	/**
-	 * [tSalesforceConnection_2 finally ] start
-	 */
-
-	
-
-	
-	
-	currentComponent="tSalesforceConnection_2";
-
-	
-// finally of generic
-
- 
-
-
-
-/**
- * [tSalesforceConnection_2 finally ] stop
- */
-				}catch(java.lang.Exception e){	
-					//ignore
-				}catch(java.lang.Error error){
-					//ignore
-				}
-				resourceMap = null;
-			}
-		
-
-		globalMap.put("tSalesforceConnection_2_SUBPROCESS_STATE", 1);
-	}
-	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -89942,6 +84209,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     3405998 characters generated by Talend Open Studio for Data Integration 
- *     on the February 18, 2021 at 11:17:34 AM PST
+ *     3315249 characters generated by Talend Open Studio for Data Integration 
+ *     on the February 18, 2021 at 3:46:18 PM PST
  ************************************************************************************************/
