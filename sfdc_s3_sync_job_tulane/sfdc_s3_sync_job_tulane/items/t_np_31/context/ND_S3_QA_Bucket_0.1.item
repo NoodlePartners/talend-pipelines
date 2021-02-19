@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_0IHH0GZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_0IHH0WZdEeu9SJfOFlRd8w" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;noodlelake-dev&quot;"/>
+    <contextParameter xmi:id="_0IHH0mZdEeu9SJfOFlRd8w" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IHH02ZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_0IHH1GZdEeu9SJfOFlRd8w" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;prod-malt-datalake&quot;"/>
+    <contextParameter xmi:id="_0IHH1WZdEeu9SJfOFlRd8w" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend-salesforce"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IHH1mZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="qa">
+    <contextParameter xmi:id="_0IHH12ZdEeu9SJfOFlRd8w" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;qa-malt-datalake&quot;"/>
+    <contextParameter xmi:id="_0IHH2GZdEeu9SJfOFlRd8w" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend-salesforce"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_pefjgHB-EeuJBscMSBCHdg" confirmationNeeded="false" name="qa2">
+    <contextParameter xmi:id="_pefjgXB-EeuJBscMSBCHdg" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;qa2-malt-datalake&quot;"/>
+    <contextParameter xmi:id="_pefjgnB-EeuJBscMSBCHdg" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend-salesforce"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IHH2WZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="staging">
+    <contextParameter xmi:id="_0IHH2mZdEeu9SJfOFlRd8w" comment="" name="nd_s3_bucket_QA_sfdc" prompt="nd_s3_bucket_QA_sfdc?" promptNeeded="false" type="id_String" value="&quot;stage-malt-datalake&quot;"/>
+    <contextParameter xmi:id="_0IHH22ZdEeu9SJfOFlRd8w" comment="" name="nd_s3_data_lake_path_sfdc" prompt="nd_s3_data_lake_path_sfdc?" promptNeeded="false" type="id_String" value="talend-salesforce"/>
+  </talendfile:ContextType>
+</xmi:XMI>
