@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_0H3QMGZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="DEV">
+    <contextParameter xmi:id="_0H3QMWZdEeu9SJfOFlRd8w" comment="" name="email_default_from" prompt="email_default_from?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QMmZdEeu9SJfOFlRd8w" comment="" name="email_default_to" prompt="email_default_to?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QM2ZdEeu9SJfOFlRd8w" comment="" name="email_host" prompt="email_host?" promptNeeded="false" type="id_String" value="'localhost'"/>
+    <contextParameter xmi:id="_0H3QNGZdEeu9SJfOFlRd8w" comment="" name="email_port" prompt="email_port?" promptNeeded="false" type="id_String" value="'25'"/>
+    <contextParameter xmi:id="_0H3QNWZdEeu9SJfOFlRd8w" comment="" name="email_sender_name" prompt="email_sender_name?" promptNeeded="false" type="id_String" value="&quot;Noodle Data Services Team&quot;"/>
+    <contextParameter xmi:id="_0H3QNmZdEeu9SJfOFlRd8w" comment="" name="email_subject_stem" prompt="email_subject_stem?" promptNeeded="false" type="id_String" value="'DW ETL Fault Notification'"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0H3QN2ZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="UAT">
+    <contextParameter xmi:id="_0H3QOGZdEeu9SJfOFlRd8w" comment="" name="email_default_from" prompt="email_default_from?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QOWZdEeu9SJfOFlRd8w" comment="" name="email_default_to" prompt="email_default_to?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QOmZdEeu9SJfOFlRd8w" comment="" name="email_host" prompt="email_host?" promptNeeded="false" type="id_String" value="'localhost'"/>
+    <contextParameter xmi:id="_0H3QO2ZdEeu9SJfOFlRd8w" comment="" name="email_port" prompt="email_port?" promptNeeded="false" type="id_String" value="'25'"/>
+    <contextParameter xmi:id="_0H3QPGZdEeu9SJfOFlRd8w" comment="" name="email_sender_name" prompt="email_sender_name?" promptNeeded="false" type="id_String" value="&quot;Noodle Data Services Team&quot;"/>
+    <contextParameter xmi:id="_0H3QPWZdEeu9SJfOFlRd8w" comment="" name="email_subject_stem" prompt="email_subject_stem?" promptNeeded="false" type="id_String" value="'DW ETL Fault Notification'"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0H3QPmZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="PRD">
+    <contextParameter xmi:id="_0H3QP2ZdEeu9SJfOFlRd8w" comment="" name="email_default_from" prompt="email_default_from?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QQGZdEeu9SJfOFlRd8w" comment="" name="email_default_to" prompt="email_default_to?" promptNeeded="false" type="id_String" value="'svishwanatha@noodle.com'"/>
+    <contextParameter xmi:id="_0H3QQWZdEeu9SJfOFlRd8w" comment="" name="email_host" prompt="email_host?" promptNeeded="false" type="id_String" value="'localhost'"/>
+    <contextParameter xmi:id="_0H3QQmZdEeu9SJfOFlRd8w" comment="" name="email_port" prompt="email_port?" promptNeeded="false" type="id_String" value="'25'"/>
+    <contextParameter xmi:id="_0H3QQ2ZdEeu9SJfOFlRd8w" comment="" name="email_sender_name" prompt="email_sender_name?" promptNeeded="false" type="id_String" value="&quot;Noodle Data Services Team&quot;"/>
+    <contextParameter xmi:id="_0H3QRGZdEeu9SJfOFlRd8w" comment="" name="email_subject_stem" prompt="email_subject_stem?" promptNeeded="false" type="id_String" value="'DW ETL Fault Notification'"/>
+  </talendfile:ContextType>
+</xmi:XMI>
