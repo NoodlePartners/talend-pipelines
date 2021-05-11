@@ -11838,6 +11838,10 @@
     "version" : "Latest",
     "type" : "property"
   }, {
+    "id" : "_bPBowLKYEeuJPpQ-pkWOyw",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
     "id" : "_k_fvMFXQEeuT2cGZaH0CdQ",
     "version" : "Latest",
     "type" : "property"
@@ -11883,6 +11887,10 @@
     "type" : "schema"
   }, {
     "id" : "_TAlPkFEPEeumz5KRhHz_JA - hed__Term__c",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_bPBowLKYEeuJPpQ-pkWOyw - hed__Course_Enrollment__c",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -22514,6 +22522,10 @@
     "type" : "property"
   }, {
     "id" : "_k_fvMFXQEeuT2cGZaH0CdQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_tECp4LKVEeuJPpQ-pkWOyw",
     "version" : "Latest",
     "type" : "property"
   }, {
