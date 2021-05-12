@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_0IDdcGZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="dev">
+    <contextParameter xmi:id="_0IDdcWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Port" prompt="ND_PostgreSQL_POND_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_0IDdcmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Server" prompt="ND_PostgreSQL_POND_Server?" promptNeeded="false" type="id_String" value="dev-dataeng-airflow-pgsql-01.cs3qcy3lego4.us-east-1.rds.amazonaws.com"/>
+    <contextParameter xmi:id="_0IDdc2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_0IDddGZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="svishwanatha"/>
+    <contextParameter xmi:id="_0IDddWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_0IDddmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_0IDdd2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IDdeGZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="prod">
+    <contextParameter xmi:id="_0IDdeWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Port" prompt="ND_PostgreSQL_POND_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_0IDdemZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Server" prompt="ND_PostgreSQL_POND_Server?" promptNeeded="false" type="id_String" value="datalake-db.noodle-partners.com"/>
+    <contextParameter xmi:id="_0IDde2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
+    <contextParameter xmi:id="_0IDdfGZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="talend"/>
+    <contextParameter xmi:id="_0IDdfWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_0IDdfmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_0IDdf2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IDdgGZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="qa">
+    <contextParameter xmi:id="_0IDdgWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Port" prompt="ND_PostgreSQL_POND_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_0IDdgmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Server" prompt="ND_PostgreSQL_POND_Server?" promptNeeded="false" type="id_String" value="dev-datalake-db.noodle-partners.com"/>
+    <contextParameter xmi:id="_0IDdg2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
+    <contextParameter xmi:id="_0IDdhGZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="NoodleMaster"/>
+    <contextParameter xmi:id="_0IDdhWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_0IDdhmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_0IDdh2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_0IDdiGZdEeu9SJfOFlRd8w" confirmationNeeded="false" name="staging">
+    <contextParameter xmi:id="_0IDdiWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Port" prompt="ND_PostgreSQL_POND_Port?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_0IDdimZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Server" prompt="ND_PostgreSQL_POND_Server?" promptNeeded="false" type="id_String" value="stage-datalake-db.noodle-partners.com"/>
+    <contextParameter xmi:id="_0IDdi2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Database" prompt="ND_PostgreSQL_POND_Database?" promptNeeded="false" type="id_String" value="pond"/>
+    <contextParameter xmi:id="_0IDdjGZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Login" prompt="ND_PostgreSQL_POND_Login?" promptNeeded="false" type="id_String" value="talend"/>
+    <contextParameter xmi:id="_0IDdjWZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Schema" prompt="ND_PostgreSQL_POND_Schema?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_0IDdjmZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_Password" prompt="ND_PostgreSQL_POND_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_0IDdj2ZdEeu9SJfOFlRd8w" comment="" name="ND_PostgreSQL_POND_AdditionalParams" prompt="ND_PostgreSQL_POND_AdditionalParams?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>
