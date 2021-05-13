@@ -3583,7 +3583,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -6913,7 +6913,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -9997,7 +9997,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -13082,7 +13082,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -16168,7 +16168,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -19254,7 +19254,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -22341,7 +22341,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -25427,7 +25427,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -28512,7 +28512,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -31598,7 +31598,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -34683,7 +34683,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -37769,7 +37769,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -40855,7 +40855,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -43940,7 +43940,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -47025,7 +47025,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -50111,7 +50111,7 @@ System.out.println("Date Format Is not Correct");
 if(context.sfdc_conn_QueryCondition.equals(""))
 // ex: "CreatedDate <= 2021-05-12T00:00:00.000Z "  from staring to till date
 {
-context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T00:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T00:00:00.000Z "; 
+context.sfdc_conn_QueryCondition="CreatedDate > " + context.get("filter_date")+"T20:00:00.000Z and CreatedDate <= "+context.get("filter_till_date")+"T20:00:00.000Z "; 
 } 
 
 
@@ -66312,5 +66312,5 @@ if (execStat) {
 }
 /************************************************************************************************
  *     1766425 characters generated by Talend Open Studio for Data Integration 
- *     on the May 13, 2021 at 10:59:37 AM PDT
+ *     on the May 13, 2021 at 12:01:42 PM PDT
  ************************************************************************************************/
