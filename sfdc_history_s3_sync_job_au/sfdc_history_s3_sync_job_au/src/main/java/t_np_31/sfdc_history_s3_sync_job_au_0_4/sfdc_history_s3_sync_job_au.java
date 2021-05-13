@@ -290,18 +290,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(nd_aws_access_key != null){
-				
-					this.setProperty("nd_aws_access_key", nd_aws_access_key.toString());
-				
-			}
-			
-			if(nd_aws_secret_key != null){
-				
-					this.setProperty("nd_aws_secret_key", nd_aws_secret_key.toString());
-				
-			}
-			
 			if(ND_PostgreSQL_POND_AdditionalParams != null){
 				
 					this.setProperty("ND_PostgreSQL_POND_AdditionalParams", ND_PostgreSQL_POND_AdditionalParams.toString());
@@ -411,14 +399,6 @@ public String getSfdc_issuer_token(){
 public java.lang.String sfdc_keystore_password;
 public java.lang.String getSfdc_keystore_password(){
 	return this.sfdc_keystore_password;
-}
-public String nd_aws_access_key;
-public String getNd_aws_access_key(){
-	return this.nd_aws_access_key;
-}
-public java.lang.String nd_aws_secret_key;
-public java.lang.String getNd_aws_secret_key(){
-	return this.nd_aws_secret_key;
 }
 public String ND_PostgreSQL_POND_AdditionalParams;
 public String getND_PostgreSQL_POND_AdditionalParams(){
@@ -4684,12 +4664,7 @@ public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap
 	
 	
 	    
-    
-    		
-	final String decryptedPassword_tS3Connection_1 = context.nd_aws_secret_key; 
-
-			com.amazonaws.auth.AWSCredentials credentials_tS3Connection_1 = new com.amazonaws.auth.BasicAWSCredentials(context.nd_aws_access_key,decryptedPassword_tS3Connection_1);
-			com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.internal.StaticCredentialsProvider(credentials_tS3Connection_1);
+		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
 		
 		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
 		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
@@ -35580,14 +35555,14 @@ public void tFileArchive_26Process(final java.util.Map<String, Object> globalMap
 
 	
 
-		String sourceFile_tFileArchive_26 = context.staging_S3_dir + "application_decision.json";
+		String sourceFile_tFileArchive_26 = context.staging_S3_dir + "noodlecrm__log_record__history.json";
 	
 
     if (java.nio.file.Files.notExists(java.nio.file.Paths.get(sourceFile_tFileArchive_26), java.nio.file.LinkOption.NOFOLLOW_LINKS)){
         throw new java.io.FileNotFoundException(sourceFile_tFileArchive_26 + " (The system cannot find the path specified)");
     }
 
-    String zipFile_tFileArchive_26 = context.staging_S3_dir + "application_decision.json.gz";
+    String zipFile_tFileArchive_26 = context.staging_S3_dir + "noodlecrm__log_record__history.json.gz";
     
     com.talend.compress.zip.Zip zip_tFileArchive_26 = new com.talend.compress.zip.Zip(sourceFile_tFileArchive_26, zipFile_tFileArchive_26);
     zip_tFileArchive_26.setOverwriteExistTargetZip(true);
@@ -61181,7 +61156,7 @@ public void tWriteJSONField_26_InProcess(final java.util.Map<String, Object> glo
 		
 
 String fileName_tFileOutputDelimited_26 = "";
-    fileName_tFileOutputDelimited_26 = (new java.io.File(context.staging_S3_dir + "application_decision.json")).getAbsolutePath().replace("\\","/");
+    fileName_tFileOutputDelimited_26 = (new java.io.File(context.staging_S3_dir + "noodlecrm__log_record__history.json")).getAbsolutePath().replace("\\","/");
     String fullName_tFileOutputDelimited_26 = null;
     String extension_tFileOutputDelimited_26 = null;
     String directory_tFileOutputDelimited_26 = null;
@@ -65851,23 +65826,6 @@ end_Hash.put("tFileOutputDelimited_33", System.currentTimeMillis());
                                     }
                                 }
                             }
-                        context.setContextType("nd_aws_access_key", "id_String");
-                            context.nd_aws_access_key=(String) context.getProperty("nd_aws_access_key");
-                        context.setContextType("nd_aws_secret_key", "id_Password");
-                            String pwd_nd_aws_secret_key_value = context.getProperty("nd_aws_secret_key");
-                            context.nd_aws_secret_key = null;
-                            if(pwd_nd_aws_secret_key_value!=null) {
-                                if(context_param.containsKey("nd_aws_secret_key")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.nd_aws_secret_key = pwd_nd_aws_secret_key_value;
-                                } else if (!pwd_nd_aws_secret_key_value.isEmpty()) {
-                                    try {
-                                        context.nd_aws_secret_key = routines.system.PasswordEncryptUtil.decryptPassword(pwd_nd_aws_secret_key_value);
-                                        context.put("nd_aws_secret_key",context.nd_aws_secret_key);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
                         context.setContextType("ND_PostgreSQL_POND_AdditionalParams", "id_String");
                             context.ND_PostgreSQL_POND_AdditionalParams=(String) context.getProperty("ND_PostgreSQL_POND_AdditionalParams");
                         context.setContextType("ND_PostgreSQL_POND_Database", "id_String");
@@ -65936,10 +65894,6 @@ end_Hash.put("tFileOutputDelimited_33", System.currentTimeMillis());
                 context.sfdc_issuer_token = (String) parentContextMap.get("sfdc_issuer_token");
             }if (parentContextMap.containsKey("sfdc_keystore_password")) {
                 context.sfdc_keystore_password = (java.lang.String) parentContextMap.get("sfdc_keystore_password");
-            }if (parentContextMap.containsKey("nd_aws_access_key")) {
-                context.nd_aws_access_key = (String) parentContextMap.get("nd_aws_access_key");
-            }if (parentContextMap.containsKey("nd_aws_secret_key")) {
-                context.nd_aws_secret_key = (java.lang.String) parentContextMap.get("nd_aws_secret_key");
             }if (parentContextMap.containsKey("ND_PostgreSQL_POND_AdditionalParams")) {
                 context.ND_PostgreSQL_POND_AdditionalParams = (String) parentContextMap.get("ND_PostgreSQL_POND_AdditionalParams");
             }if (parentContextMap.containsKey("ND_PostgreSQL_POND_Database")) {
@@ -65974,7 +65928,6 @@ end_Hash.put("tFileOutputDelimited_33", System.currentTimeMillis());
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
 			parametersToEncrypt.add("sfdc_keystore_password");
-			parametersToEncrypt.add("nd_aws_secret_key");
 			parametersToEncrypt.add("ND_PostgreSQL_POND_Password");
         //Resume: jobStart
         resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "", "","","","",resumeUtil.convertToJsonText(context,parametersToEncrypt));
@@ -66226,6 +66179,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     1758260 characters generated by Talend Open Studio for Data Integration 
- *     on the May 12, 2021 at 4:56:55 PM PDT
+ *     1755763 characters generated by Talend Open Studio for Data Integration 
+ *     on the May 12, 2021 at 5:05:01 PM PDT
  ************************************************************************************************/
