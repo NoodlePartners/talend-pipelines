@@ -248,18 +248,6 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(nd_aws_access_key != null){
-				
-					this.setProperty("nd_aws_access_key", nd_aws_access_key.toString());
-				
-			}
-			
-			if(nd_aws_secret_key != null){
-				
-					this.setProperty("nd_aws_secret_key", nd_aws_secret_key.toString());
-				
-			}
-			
 			if(nd_s3_bucket_QA_sfdc != null){
 				
 					this.setProperty("nd_s3_bucket_QA_sfdc", nd_s3_bucket_QA_sfdc.toString());
@@ -483,14 +471,6 @@ public String getSfdc_conn_QueryCondition(){
 public String filter_date;
 public String getFilter_date(){
 	return this.filter_date;
-}
-public String nd_aws_access_key;
-public String getNd_aws_access_key(){
-	return this.nd_aws_access_key;
-}
-public java.lang.String nd_aws_secret_key;
-public java.lang.String getNd_aws_secret_key(){
-	return this.nd_aws_secret_key;
 }
 public String nd_s3_bucket_QA_sfdc;
 public String getNd_s3_bucket_QA_sfdc(){
@@ -30828,12 +30808,7 @@ public void tS3Connection_1Process(final java.util.Map<String, Object> globalMap
 	
 	
 	    
-    
-    		
-	final String decryptedPassword_tS3Connection_1 = context.nd_aws_secret_key; 
-
-			com.amazonaws.auth.AWSCredentials credentials_tS3Connection_1 = new com.amazonaws.auth.BasicAWSCredentials(context.nd_aws_access_key,decryptedPassword_tS3Connection_1);
-			com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.internal.StaticCredentialsProvider(credentials_tS3Connection_1);
+		com.amazonaws.auth.AWSCredentialsProvider credentialsProvider_tS3Connection_1 = new com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper();
 		
 		com.amazonaws.ClientConfiguration cc_tS3Connection_1 = new com.amazonaws.ClientConfiguration();
 		cc_tS3Connection_1.setUserAgent("APN/1.0 Talend/7.3 Studio/7.3 (Talend Open Studio)");
@@ -38429,23 +38404,6 @@ end_Hash.put("tFileOutputDelimited_16", System.currentTimeMillis());
                             context.sfdc_conn_QueryCondition=(String) context.getProperty("sfdc_conn_QueryCondition");
                         context.setContextType("filter_date", "id_String");
                             context.filter_date=(String) context.getProperty("filter_date");
-                        context.setContextType("nd_aws_access_key", "id_String");
-                            context.nd_aws_access_key=(String) context.getProperty("nd_aws_access_key");
-                        context.setContextType("nd_aws_secret_key", "id_Password");
-                            String pwd_nd_aws_secret_key_value = context.getProperty("nd_aws_secret_key");
-                            context.nd_aws_secret_key = null;
-                            if(pwd_nd_aws_secret_key_value!=null) {
-                                if(context_param.containsKey("nd_aws_secret_key")) {//no need to decrypt if it come from program argument or parent job runtime
-                                    context.nd_aws_secret_key = pwd_nd_aws_secret_key_value;
-                                } else if (!pwd_nd_aws_secret_key_value.isEmpty()) {
-                                    try {
-                                        context.nd_aws_secret_key = routines.system.PasswordEncryptUtil.decryptPassword(pwd_nd_aws_secret_key_value);
-                                        context.put("nd_aws_secret_key",context.nd_aws_secret_key);
-                                    } catch (java.lang.RuntimeException e) {
-                                        //do nothing
-                                    }
-                                }
-                            }
                         context.setContextType("nd_s3_bucket_QA_sfdc", "id_String");
                             context.nd_s3_bucket_QA_sfdc=(String) context.getProperty("nd_s3_bucket_QA_sfdc");
                         context.setContextType("nd_s3_data_lake_path_sfdc", "id_String");
@@ -38624,10 +38582,6 @@ end_Hash.put("tFileOutputDelimited_16", System.currentTimeMillis());
                 context.sfdc_conn_QueryCondition = (String) parentContextMap.get("sfdc_conn_QueryCondition");
             }if (parentContextMap.containsKey("filter_date")) {
                 context.filter_date = (String) parentContextMap.get("filter_date");
-            }if (parentContextMap.containsKey("nd_aws_access_key")) {
-                context.nd_aws_access_key = (String) parentContextMap.get("nd_aws_access_key");
-            }if (parentContextMap.containsKey("nd_aws_secret_key")) {
-                context.nd_aws_secret_key = (java.lang.String) parentContextMap.get("nd_aws_secret_key");
             }if (parentContextMap.containsKey("nd_s3_bucket_QA_sfdc")) {
                 context.nd_s3_bucket_QA_sfdc = (String) parentContextMap.get("nd_s3_bucket_QA_sfdc");
             }if (parentContextMap.containsKey("nd_s3_data_lake_path_sfdc")) {
@@ -38700,7 +38654,6 @@ end_Hash.put("tFileOutputDelimited_16", System.currentTimeMillis());
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
 			parametersToEncrypt.add("sfdc_keystore_password");
-			parametersToEncrypt.add("nd_aws_secret_key");
 			parametersToEncrypt.add("NP_Salesforce_oauth_clientSecret");
 			parametersToEncrypt.add("NP_Salesforce_oauth2JwtFlow_keyStorePassword");
 			parametersToEncrypt.add("NP_Salesforce_proxy_userPassword_password");
@@ -38956,6 +38909,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     1041770 characters generated by Talend Open Studio for Data Integration 
- *     on the May 13, 2021 at 4:31:08 PM PDT
+ *     1039243 characters generated by Talend Open Studio for Data Integration 
+ *     on the May 14, 2021 at 9:50:16 AM PDT
  ************************************************************************************************/
